@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+
+
+.navbar {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #142b2bf1; 
+    font-size: 25px;
+    font-family:'verdana';
+    font-weight: 600;
+}
+
+
+
+.navbar a {
+
+    text-decoration: none;
+    color: rgb(245, 217, 191);
+    color: rgb(255, 123, 0);
+}
+
+.navbar a:hover{
+      
+      color: rgb(255, 123, 0);
+      color: rgb(245, 217, 191);
+}
+
+.home {
+    
+    width: 100vw;
+    display: flex;
+    font-size: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.about,
+.home {
+    background-image: url('./Photos/jetski.png');
+    background-size: cover ;
+    position:fixed;
+    height: 740px;
+    width: 100vw;
+}
+
+
+.logIn{
+    display: block;
+    height: 400px;
+    width: 350px;
+    border: 4px solid rgba(255, 123, 0, 0.911);
+    border-radius:10px;
+    background-color: rgba(5, 44, 49, 0.842);
+    margin:auto;
+    margin-top: -120px;
+    
+}
+
+
+.signupButton{
+    margin-top: -110px;
+    
+}
+
+.signUp {
+    display: block;
+    height: 370px;
+    width: 350px;
+    border: 4px solid rgba(255, 123, 0, 0.918);
+    border-radius:10px;
+    background-color: rgba(5, 32, 36, 0.774);
+    margin:auto;
+    margin-top:70px;
+}
+
+
+
+.bookingContainer{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 350px;
+    border: 3px solid rgb(224, 108, 0);
+    border-radius:10px;
+    background-color: rgba(5, 32, 36, 0.76);
+    margin-right: 270px;
+
+}
+
+.editContainer{
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: auto;
+    border: 3px solid rgb(224, 108, 0);
+    border-radius:10px;
+    background-color: rgba(3, 29, 31, 0.781);
+    margin:auto;
+    margin-top:  100px;
+}
+
+.edit{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 35px;
+    width: 170px;
+}
+
+.editButton{
+    width:100px;
+    border-radius: 200px;
+    margin:10px;
+   
+}
+
+.bookingForm2{
+    height:auto;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    color: rgb(245, 217, 191);
+    font-family: "verdana";
+    margin-top: -30px;
+    font-size:25px;
+    font-weight: 900;
+}
+
+
+h4{
+    text-align: center;
+    color: rgb(245, 217, 191);
+    font-family: "verdana";
+    margin-top:20px;
+    font-size:26px;
+    font-weight: 900;
+}
+
+.date,
+select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    height: 35px;
+    width: 200px;
+    border: 3px solid  rgb(255, 123, 0);
+    background-color:rgba(30, 30, 59, 0.205);
+    color:rgb(240, 219, 161);
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+
+
+input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    height: 35px;
+    width: 200px;
+    font-size: 15px;
+    border: 3px solid  rgba(255, 123, 0, 0.877);
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top:30px;
+    height: 40px;
+    width: 150px;
+    border: 3px solid  rgb(206, 99, 0);
+    background-color:rgba(12, 31, 30, 0.979);
+    border-radius: 5px;
+    font-size: 19px;
+    font-weight: 600;
+    color:rgb(255, 208, 164);
+}
+
+
+.deleteButton{
+
+    background-color: rgba(206, 0, 0, 0.87);
+    color: rgb(255, 220, 197);
+    width: 60px;
+    height: 25px;
+    margin: 10px;
+    font-size: 12px;
+    border-radius: 100px;
+    border: 2px solid rgb(0, 0, 0);
+    display: inline;
+}
+
+
+.admin{
+        background-image:url('./Photos/admin.jpeg') ;
+        background-size: cover;
+        height: 750px;
+        width: 100%;
+        position:fixed;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+}
+
+
+.bookingList {
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 7px;
+    background-color: rgba(17, 39, 34, 0.774);
+    color:rgb(255, 232, 210);
+    font-family: verdana;
+    font-size: 20px;
+    margin: auto;
+    margin-top:20px;
+    padding:5px;
+    width: auto;
+    text-align: center;
+
+}
+
+.h1{
+    text-align: center;
+    font-family: verdana;
+    font-size:45px;
+    color:rgb(226, 102, 0);
+    margin-bottom: 20px;
+    
+}
+
+.contact{
+    display:block;
+    width:100vw;
+}
+
+.contact{
+    background-image:url('./Photos/admin.jpeg') ;
+    background-size:cover;
+    position: fixed;
+    display:block;
+    background-color: rgb(36, 53, 50);
+    height: 740px;
+}
+
+
+.adminPortal {
+    background-image:url('./Photos/admin.jpeg') ;
+    background-size:cover;
+    position: relative;
+    display:block;
+    background-color: rgb(36, 53, 50);
+    height: 740px;
+}
+
+
+.aboutText{
+     color: #1c3a3a; 
+     font-family: verdana;
+     margin-top:50px;
+     margin-left: 700px;
+     width: 700px;
+}
