@@ -45,7 +45,7 @@ class Admin extends Component {
         e.preventDefault()
        
         if (this.state.adminPassword === process.env.REACT_APP_CODE) {
-            console.log(process.env.REACT_APP_CODE)
+            
             const newAdmin = {
                 username: this.state.username,
                 password: this.state.password

@@ -18,7 +18,7 @@ class AdminProvider extends Component {
 
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
-            console.log("response.data=",response.data)
+            console.log(response)
             const updatedBooking = response.data
             this.setState(prevState => {
                 return {
