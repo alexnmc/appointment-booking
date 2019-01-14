@@ -274,7 +274,15 @@ button {
     position: relative;
     display:block;
     background-color: rgb(36, 53, 50);
-    height: auto;
+    height:auto;
+   
+}
+
+.adminPortal2{
+    background-image:url('./Photos/admin.jpeg') ;
+    background-size:cover;
+    height:800px;
+
 }
 
 

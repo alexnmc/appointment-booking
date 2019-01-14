@@ -21,7 +21,7 @@ class Home extends Component {
         const {date, time, name, email, phone} = this.state
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone}).then(res => {
             
-                   alert(res.data +' on '+ date +'  from '+ time)
+                   alert(res.data +' Date: '+ date +'  from '+ time)
         })
         this.setState({
             date: '',

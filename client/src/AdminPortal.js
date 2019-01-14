@@ -96,7 +96,8 @@ class AdminPortal extends Component  {
                 <div>
                 
                     {this.state.toggle ? 
-                        <div className="adminPortal">
+                        <div className = "adminPortal2">
+                        <div className = "adminPortal">
                             <h1 className= 'h1'>Bookings:</h1>
                         <div >
                             { this.props.bookings.map( item =>
@@ -112,6 +113,7 @@ class AdminPortal extends Component  {
                             )}
                         </div>
                             <button onClick = {this.props.logout}>Log out </button>
+                        </div>
                         </div>
 
                     :
