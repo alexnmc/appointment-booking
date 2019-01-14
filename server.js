@@ -7,12 +7,13 @@ const expressJwt = require("express-jwt");
 const PORT = process.env.PORT || 8000
 const path = require("path")
 require("dotenv").config()
+const secret = process.env.SECRET || "some secret passphrase here for local development"
 
 
 
 app.use(express.json()) 
 app.use(morgan('dev'))  
-app.use("/api", expressJwt({secret: process.env.SECRET})) //req.user === {username, password, _id}
+app.use("/api", expressJwt({secret})) //req.user === {username, password, _id}
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 //Routes
