@@ -60,7 +60,7 @@ bookingsRouter.post('/', (req, res) => {   //for testing with postman
 
 bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
                 // if booking exists, throw error
-    Booking.findOne({ date: req.body.date, time: req.body.time}), (err, booking) => {
+    Booking.findOne({ date: req.body.date, time: req.body.time }), (err, booking) => {
         if (err) {
             
             res.status(500)
@@ -79,6 +79,7 @@ bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the 
                 {new: true},                   // 3rd argument of the axios.put..it tells the database to get the new updated version of the booking
                 (err, updatedBooking) => {    // 4th argument 
                     if (err) {
+                        res.status(500)
                         return next(err)
                     }
                     return res.status(201).send(updatedBooking)
