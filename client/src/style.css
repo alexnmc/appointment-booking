@@ -274,7 +274,7 @@ button {
     position: relative;
     display:block;
     background-color: rgb(36, 53, 50);
-    height: 740px;
+    height: auto;
 }
 
 
