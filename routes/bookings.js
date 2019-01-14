@@ -58,21 +58,36 @@ bookingsRouter.post('/', (req, res) => {   //for testing with postman
 })
 
 
-bookingsRouter.put('/:id', (req, res, next) => { // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
-    
-    
-    Booking.findOneAndUpdate(
-        {_id: req.params.id},
-        req.body,
-        {new: true},
-        (err, updatedBooking) => {
-            if (err) {
-                return next(err)
-            }
-            return res.status(201).send(updatedBooking)
+bookingsRouter.put('/:id',  (req, res, next) => { // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
+    // if booking exists, throw error
+    Booking.findOne({date:req.body.date, time:req.body.time}), (err, booking) => {
+        if (err) {
+            
+            res.status(500)
+            return next(err)
         }
-    )
-})
+            
+        if(booking){ 
+            
+            return res.status(200).send("Not available")
+
+        } else {
+
+            Booking.findOneAndUpdate(
+            {_id: req.params.id},
+            req.body,// update existing booking with this object(this is the 2nd argument of the axios.put)
+            {new: true},// 3rd argument of the axios.put..it tells the database to get the new updated version of the booking
+            (err, updatedBooking) => { // 4th argument 
+                if (err) {
+                    return next(err)
+                }
+                return res.status(201).send(updatedBooking)
+            }
+        )
+        }
+    }
+}
+)
 
 
 
@@ -109,3 +124,17 @@ bookingsRouter.post('/:date', (req, res, next) => {
 
 
 module.exports = bookingsRouter
+
+
+// try{
+//     const booking = await Booking.findOne({time: req.body.time, date: req.body.date})
+//     if(booking){
+//         throw new Error("Not available")
+//     } else {
+//         return res.status(200).send("That spot is available!")
+//     }
+// }
+// catch(err){
+//     res.status(500)
+//     return next(err)
+// }

@@ -285,3 +285,72 @@ button {
      margin-left: 700px;
      width: 700px;
 }
+
+@media only screen and (max-width: 1025px) {
+
+    .navbar{
+        font-size: 16px;
+    }
+
+    .bookingContainer{
+        margin:auto;
+        margin-top: 40px;
+        width:auto;
+        padding:10px;
+    
+    }
+    p{
+        font-size: 19px;
+    }
+    .login{
+        width:auto;
+    }
+
+   .button{
+       width: 80px;
+   }
+
+   .about{
+       display:flex;
+       align-items: center;
+       justify-content: center;
+       padding:20px;
+   }
+
+   .aboutText{
+       margin:auto;
+       margin-top: 10px;
+       font-size: 19px;
+   }
+
+   .editContainer,
+   .bookingForm2{
+       display:flex;
+       flex-direction: column;
+       align-content: center;
+       justify-content: center;
+       margin: auto;
+       height: auto;
+       width: auto;
+       
+}
+    .editContainer{
+        margin-bottom: 350px;
+    }
+    .bookingList{
+        font-size: 15px;
+    }
+    
+    .logIn{
+        width:auto;
+        padding:10px;
+        
+    }
+
+   
+
+    button{
+        width:100px;
+
+    }
+}
