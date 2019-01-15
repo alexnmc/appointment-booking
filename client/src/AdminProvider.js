@@ -18,7 +18,7 @@ class AdminProvider extends Component {
 
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
-            console.log(response)
+            console.log("response.data=",response.data)
             const updatedBooking = response.data
             this.setState(prevState => {
                 return {
@@ -42,7 +42,7 @@ class AdminProvider extends Component {
     
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
-            console.log(res.data)
+            
         
             this.setState({
                 bookings: res.data
@@ -69,7 +69,7 @@ class AdminProvider extends Component {
             localStorage.setItem("user", JSON.stringify(admin))//stores the token and the user  in local storage in case of page refresh...
             localStorage.setItem("token", token)
             this.setState({ user: admin, token })
-            console.log(res.data)
+            
         })
         .catch(err => alert(err.response.data.errMsg))
     }
@@ -83,7 +83,7 @@ class AdminProvider extends Component {
             localStorage.setItem("user", JSON.stringify(admin))
             localStorage.setItem("token", token)
             this.setState({ user: admin, token })
-            console.log(res.data)
+           
             
         })
         .catch(err => alert(err.response.data.errMsg))

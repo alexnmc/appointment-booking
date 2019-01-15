@@ -88,8 +88,8 @@ class Admin extends Component {
                 <div className="admin">
                     {
                     this.state.toggle ?
-                        <div>
-                            <form onSubmit={this.handleLogin} className='logIn'>
+                        <div className = 'logIn'>
+                            <form onSubmit={this.handleLogin} className='loginForm'>
                                 <h4>Admin only:</h4>
                                 <input
                                     type='text'
