@@ -47,7 +47,6 @@
 .home {
     background-image: url('./Photos/jetski.png');
     background-size: cover ;
-    position:fixed;
     height: 740px;
     width: 100vw;
 }
@@ -226,7 +225,6 @@ button {
         background-size: cover;
         height: 750px;
         width: 100%;
-        position:fixed;
         display:flex;
         align-items: center;
         justify-content: center;
@@ -265,7 +263,6 @@ button {
 .contact{
     background-image:url('./Photos/admin.jpeg') ;
     background-size:cover;
-    position: fixed;
     display:block;
     background-color: rgb(36, 53, 50);
     height: 740px;
