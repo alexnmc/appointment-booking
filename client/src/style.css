@@ -271,17 +271,17 @@ button {
 
 
 .adminPortal {
-    background-image:url('./Photos/admin.jpeg') ;
+    background-color:rgb(179, 194, 207);
     background-size:cover;
     position: relative;
     display:block;
-    background-color: rgb(36, 53, 50);
+    
     height:auto;
    
 }
 
 .adminPortal2{
-    background-image:url('./Photos/admin.jpeg') ;
+    background-color:rgb(179, 194, 207);
     background-size:cover;
     height:800px;
 
