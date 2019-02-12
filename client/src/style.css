@@ -23,13 +23,13 @@
 .navbar a {
 
     text-decoration: none;
-    color: rgb(245, 217, 191);
+    
     color: rgb(255, 123, 0);
 }
 
 .navbar a:hover{
       
-      color: rgb(255, 123, 0);
+      
       color: rgb(245, 217, 191);
 }
 
@@ -309,7 +309,7 @@ button {
 
 
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1024px) {
 
     .navbar{
         font-size: 16px;
