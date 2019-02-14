@@ -86,40 +86,49 @@ class AdminPortal extends Component  {
         this.editToggler(null)
     }
    
+    
+   
+   
+   
+    
    
    
     render(){
-        
-        return (
-            <Fragment>
-                <div>
+       
+       
+        let mapIt = this.props.bookings.map(item => {
+                                
+            return(
                 
-                    {this.state.toggle ? 
-                        <div className = "adminPortal2">
-                        <div className = "adminPortal">
-                            <h1 className= 'h1'>Bookings:</h1>
-                        <div >
-                            { this.props.bookings.map( item =>
-                                <div className = "bookingList" key = {item._id} > 
-                                    
-                                    {  `Name: ${item.name.toUpperCase()} ,
-                                        Date: ${moment(item.date).format("MMM Do YY ")} ,
-                                        Time: ${item.time} , Phone: ${item.phone} , 
-                                        Email: ${item.email} `}
-                                    <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone,item.email)}>Edit</button>
-                                </div>
-                            )}
-                        </div>
-                            <button onClick = {this.props.logout}>Log out </button>
-                        </div>
-                        </div>
 
-                    :
-                        <div className = "admin">
-                            <div className='editContainer'>
+                <div className = "bookingList" key = {item._id} > 
+                        
+                        {`Name: ${item.name.toUpperCase()} ,
+                        Date: ${moment(item.date).format("MMM Do YY ")} ,
+                        Time: ${item.time} , Phone: ${item.phone} , 
+                        Email: ${item.email} `}
+                    
+                    <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
+                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone,item.email)}>Edit</button>
+                
+                </div>  
+
+        )})
+       
+       
+    
+    return (
+            <Fragment>
+                <div className = "adminPortal2">
+                    <h1 className= 'h1'>Bookings:</h1>
+                       { this.state.toggle ?
+                       
+                                mapIt
+
+                            :
+            
                                 <form onSubmit={this.handleSubmit} className = 'bookingForm2'>
-                                   
+                                   <p className = "p">Edit here:</p>
                                     <input 
                                         className = "edit"
                                         type='date' 
@@ -161,11 +170,12 @@ class AdminPortal extends Component  {
                                         />
                                     <button className = "editButton">Save</button>
                                 </form>
-                            </div>   
-                        </div>
-                    }
+                       }
+                       
+                                
+                    <button onClick = {this.props.logout}>Log out </button>
                 </div>
-            </Fragment>
+                </Fragment>
         )
     }
 }
