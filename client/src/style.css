@@ -319,6 +319,7 @@ button {
     
     }
 
+    
     .date,
     select,
     input{
@@ -344,7 +345,7 @@ button {
        justify-content: center;
        position: fixed;
        padding:20px;
-   }
+    }
 
 
    .aboutText2,
@@ -353,8 +354,9 @@ button {
       width:auto;
       height: auto;
       margin-top: 30px;
-   }
+    }
 
+   
    .editContainer,
    .bookingForm2{
        display:flex;
@@ -393,9 +395,9 @@ button {
         height: 35px;
         font-size: 15px;
         margin-top: 15px;
-
     }
 
+    
     .signupButton{
         position: relative;
         margin: auto;
