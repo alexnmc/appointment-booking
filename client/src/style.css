@@ -328,6 +328,7 @@ button {
         margin-top: 10px;
     }
     
+    
     p{
         font-size: 19px;
     }
@@ -337,8 +338,7 @@ button {
     }
 
    
-
-   .about{
+    .about{
        display:flex;
        align-items: flex-start;
        justify-content: center;
@@ -364,8 +364,7 @@ button {
        margin: auto;
        height: auto;
        width: auto;
-       
-}
+    }
     .editContainer{
         margin-bottom: 350px;
     }
