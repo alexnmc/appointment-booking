@@ -97,7 +97,6 @@
 }
 
 
-
 .edit{
     display:inline-flex;
     align-items: center;
@@ -307,6 +306,7 @@ button {
         font-size: 16px;
     }
 
+    
     .bookingContainer{
         margin:auto;
         margin-top: 40px;
@@ -330,6 +330,7 @@ button {
     p{
         font-size: 19px;
     }
+    
     
     .login{
         width:auto;
@@ -386,7 +387,6 @@ button {
     }
 
    
-
     button{
         width:100px;
         height: 35px;
