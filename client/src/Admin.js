@@ -9,8 +9,6 @@ class Admin extends Component {
             password: '',
             toggle: true,
             adminPassword: ''
-
-
         }
     }
 
@@ -35,10 +33,8 @@ class Admin extends Component {
         this.setState({
             username: '',
             password: ''
-
         })
     }
-
 
 
     handleSignup = (e) => {
@@ -56,9 +52,8 @@ class Admin extends Component {
             this.setState({
                 username: '',
                 password: '',
-        })
+            })
 
-            
         } else {
             if(this.state.adminPassword === "") {
                 alert("please enter secret code: vschool")
@@ -77,7 +72,6 @@ class Admin extends Component {
         this.setState({
             [name]: value
         })
-
     }
 
 
