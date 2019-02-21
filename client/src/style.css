@@ -21,16 +21,12 @@
 
 
 .navbar a {
-
     text-decoration: none;
-    
     color: rgb(255, 123, 0);
 }
 
 .navbar a:hover{
-      
-      
-      color: rgb(245, 217, 191);
+    color: rgb(245, 217, 191);
 }
 
 .home {
@@ -159,6 +155,7 @@ h4{
     font-size:26px;
     font-weight: 900;
 }
+
 
 .date,
 select{

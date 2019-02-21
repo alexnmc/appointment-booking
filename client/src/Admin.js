@@ -22,7 +22,7 @@ class Admin extends Component {
     }
 
 
-    handleLogin = (e) => {     // login method, we send the username and password entered in the input fields to the database 
+    handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
         e.preventDefault()
         const newAdmin = {
             username: this.state.username,
