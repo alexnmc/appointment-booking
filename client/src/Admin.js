@@ -12,6 +12,7 @@ class Admin extends Component {
         }
     }
 
+    
     editToggler = () => {
         this.setState(prevState => {
             return {
