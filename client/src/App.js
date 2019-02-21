@@ -14,11 +14,11 @@ import ProtectedRoutes from './PortectedRoutes'
 class App extends Component {
     render(){
         return (
-
-        //if there is a token in the local storage(or state) the  Admin component redirects to the AdminPortal component autoomatically
+    //if there is a token in the local storage(or state) the  Admin component redirects to the AdminPortal component autoomatically
             <div>
                 <Navbar token = {this.props.token} />
                 <Switch>
+                    
                     <Route exact path="/" component={Home}/>
                     <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
@@ -31,7 +31,6 @@ class App extends Component {
                     />
                 
                 </Switch>
-
             </div>
         )
     }

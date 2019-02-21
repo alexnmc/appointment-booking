@@ -18,7 +18,6 @@ class AdminPortal extends Component  {
             phone: '',
             toggle: true,
             currentId: ''
-            
         }
     }
     
@@ -89,30 +88,23 @@ class AdminPortal extends Component  {
     
    
    
-   
-    
-   
-   
-    render(){
-       
+render(){
        
         let mapIt = this.props.bookings.map(item => {
                                 
             return(
                 
-
                 <div className = "bookingList" key = {item._id} > 
                         
                         {`Name: ${item.name.toUpperCase()} ,
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
                         Time: ${item.time} , Phone: ${item.phone} , 
-                        Email: ${item.email} `}
+                        Email: ${item.email}`}
                     
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone,item.email)}>Edit</button>
                 
                 </div>  
-
         )})
        
        

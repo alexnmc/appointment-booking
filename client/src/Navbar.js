@@ -9,8 +9,6 @@ const Navbar = (props) => {
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
             <Link to = "/admin">Admin</Link>
-            
-            
         </div>
     )
 }

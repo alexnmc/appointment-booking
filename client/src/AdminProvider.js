@@ -83,8 +83,6 @@ class AdminProvider extends Component {
             localStorage.setItem("user", JSON.stringify(admin))
             localStorage.setItem("token", token)
             this.setState({ user: admin, token })
-           
-            
         })
         .catch(err => alert(err.response.data.errMsg))
     }
@@ -102,7 +100,6 @@ class AdminProvider extends Component {
                     showBookings: this.showBookings,
                     handleDelete: this.handleDelete,
                     handleEdit: this.handleEdit
-
                 }}>
                 {this.props.children}
             </AdminContext.Provider>
