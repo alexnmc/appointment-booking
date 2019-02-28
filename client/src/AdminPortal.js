@@ -164,8 +164,7 @@ render(){
                                 </form>
                        }
                        
-                                
-                    <button onClick = {this.props.logout}>Log out </button>
+                        <button onClick = {this.props.logout}>Log out </button>
                 </div>
                 </Fragment>
         )
