@@ -52,7 +52,7 @@
     display: block;
     height: 350px;
     width: 300px;
-    border: 4px solid rgba(255, 123, 0, 0.911);
+    border: 3px solid rgba(255, 123, 0, 0.911);
     border-radius:10px;
     background-color: rgba(5, 44, 49, 0.842);
     margin-right:300px;
@@ -63,7 +63,7 @@
     display: block;
     height: 350px;
     width: 300px;
-    border: 4px solid rgba(255, 123, 0, 0.911);
+    border: 3px solid rgba(255, 123, 0, 0.911);
     border-radius:10px;
     background-color: rgba(5, 44, 49, 0.842);
 }
@@ -83,7 +83,7 @@
     display: block;
     height: 370px;
     width: 300px;
-    border: 4px solid rgba(255, 123, 0, 0.918);
+    border: 3px solid rgba(255, 123, 0, 0.918);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.774);
     margin-right: 300px;
@@ -93,7 +93,7 @@
     display: block;
     height: 370px;
     width: 300px;
-    border: 4px solid rgba(255, 123, 0, 0.918);
+    border: 3px solid rgba(255, 123, 0, 0.918);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.774);
     
@@ -174,7 +174,7 @@ h4{
 
 h2{
     text-align: center;
-    color: rgb(255, 223, 194);
+    color: rgb(255, 230, 210);
     font-family: "verdana";
     margin-top:-80px;
     margin-bottom: 50px;
