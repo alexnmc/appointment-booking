@@ -118,7 +118,7 @@ class Home extends Component {
                             <input
                                 type ='text'
                                 name ='username'
-                                placeholder  ='username'
+                                placeholder  ='Username:'
                                 value = {this.props.username}
                                 onChange= {this.props.handleChange}
                             />
@@ -126,7 +126,7 @@ class Home extends Component {
                             <input
                                 type ='text'
                                 name ='password'
-                                placeholder ='Password'
+                                placeholder ='Password:'
                                 value = {this.props.password}
                                 onChange = {this.props.handleChange}
                             />
