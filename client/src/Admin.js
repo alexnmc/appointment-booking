@@ -87,8 +87,8 @@ class Admin extends Component {
                                 <h4>Admin only:</h4>
                                 <input
                                     type='text'
-                                    name='Username:'
-                                    placeholder='username'
+                                    name='username:'
+                                    placeholder='Username'
                                     value={this.state.username}
                                     onChange={this.handleChange}
                                 />
@@ -111,7 +111,7 @@ class Admin extends Component {
                             <input
                                 type='text'
                                 name='adminPassword'
-                                placeholder='enter code'
+                                placeholder='enter code:'
                                 value={this.state.adminPassword}
                                 onChange={this.handleChange}
                             />
@@ -119,7 +119,7 @@ class Admin extends Component {
                             <input
                                 type='text'
                                 name='username'
-                                placeholder='enter a username'
+                                placeholder='enter a username:'
                                 value={this.state.username}
                                 onChange={this.handleChange}
                             />
@@ -127,7 +127,7 @@ class Admin extends Component {
                             <input
                                 type='text'
                                 name='password'
-                                placeholder='choose your password'
+                                placeholder='choose your password:'
                                 value={this.state.password}
                                 onChange={this.handleChange}
                             />

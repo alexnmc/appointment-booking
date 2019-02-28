@@ -89,6 +89,7 @@
     margin-left: 120px;
 }
 
+
 .signUp2{
     display: block;
     height: 370px;
@@ -125,12 +126,16 @@
     width: 170px;
 }
 
+
+
 .editButton{
     width:100px;
     border-radius: 200px;
     margin:10px;
    
 }
+
+
 
 .bookingForm2{
     height:auto;
@@ -193,7 +198,7 @@ select{
     margin: auto;
     margin-top: 30px;
     height: 35px;
-    width: 200px;
+    width: 220px;
     border: 3px solid  rgb(255, 123, 0);
     background-color:rgba(30, 30, 59, 0.205);
     color:rgb(240, 219, 161);
@@ -210,7 +215,7 @@ input{
     margin: auto;
     margin-top: 30px;
     height: 35px;
-    width: 200px;
+    width: 220px;
     font-size: 15px;
     border: 3px solid  rgba(255, 123, 0, 0.877);
     border-radius: 5px;
@@ -225,7 +230,7 @@ button {
     margin: auto;
     margin-top:30px;
     height: 40px;
-    width: 150px;
+    width: 130px;
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
