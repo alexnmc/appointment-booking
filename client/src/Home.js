@@ -52,6 +52,7 @@ class Home extends Component {
         let name = this.props.user.username
         return(
             <div className = "home">
+            <h2>Professional  jet ski  racing!</h2>
             { this.props.token ?
             
                 <div className='bookingContainer'>
