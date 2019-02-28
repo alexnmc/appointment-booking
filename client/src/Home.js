@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import data from './time.json'
+import {withUser} from './UserProvider'
 
 class Home extends Component {
     constructor(){
@@ -47,11 +48,16 @@ class Home extends Component {
     
 
     render(){
+
+        let name = this.props.user.username
         return(
             <div className = "home">
+            { this.props.token ?
             
                 <div className='bookingContainer'>
+                 
                     <form onSubmit={this.handleSubmit} className = 'bookingForm'>
+                    <p>{`Hello ${name ? name.toUpperCase() : "Hello"} !`}</p>
                         <p>Book your adventure:</p>
                         <input className = "date"
                             type='date' 
@@ -94,11 +100,70 @@ class Home extends Component {
                             required
                             />
                         <button>Submit</button>
+                        <button className = "button" onClick = {this.props.logout}>Log out </button>
+                   
                     </form>
+                   
                 </div>
+
+                :
+                
+                <div>
+                { this.props.toggle ?
+                    <div className = 'logIn'>
+                        <form onSubmit={this.props.handleLogin} className='loginForm'>
+                            <h4>Bookings here:</h4>
+                            <input
+                                type ='text'
+                                name ='username'
+                                placeholder  ='username'
+                                value = {this.props.username}
+                                onChange= {this.props.handleChange}
+                            />
+
+                            <input
+                                type ='text'
+                                name ='password'
+                                placeholder ='Password'
+                                value = {this.props.password}
+                                onChange = {this.props.handleChange}
+                            />
+
+                            <button>Login</button>
+                            
+                        </form>
+                        <button className ='signupButton' onClick = {this.props.editToggler}>Sign up</button>
+                    </div>
+                    
+                    :
+                    
+                    <form onSubmit={this.props.handleSignup} className='signUp'>
+                         <h4>Sign Up:</h4>
+                        
+                        <input
+                            type='text'
+                            name='username'
+                            placeholder ='enter a username'
+                            value ={this.props.username}
+                            onChange ={this.props.handleChange}
+                        />
+
+                        <input
+                            type ='text'
+                            name ='password'
+                            placeholder ='choose your password'
+                            value = {this.props.password}
+                            onChange = {this.props.handleChange}
+                        />
+                        <button>Sign up</button>
+                    </form>
+            }
+            </div>
+            }
+                  
             </div>
         )
     }
 }
 
-export default Home
+export default withUser(Home)

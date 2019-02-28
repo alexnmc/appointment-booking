@@ -54,9 +54,19 @@
     border: 4px solid rgba(255, 123, 0, 0.911);
     border-radius:10px;
     background-color: rgba(5, 44, 49, 0.842);
-    margin:auto;
+    margin-right:300px;
    
 }
+
+.logIn2{
+    display: block;
+    height: 350px;
+    width: 300px;
+    border: 4px solid rgba(255, 123, 0, 0.911);
+    border-radius:10px;
+    background-color: rgba(5, 44, 49, 0.842);
+}
+
 
 .loginForm{
     height: 90%;
@@ -75,8 +85,7 @@
     border: 4px solid rgba(255, 123, 0, 0.918);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.774);
-    margin:auto;
-    margin-top:70px;
+    margin-right: 300px;
 }
 
 
@@ -87,8 +96,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 500px;
-    width: 350px;
+    height: 650px;
+    width: 400px;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
@@ -139,7 +148,6 @@
 p{
     color: rgb(245, 217, 191);
     font-family: "verdana";
-    margin-top: -30px;
     font-size:25px;
     font-weight: 900;
 }
