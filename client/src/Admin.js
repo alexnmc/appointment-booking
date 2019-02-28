@@ -106,7 +106,7 @@ class Admin extends Component {
                             <button className='signupButton' onClick={this.editToggler}>Sign up</button>
                         </div>
                         :
-                        <form onSubmit={this.handleSignup} className='signUp'>
+                        <form onSubmit={this.handleSignup} className='signUp2'>
                        
                             <input
                                 type='text'
