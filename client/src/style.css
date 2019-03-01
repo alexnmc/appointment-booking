@@ -268,8 +268,8 @@ button {
 
     background-color: rgba(206, 0, 0, 0.87);
     color: rgb(255, 220, 197);
-    width: 70px;
-    height: 35px;
+    width: 65px;
+    height: 32px;
     margin: 10px;
     font-size: 12px;
     border-radius: 100px;
@@ -277,6 +277,19 @@ button {
     display: inline;
 }
 
+
+.deleteButton2{
+
+    background-color: rgba(206, 0, 0, 0.87);
+    color: rgb(255, 220, 197);
+    width: 70px;
+    height: 38px;
+    margin: 10px;
+    font-size: 12px;
+    border-radius: 100px;
+    border: 2px solid rgb(0, 0, 0);
+    display: inline;
+}
 
 .admin{
         
