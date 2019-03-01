@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import data from './time.json'
 import {withUser} from './UserProvider'
+import moment from 'moment'
 
 class Home extends Component {
     constructor(){
@@ -12,13 +13,16 @@ class Home extends Component {
             name: '',
             email: '',
             phone: '',
+            toggle: true,
+            booking: [],
+            
             
         }
     }
 
+    
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        console.log(this.state.date)
         const {date, time, name, email, phone} = this.state
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone}).then(res => {
             
@@ -46,67 +50,116 @@ class Home extends Component {
     }
 
     
+    
+    editToggler = () => {
+        this.setState(prevState => {
+            return {
+                toggle: !prevState.toggle  
+            }
+        })
+        this.showBooking()
+    }
+
+
+    
+    showBooking = () => {
+        axios.get('/bookings').then(res => { 
+            
+        this.setState({
+                booking: res.data,
+               
+            })
+        })
+    }
+    
+    
 
     render(){
-
+       
+        let mapBoking = this.state.booking.map(item => {
+            
+            return(
+            <div>
+            <p>{item.name}</p>
+            <p>{moment(item.date).format("MMM Do YY ")}</p>
+            </div>
+            )
+        })
+           
         let name = this.props.user.username
+        
         return(
             <div className = "home">
             
             { this.props.token ?
+                <div>
+                { this.state.toggle ?
                 
-                <div className='bookingContainer'>
+                    <div className='bookingContainer'>
                  
-                    <form onSubmit={this.handleSubmit} className = 'bookingForm'>
-                    <p>{`Hello ${name ? name.toUpperCase() : "Hello"} !`}</p>
-                        <p>Book your adventure:</p>
-                        <input className = "date"
-                            type='date' 
-                            name='date'
-                            value={this.state.date} 
-                            onChange={this.handleChange}
-                            required
-                            />
-                        <select 
-                            required 
-                            aria-required="true" 
-                            name='time'
-                            value={this.state.time}
-                            onChange={this.handleChange}>
-                            <option value = ''>Choose a Time</option>
-                            {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
-                        </select>
-                        <input 
-                            type='text'
-                            name='name'
-                            placeholder='Name of Renter'
-                            value={this.state.name}
-                            onChange={this.handleChange}
-                            required
-                            />
-                        <input 
-                            type='email'
-                            name='email'
-                            placeholder='Your Email Address'
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            required
-                            />
-                        <input 
-                            type='number'
-                            name='phone'
-                            placeholder='Phone Number'
-                            value={this.state.phone}
-                            onChange={this.handleChange}
-                            required
-                            />
-                        <button>Submit</button>
-                        <button className = "button" onClick = {this.props.logout}>Log out </button>
-                   
-                    </form>
-                   
-                </div>
+                        <form onSubmit={this.handleSubmit} className = 'bookingForm'>
+                       
+                        <p>{`Hello ${name ? name.toUpperCase() : "Hello"} !`}</p>
+                            <p>Book your adventure:</p>
+                            <input className = "date"
+                                type='date' 
+                                name='date'
+                                value={this.state.date} 
+                                onChange={this.handleChange}
+                                required
+                                />
+                            <select 
+                                required 
+                                aria-required="true" 
+                                name='time'
+                                value={this.state.time}
+                                onChange={this.handleChange}>
+                                <option value = ''>Choose a Time</option>
+                                { data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                            </select>
+                            <input 
+                                type='text'
+                                name='name'
+                                placeholder='Name of Renter'
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                                required
+                                />
+                            <input 
+                                type='email'
+                                name='email'
+                                placeholder='Your Email Address'
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                                required
+                                />
+                            <input 
+                                type='number'
+                                name='phone'
+                                placeholder='Phone Number'
+                                value={this.state.phone}
+                                onChange={this.handleChange}
+                                required
+                                />
+                            <button>Submit</button>
+                            <button onClick = {this.editToggler}>Booking</button>
+                            <button className = "button" onClick = {this.props.logout}>Log out </button>
+                        
+                        </form>
+                    </div>
+                    
+                    :
 
+                    <div className = "bookingContainer">
+                        <div className = "booking2">
+                        {mapBoking}
+                        </div>
+                        <button className = "button1" onClick = {this.editToggler}>Return</button>
+                        <button className = "button1" onClick = {this.props.logout}>Log out </button>
+                    </div>
+                }
+                </div>
+              
                 :
                 
                 <div>

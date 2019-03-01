@@ -79,7 +79,6 @@ authRouter.get('/', (req, res) => {    // get all for testing with postman
             return next(err)
         }
         return res.status(200).send(data)
-
     })
 })
 

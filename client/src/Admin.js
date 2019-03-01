@@ -38,6 +38,7 @@ class Admin extends Component {
     }
 
 
+    
     handleSignup = (e) => {
         e.preventDefault()
        
@@ -88,7 +89,7 @@ class Admin extends Component {
                                 <input
                                     type='text'
                                     name='username:'
-                                    placeholder='Username'
+                                    placeholder='Username:'
                                     value={this.state.username}
                                     onChange={this.handleChange}
                                 />
@@ -96,7 +97,7 @@ class Admin extends Component {
                                 <input
                                     type='text'
                                     name='Password:'
-                                    placeholder='Password'
+                                    placeholder='Password:'
                                     value={this.state.password}
                                     onChange={this.handleChange}
                                 />
@@ -111,7 +112,7 @@ class Admin extends Component {
                             <input
                                 type='text'
                                 name='adminPassword'
-                                placeholder='enter code:'
+                                placeholder='enter secret code:'
                                 value={this.state.adminPassword}
                                 onChange={this.handleChange}
                             />
