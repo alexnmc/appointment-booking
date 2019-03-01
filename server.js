@@ -15,6 +15,8 @@ app.use(morgan('dev'))
 app.use("/api", expressJwt({secret})) //req.user === {username, password, _id}
 app.use(express.static(path.join(__dirname, "client", "build")))
 
+
+
 //Routes
 app.use('/bookings', require('./routes/bookings'))
 app.use("/auth", require("./routes/auth"))
@@ -22,9 +24,11 @@ app.use('/user', require("./routes/user"))
 
 
 
+
 mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/version2', {useNewUrlParser: true}, () => {
     console.log('connect to the db captain!')    // name of database is version2
 })
+
 
 
 

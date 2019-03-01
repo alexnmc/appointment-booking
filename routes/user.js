@@ -95,4 +95,9 @@ authRouter.delete('/', (req, res, next) => {
     })
 })
 
+
+
+
+
+
 module.exports = authRouter

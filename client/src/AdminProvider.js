@@ -29,6 +29,7 @@ class AdminProvider extends Component {
     }
    
     
+    
     logout = () => {
         this.setState({
             user:'',   // we logout by removing the token from state and local storage

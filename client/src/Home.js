@@ -76,17 +76,16 @@ class Home extends Component {
 
     render(){
        
-        let mapBoking = this.state.booking.map(item => {
+        let mapBooking = this.state.booking.map(item => {
             
             return(
             <div>
-            <p>{item.name}</p>
+            <p>{item.name.toUpperCase()}</p>
             <p>{moment(item.date).format("MMM Do YY ")}</p>
             </div>
             )
         })
            
-        let name = this.props.user.username
         
         return(
             <div className = "home">
@@ -99,7 +98,7 @@ class Home extends Component {
                  
                         <form onSubmit={this.handleSubmit} className = 'bookingForm'>
                        
-                        <p>{`Hello ${name ? name.toUpperCase() : "Hello"} !`}</p>
+                        <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
                             <p>Book your adventure:</p>
                             <input className = "date"
                                 type='date' 
@@ -142,7 +141,7 @@ class Home extends Component {
                                 required
                                 />
                             <button>Submit</button>
-                            <button onClick = {this.editToggler}>Booking</button>
+                            <button onClick = {this.editToggler}>Bookings</button>
                             <button className = "button" onClick = {this.props.logout}>Log out </button>
                         
                         </form>
@@ -152,7 +151,7 @@ class Home extends Component {
 
                     <div className = "bookingContainer">
                         <div className = "booking2">
-                        {mapBoking}
+                        {mapBooking}
                         </div>
                         <button className = "button1" onClick = {this.editToggler}>Return</button>
                         <button className = "button1" onClick = {this.props.logout}>Log out </button>
