@@ -149,7 +149,7 @@ class Home extends Component {
                             <button >Submit</button>
                             <button onClick = {this.editToggler}>Bookings</button>
                             <button className = "button" onClick = {this.props.logout}>Log out </button>
-                            <button className = "deleteButton">Delete acount</button>
+                            <button className = "deleteButton2">Delete acount</button>
                         </form>
                     </div>
                     
