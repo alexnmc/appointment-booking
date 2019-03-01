@@ -9,11 +9,37 @@ const userSchema = new Schema({
         unique: true,
         lowercase: true
     },
+    
     password: {
         type: String,
         required: true
-    }
+    },
     
+    name: {
+        type: String,
+        default:'not booked'
+    },
+    
+    email: {
+        type: String,
+        default: 'email@'
+        
+    },
+    
+    phone: {
+        type:Number,
+        default:0
+    },
+    
+    time: {
+        type: String,
+        default: 'not booked'
+    },
+    
+    date: {
+        type: Date,
+       
+    }
 
 })
    
@@ -52,4 +78,4 @@ userSchema.methods.withoutPassword = function(){
     
 
 
-module.exports = mongoose.model("User", userSchema); //admin model using the admin schema
+module.exports = mongoose.model("User", userSchema); 

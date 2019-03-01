@@ -14,7 +14,9 @@ class Home extends Component {
             email: '',
             phone: '',
             toggle: true,
-            booking: [],
+            booking: {},
+            booking2: {}
+           
             
             
         }
@@ -23,19 +25,30 @@ class Home extends Component {
     
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        const {date, time, name, email, phone} = this.state
-        axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone}).then(res => {
+       
+        const updates = {
+            date: this.state.date,
+            time: this.state.time,    
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+         }
+
+        axios.put(`/user/${this.props.user.username}`, updates).then(res => {
             
-                   alert(res.data +' Date: '+ date +'  from '+ time)
+             console.log(res.data)
+                  
+                  this.setState({
+                    date: '',
+                    time: '',   // reseting all the inputs to be empty after submit
+                    name: '',   
+                    email: '',
+                    phone: '',
+                    booking:res.data,
+            })
+                   
         })
-        this.setState({
-            date: '',
-            time: '',   // reseting all the inputs to be empty after submit
-            name: '',   
-            email: '',
-            phone: '',
-            
-        })
+        
     }
 
     
@@ -51,6 +64,7 @@ class Home extends Component {
 
     
     
+    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -58,15 +72,17 @@ class Home extends Component {
             }
         })
         this.showBooking()
+       
     }
 
 
     
     showBooking = () => {
-        axios.get('/bookings').then(res => { 
-            
+        
+        axios.get(`/user/${this.props.user.username}`).then(res => { 
+            console.log(res.data)
         this.setState({
-                booking: res.data,
+                booking2: res.data,
                
             })
         })
@@ -76,17 +92,7 @@ class Home extends Component {
 
     render(){
        
-        let mapBooking = this.state.booking.map(item => {
-            
-            return(
-            <div>
-            <p>{item.name.toUpperCase()}</p>
-            <p>{moment(item.date).format("MMM Do YY ")}</p>
-            </div>
-            )
-        })
-           
-        
+    
         return(
             <div className = "home">
             
@@ -96,7 +102,7 @@ class Home extends Component {
                 
                     <div className='bookingContainer'>
                  
-                        <form onSubmit={this.handleSubmit} className = 'bookingForm'>
+                        <form  className = 'bookingForm' onSubmit={this.handleSubmit}  >
                        
                         <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
                             <p>Book your adventure:</p>
@@ -140,7 +146,7 @@ class Home extends Component {
                                 onChange={this.handleChange}
                                 required
                                 />
-                            <button>Submit</button>
+                            <button >Submit</button>
                             <button onClick = {this.editToggler}>Bookings</button>
                             <button className = "button" onClick = {this.props.logout}>Log out </button>
                         
@@ -151,7 +157,12 @@ class Home extends Component {
 
                     <div className = "bookingContainer">
                         <div className = "booking2">
-                        {mapBooking}
+                        <p className = "p3">{"Your booking is:"}</p>
+                        <p className = "p2"> {`For: ${this.state.booking2.name}`}</p>
+                        <p className = "p2">{moment(this.state.booking2.date).format("MMM Do YY ")}</p>
+                        <p className = "p2">{`at: ${this.state.booking2.time}`}</p>
+                        <p className = "p2">{`Phone: ${this.state.booking2.phone}`}</p>
+                        <p className = "p2">{`Email: ${this.state.booking2.email}`}</p>
                         </div>
                         <button className = "button1" onClick = {this.editToggler}>Return</button>
                         <button className = "button1" onClick = {this.props.logout}>Log out </button>

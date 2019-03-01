@@ -117,6 +117,7 @@ class UserProvider extends Component {
             <Context.Provider
                 value={{
                     ...this.state,
+                   user: this.state.user,
                    editToggler : this.editToggler,
                    signup : this.signup,
                    login : this.login,
