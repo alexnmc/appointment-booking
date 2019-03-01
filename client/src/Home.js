@@ -36,7 +36,7 @@ class Home extends Component {
 
         axios.put(`/user/${this.props.user.username}`, updates).then(res => {
             
-             console.log(res.data)
+            alert('You are booked on:  Date: '+ this.state.date +'  from '+ this.state.time)
                   
                   this.setState({
                     date: '',
@@ -149,7 +149,7 @@ class Home extends Component {
                             <button >Submit</button>
                             <button onClick = {this.editToggler}>Bookings</button>
                             <button className = "button" onClick = {this.props.logout}>Log out </button>
-                        
+                            <button className = "deleteButton">Delete acount</button>
                         </form>
                     </div>
                     
@@ -157,10 +157,11 @@ class Home extends Component {
 
                     <div className = "bookingContainer">
                         <div className = "booking2">
+                        <p className = "p3">{this.props.user.username.toUpperCase()}</p>
                         <p className = "p3">{"Your booking is:"}</p>
                         <p className = "p2"> {`For: ${this.state.booking2.name}`}</p>
                         <p className = "p2">{moment(this.state.booking2.date).format("MMM Do YY ")}</p>
-                        <p className = "p2">{`at: ${this.state.booking2.time}`}</p>
+                        <p className = "p2">{`Time: ${this.state.booking2.time}`}</p>
                         <p className = "p2">{`Phone: ${this.state.booking2.phone}`}</p>
                         <p className = "p2">{`Email: ${this.state.booking2.email}`}</p>
                         </div>
