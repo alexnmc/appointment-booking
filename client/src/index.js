@@ -8,10 +8,10 @@ import UserProvider from './UserProvider'
 
 ReactDOM.render(
     <BrowserRouter>
-    <UserProvider>
     <AdminProvider>
+    <UserProvider>   
         <App/>
-    </AdminProvider>
     </UserProvider>
+    </AdminProvider>
     </BrowserRouter>, 
 document.getElementById('root'))

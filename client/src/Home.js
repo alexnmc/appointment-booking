@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import data from './time.json'
 import {withUser} from './UserProvider'
+import {withAdmin} from './AdminProvider'
 import moment from 'moment'
 
 class Home extends Component {
@@ -89,6 +90,14 @@ class Home extends Component {
     }
     
     
+    handleErase = () => {
+
+            this.props.handleDelete()
+            this.props.logout()
+    }
+
+
+
 
     render(){
        
@@ -149,7 +158,7 @@ class Home extends Component {
                             <button >Submit</button>
                             <button onClick = {this.editToggler}>Bookings</button>
                             <button className = "button" onClick = {this.props.logout}>Log out </button>
-                            <button className = "deleteButton2">Delete Account</button>
+                            <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
                         </form>
                     </div>
                     
@@ -232,4 +241,4 @@ class Home extends Component {
     }
 }
 
-export default withUser(Home)
+export default withAdmin(withUser(Home))
