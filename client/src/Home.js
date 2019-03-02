@@ -79,7 +79,8 @@ class Home extends Component {
         axios.get(`/bookings/${id}`).then(res => { 
             
         this.setState({
-                booking2: res.data,
+                
+            booking2: res.data
                
             })
         })
