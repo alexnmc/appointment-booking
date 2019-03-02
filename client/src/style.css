@@ -147,6 +147,7 @@
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
     margin-right: 300px;
+    padding:20px;
 
 }
 
@@ -338,8 +339,8 @@ button{
     color: rgb(255, 220, 197);
     width: 65px;
     height: 35px;
-    margin-top: 20px;
-    margin-left: -20px;
+    margin-top: 0px;
+    margin-left: 10px;
     font-size: 10px;
     border-radius: 100px;
     border: 2px solid rgb(0, 0, 0);
