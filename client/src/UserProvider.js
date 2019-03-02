@@ -116,7 +116,7 @@ class UserProvider extends Component {
     
     
     handleDelete2 = (id) => {
-       console.log('hello')
+      
         axios.delete(`/user/${id}`).then(res => {
                 
            alert(res.data)

@@ -79,7 +79,7 @@ class AdminPortal extends Component  {
         if(!updates.phone.length) {
             delete updates.phone
         }
-        console.log("this goes into the database for update=",updates)
+        console.log("this goes into the database for update=", updates)
         
         this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
         this.editToggler(null)
@@ -103,7 +103,7 @@ render(){
                         Email: ${item.email}`}
                     
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone,item.email)}>Edit</button>
+                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email)}>Edit</button>
                 
                 </div>  
         )})

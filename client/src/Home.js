@@ -26,7 +26,7 @@ class Home extends Component {
     
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        console.log(this.props.user._id)
+        
         const {date, time, name, email, phone, userID, username} = this.state
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
             
