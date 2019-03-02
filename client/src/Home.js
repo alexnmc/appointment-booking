@@ -60,7 +60,6 @@ class Home extends Component {
         this.setState({
             [name]: value
         })
-
     }
 
     
@@ -169,7 +168,7 @@ class Home extends Component {
                         <p className = "p3">{this.props.user.username.toUpperCase()}</p>
                         <p className = "p3">{"Your booking is:"}</p>
                         <p className = "p2"> {`For: ${this.state.booking2.name}`}</p>
-                        <p className = "p2">{moment(this.state.booking2.date).format("MMM Do YY ")}</p>
+                        <p className = "p2">{ moment(this.state.booking2.date).format("MMM Do YY ")}</p>
                         <p className = "p2">{`Time: ${this.state.booking2.time}`}</p>
                         <p className = "p2">{`Phone: ${this.state.booking2.phone}`}</p>
                         <p className = "p2">{`Email: ${this.state.booking2.email}`}</p>

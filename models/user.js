@@ -22,7 +22,7 @@ const userSchema = new Schema({
     
     email: {
         type: String,
-        default: 'email@'
+        default: 'email@email'
         
     },
     
