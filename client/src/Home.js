@@ -1,9 +1,13 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import data from './time.json'
-import {withUser} from './UserProvider'
 import {withAdmin} from './AdminProvider'
+import {withUser} from './UserProvider'
 import moment from 'moment'
+
+
+
+
 
 class Home extends Component {
     constructor(props){
@@ -31,6 +35,7 @@ class Home extends Component {
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
             
                    alert(res.data +' Date: '+ date +'  from '+ time)
+                   
         })
         this.setState({
             date: '',
@@ -97,7 +102,7 @@ class Home extends Component {
         let mapBooking2 = this.state.booking2.map(item =>{
             
             return(
-              <div className = "homeBooking">
+              <div className = "homeBooking" key = {item._id}>
               <p className = "p2"> {`For: ${item.name.toUpperCase()}`}</p>   
               <p className = "p2"> {`Date: ${moment(item.date).format("MMM Do YY ")}`}</p>
               <p className = "p2"> {`Time: ${item.time}`}</p>
