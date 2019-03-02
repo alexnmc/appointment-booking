@@ -17,7 +17,6 @@ class UserProvider extends Component {
             token: localStorage.getItem("token") || "",
             
         }
-        
     }
 
     
@@ -95,7 +94,6 @@ class UserProvider extends Component {
                 password: '',
             })
 
-        
         this.editToggler()
     }
 

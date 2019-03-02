@@ -13,16 +13,16 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state = {
+            
             date: '',
             time: '',      //we store all the data from the inputs here and after that we send it to the database
             name: '',
             email: '',
             phone: '',
-            toggle: true,
-            booking: {},
-            booking2: [],
             userID: this.props.user._id,
-            username: this.props.user.username
+            username: this.props.user.username,
+            toggle: true,
+            booking2: []
             
         }
     }
@@ -32,20 +32,20 @@ class Home extends Component {
         e.preventDefault()
         
         const {date, time, name, email, phone, userID, username} = this.state
+        
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
             
-                   alert(res.data +' Date: '+ date +'  from '+ time)
-                   
+                alert(res.data +' Date: '+ date +'  from '+ time)
         })
+        
         this.setState({
             date: '',
-            time: '',   // reseting all the inputs to be empty after submit
+            time: '',               // reseting all the inputs to be empty after submit
             name: '',   
             email: '',
             phone: '',
             userID: '',
             username: ''
-            
         })
     }
 
@@ -70,7 +70,6 @@ class Home extends Component {
         })
         
         this.showBooking(this.props.user._id)
-       
     }
 
 
@@ -108,7 +107,6 @@ class Home extends Component {
               <p className = "p2"> {`Time: ${item.time}`}</p>
               </div>
             )
-            
         })
     
         return(

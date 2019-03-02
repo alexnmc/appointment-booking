@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import { withAdmin } from './AdminProvider'
 
+
+
+
+
 class Admin extends Component {
     constructor() {
         super()
@@ -22,6 +26,7 @@ class Admin extends Component {
     }
 
 
+    
     handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
         e.preventDefault()
         const newAdmin = {
@@ -38,6 +43,7 @@ class Admin extends Component {
     }
 
 
+    
     handleSignup = (e) => {
         e.preventDefault()
        
@@ -76,6 +82,7 @@ class Admin extends Component {
     }
 
 
+    
     render() {
 
         return (
