@@ -7,7 +7,7 @@ import Contact from './Contact'
 import Admin from './Admin'
 import AdminPortal from './AdminPortal'
 import {withAdmin} from './AdminProvider'
-import ProtectedRoutes from './PortectedRoutes'
+import ProtectedRoutes from './ProtectedRoutes'
 
 
 
