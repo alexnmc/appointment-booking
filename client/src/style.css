@@ -76,6 +76,7 @@
 }
 
 
+
 .loginForm{
     height: 90%;
 }
@@ -85,6 +86,8 @@
     margin-top: -70px;
     
 }
+
+
 
 .signUp {
     display: block;
@@ -108,6 +111,7 @@
 }
 
 
+
 .bookingContainer{
 
     display: flex;
@@ -123,6 +127,7 @@
     margin-right: 300px;
 
 }
+
 
 
 .booking2{
@@ -145,6 +150,7 @@
     font-size:30px;
 }
 
+
 .edit{
     display:inline-flex;
     align-items: center;
@@ -153,6 +159,7 @@
     height: 35px;
     width: 170px;
 }
+
 
 
 .bookingForm2{
@@ -251,7 +258,7 @@ button {
     align-items: center;
     justify-content: center;
     margin:auto;
-    margin-top:17px;
+    margin-top:20px;
     height: 37px;
     width: 130px;
     border: 3px solid  rgb(206, 99, 0);
@@ -269,7 +276,7 @@ button {
     align-items: center;
     justify-content: center;
     margin:0px;
-    margin-top:17px;
+    margin-top:20px;
     height: 37px;
     width: 130px;
     border: 3px solid  rgb(206, 99, 0);
@@ -299,10 +306,11 @@ button {
 
     background-color: rgba(206, 0, 0, 0.87);
     color: rgb(255, 220, 197);
-    width: 70px;
+    width: 76px;
     height: 40px;
-    margin: 10px;
-    font-size: 11px;
+    margin-top: 30px;
+    margin-left: -20px;
+    font-size: 12px;
     border-radius: 100px;
     border: 2px solid rgb(0, 0, 0);
     display: inline;
