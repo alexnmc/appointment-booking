@@ -17,8 +17,7 @@ class AdminPortal extends Component  {
             email: '',
             phone: '',
             toggle: true,
-            currentId: '',
-            username:''
+            currentId: ''
         }
     }
     
@@ -31,7 +30,7 @@ class AdminPortal extends Component  {
 
     
     
-    editToggler = (id, username, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
+    editToggler = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
         this.setState(prevState =>{
             return{
                 toggle: !prevState.toggle,
@@ -41,7 +40,6 @@ class AdminPortal extends Component  {
                 name: name,
                 email: email,
                 phone: phone,
-                username: username
             }
         })
     }
@@ -60,7 +58,7 @@ class AdminPortal extends Component  {
          e.preventDefault()
     
         const updates = {
-                date: this.state.date ? this.state.date : "no date",
+                date: this.state.date,
                 time: this.state.time,    // creates the object we want to send for editing, the database finds the object in the database and updates all the changed values
                 name: this.state.name,
                 email: this.state.email,
@@ -83,7 +81,7 @@ class AdminPortal extends Component  {
         }
         console.log("this goes into the database for update=",updates)
         
-        this.props.handleEdit(this.state.username, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
+        this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
         this.editToggler(null)
     }
    
@@ -98,14 +96,14 @@ render(){
                 
                 <div className = "bookingList" key = {item._id} > 
                         
-                    {  `User: ${item.username} ,
-                        Name: ${item.name} ,
+                    { ` User: ${item.username} ,
+                        Name: ${item.name.toUpperCase()} ,
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
                         Time: ${item.time} , Phone: ${item.phone} , 
-                        Email: ${item.email}` }
+                        Email: ${item.email}`}
                     
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.username, item.name, item.date, item.time, item.phone, item.email)}>Edit</button>
+                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone,item.email)}>Edit</button>
                 
                 </div>  
         )})

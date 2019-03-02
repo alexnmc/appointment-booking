@@ -38,7 +38,6 @@ class Admin extends Component {
     }
 
 
-    
     handleSignup = (e) => {
         e.preventDefault()
        
@@ -83,13 +82,13 @@ class Admin extends Component {
             <Fragment>
                 <div className="admin">
                 { this.state.toggle ?
-                        <div className = 'logIn2'>
+                        <div className = 'logIn'>
                             <form onSubmit={this.handleLogin} className='loginForm'>
                                 <h4>Admin only:</h4>
                                 <input
                                     type='text'
                                     name='username'
-                                    placeholder='Username:'
+                                    placeholder='Username'
                                     value={this.state.username}
                                     onChange={this.handleChange}
                                 />
@@ -97,7 +96,7 @@ class Admin extends Component {
                                 <input
                                     type='text'
                                     name='password'
-                                    placeholder='Password:'
+                                    placeholder='Password'
                                     value={this.state.password}
                                     onChange={this.handleChange}
                                 />
@@ -107,12 +106,12 @@ class Admin extends Component {
                             <button className='signupButton' onClick={this.editToggler}>Sign up</button>
                         </div>
                         :
-                        <form onSubmit={this.handleSignup} className='signUp2'>
+                        <form onSubmit={this.handleSignup} className='signUp'>
                        
                             <input
                                 type='text'
                                 name='adminPassword'
-                                placeholder='enter secret code:'
+                                placeholder='enter code'
                                 value={this.state.adminPassword}
                                 onChange={this.handleChange}
                             />
@@ -120,7 +119,7 @@ class Admin extends Component {
                             <input
                                 type='text'
                                 name='username'
-                                placeholder='enter a username:'
+                                placeholder='enter a username'
                                 value={this.state.username}
                                 onChange={this.handleChange}
                             />
@@ -128,7 +127,7 @@ class Admin extends Component {
                             <input
                                 type='text'
                                 name='password'
-                                placeholder='choose your password:'
+                                placeholder='choose your password'
                                 value={this.state.password}
                                 onChange={this.handleChange}
                             />

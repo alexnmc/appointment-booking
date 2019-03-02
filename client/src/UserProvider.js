@@ -15,10 +15,13 @@ class UserProvider extends Component {
             adminPassword: '',
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "",
+            
         }
         
     }
 
+    
+    
     
     editToggler = () => {
         this.setState(prevState => {
@@ -30,6 +33,7 @@ class UserProvider extends Component {
 
 
    
+    
     signup = userInfo => {
         axios.post('/user/signup', userInfo).then(res => {
             const { token, user } = res.data
@@ -41,6 +45,7 @@ class UserProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
 
+    
     
     
     login = userInfo => {
@@ -57,6 +62,7 @@ class UserProvider extends Component {
    
    
    
+    
     handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
         e.preventDefault()
         const newUser = {
@@ -73,6 +79,8 @@ class UserProvider extends Component {
     }
 
 
+    
+    
     handleSignup = (e) => {
         e.preventDefault()
             const newUser = {
@@ -93,6 +101,8 @@ class UserProvider extends Component {
 
 
 
+    
+    
     handleChange = (e) => {
         e.preventDefault()
         const { name, value } = e.target
@@ -101,6 +111,20 @@ class UserProvider extends Component {
         })
     }
 
+    
+    
+    
+    
+    handleDelete2 = (id) => {
+       console.log('hello')
+        axios.delete(`/user/${id}`).then(res => {
+                
+           alert(res.data)
+        })
+    }
+    
+    
+    
     
     logout = () => {
         this.setState({
@@ -111,6 +135,8 @@ class UserProvider extends Component {
         localStorage.removeItem("token")
     }
 
+    
+    
     
     render() {
         return (
@@ -124,6 +150,7 @@ class UserProvider extends Component {
                    handleLogin: this.handleLogin,
                    handleSignup: this.handleSignup,
                    handleChange:this.handleChange,
+                   handleDelete2: this.handleDelete2,
                    logout: this.logout
 
                 }}>
@@ -134,6 +161,7 @@ class UserProvider extends Component {
 }
 
 export default UserProvider
+
 
 
 export const withUser= C => props => (

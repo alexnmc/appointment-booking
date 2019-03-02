@@ -6,8 +6,8 @@ import {withAdmin} from './AdminProvider'
 import moment from 'moment'
 
 class Home extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             date: '',
             time: '',      //we store all the data from the inputs here and after that we send it to the database
@@ -16,9 +16,9 @@ class Home extends Component {
             phone: '',
             toggle: true,
             booking: {},
-            booking2: {}
-           
-            
+            booking2: [],
+            userID: this.props.user._id,
+            username: this.props.user.username
             
         }
     }
@@ -26,30 +26,22 @@ class Home extends Component {
     
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-       
-        const updates = {
-            date: this.state.date,
-            time: this.state.time,    
-            name: this.state.name,
-            email: this.state.email,
-            phone: this.state.phone,
-         }
-
-        axios.put(`/user/${this.props.user.username}`, updates).then(res => {
+        console.log(this.props.user._id)
+        const {date, time, name, email, phone, userID, username} = this.state
+        axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
             
-            alert('You are booked on:  Date: '+ this.state.date +'  from '+ this.state.time)
-                  
-                  this.setState({
-                    date: '',
-                    time: '',   // reseting all the inputs to be empty after submit
-                    name: '',   
-                    email: '',
-                    phone: '',
-                    booking:res.data,
-            })
-                   
+                   alert(res.data +' Date: '+ date +'  from '+ time)
         })
-        
+        this.setState({
+            date: '',
+            time: '',   // reseting all the inputs to be empty after submit
+            name: '',   
+            email: '',
+            phone: '',
+            userID: '',
+            username: ''
+            
+        })
     }
 
     
@@ -71,16 +63,17 @@ class Home extends Component {
                 toggle: !prevState.toggle  
             }
         })
-        this.showBooking()
+        
+        this.showBooking(this.props.user._id)
        
     }
 
 
     
-    showBooking = () => {
+    showBooking = (id) => {
         
-        axios.get(`/user/${this.props.user.username}`).then(res => { 
-            console.log(res.data)
+        axios.get(`/bookings/${id}`).then(res => { 
+            
         this.setState({
                 booking2: res.data,
                
@@ -89,9 +82,10 @@ class Home extends Component {
     }
     
     
+    
     handleErase = () => {
-
-            this.props.handleDelete(this.props.user._id)
+       
+            this.props.handleDelete2(this.props.user._id)
             this.props.logout()
     }
 
@@ -100,6 +94,17 @@ class Home extends Component {
 
     render(){
        
+        let mapBooking2 = this.state.booking2.map(item =>{
+            
+            return(
+              <div className = "homeBooking">
+              <p className = "p2"> {`For: ${item.name.toUpperCase()}`}</p>   
+              <p className = "p2"> {`Date: ${moment(item.date).format("MMM Do YY ")}`}</p>
+              <p className = "p2"> {`Time: ${item.time}`}</p>
+              </div>
+            )
+            
+        })
     
         return(
             <div className = "home">
@@ -163,15 +168,11 @@ class Home extends Component {
                     
                     :
 
-                    <div className = "bookingContainer">
+                    <div className = "bookingContainer2">
                         <div className = "booking2">
                         <p className = "p3">{this.props.user.username.toUpperCase()}</p>
-                        <p className = "p3">{"Your booking is:"}</p>
-                        <p className = "p2"> {`For: ${this.state.booking2.name}`}</p>
-                        <p className = "p2">{ moment(this.state.booking2.date).format("MMM Do YY ")}</p>
-                        <p className = "p2">{`Time: ${this.state.booking2.time}`}</p>
-                        <p className = "p2">{`Phone: ${this.state.booking2.phone}`}</p>
-                        <p className = "p2">{`Email: ${this.state.booking2.email}`}</p>
+                        
+                        {mapBooking2}
                         </div>
                         <button className = "button1" onClick = {this.editToggler}>Return</button>
                         <button className = "button1" onClick = {this.props.logout}>Log out </button>

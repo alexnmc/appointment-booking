@@ -10,27 +10,24 @@ class AdminProvider extends Component {
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "",
             bookings:[],
-            toggle: true
+            toggle: true,
 
         }
     }
 
 
-    
-    
-    handleEdit = (username, updates) => {
-        axios.put(`/user/${username}`, updates).then(response => {
-            console.log( "updated obj",response.data)
+    handleEdit = (id, updates) => {
+        axios.put(`/bookings/${id}`, updates).then(response => {
+            console.log("response.data=",response.data)
             const updatedBooking = response.data
             this.setState(prevState => {
                 return {
-                    bookings: prevState.bookings.map(item => item.username === username ? updatedBooking : item )
+                    bookings: prevState.bookings.map(item => item._id === id ? updatedBooking : item )
                 }
             })
         })
     }
    
-    
     
     logout = () => {
         this.setState({
@@ -44,8 +41,9 @@ class AdminProvider extends Component {
     
     
     showBookings = () => {
-        axios.get('/user').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
-            console.log(res.data)
+        axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
+            
+        
             this.setState({
                 bookings: res.data
             })
@@ -54,7 +52,7 @@ class AdminProvider extends Component {
     
     
     handleDelete = (id) => {
-        axios.delete(`/user/${id}`).then(res => {
+        axios.delete(`/bookings/${id}`).then(res => {
                 
             this.setState(prevState=>({//we use prevState so the requested booking gets deleted without refreshing
                     bookings: prevState.bookings.filter(item => item._id !== id)

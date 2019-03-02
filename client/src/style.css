@@ -7,7 +7,6 @@
 
 
 .navbar {
-    
     width: 100%;
     height: 85px;
     display: flex;
@@ -119,6 +118,22 @@
 
 
 
+.bookingContainer2{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: 665px;
+    width: 390px;
+    border: 3px solid rgb(224, 108, 0);
+    border-radius:10px;
+    background-color: rgba(5, 32, 36, 0.76);
+    margin-right: 300px;
+
+}
+
 .bookingContainer{
 
     display: flex;
@@ -139,13 +154,14 @@
 
 .booking2{
     height: 430px;
-    padding:10px;
+    padding:15px;
 }
 
 
 
 .p2{
     margin-top: 10px;
+    font-size: 21px;
 }
 
 
@@ -349,6 +365,15 @@ button{
     padding:5px;
     width: 100%;
     text-align: center;
+}
+
+
+
+.homeBooking{
+    border:3px solid rgb(245, 217, 191);
+    border-radius: 5px;
+    margin: 4px;
+    padding: 20px;
 }
 
 
