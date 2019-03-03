@@ -118,135 +118,134 @@ class Home extends Component {
     
         return(
             <div className = "home">
-            
-            { this.props.token ?
-                <div>
-                { this.state.toggle ?
                 
-                    <div className='bookingContainer'>
-                 
-                        <form  className = 'bookingForm' onSubmit={this.handleSubmit}  >
-                       
-                        <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
-                            <p>Book your adventure:</p>
-                            <input className = "date"
-                                type='date' 
-                                name='date'
-                                value={this.state.date} 
-                                onChange={this.handleChange}
-                                required
-                                />
-                            <select 
-                                required 
-                                aria-required="true" 
-                                name='time'
-                                value={this.state.time}
-                                onChange={this.handleChange}>
-                                <option value = ''>Choose a Time</option>
-                                { data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
-                            </select>
-                            <input 
-                                type='text'
-                                name='name'
-                                placeholder='Name of Renter'
-                                value={this.state.name}
-                                onChange={this.handleChange}
-                                required
-                                />
-                            <input 
-                                type='email'
-                                name='email'
-                                placeholder='Your Email Address'
-                                value={this.state.email}
-                                onChange={this.handleChange}
-                                required
-                                />
-                            <input 
-                                type='number'
-                                name='phone'
-                                placeholder='Phone Number'
-                                value={this.state.phone}
-                                onChange={this.handleChange}
-                                required
-                                />
-                            <button>Submit</button>
-                            </form>
+                { this.props.token ?
+                    <div>
+                        { this.state.toggle ?
+                        
+                            <div className='bookingContainer'>
+                        
+                                <form  className = 'bookingForm' onSubmit={this.handleSubmit}  >
                             
-                            <button onClick = {this.editToggler}>Bookings</button>
-                            <button className = "button" onClick = {this.props.logout}>Log out </button>
-                            <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
-                         </div>
+                                    <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
+                                    <p>Book your adventure:</p>
+                                    <input className = "date"
+                                        type='date' 
+                                        name='date'
+                                        value={this.state.date} 
+                                        onChange={this.handleChange}
+                                        required
+                                        />
+                                    <select 
+                                        required 
+                                        aria-required="true" 
+                                        name='time'
+                                        value={this.state.time}
+                                        onChange={this.handleChange}>
+                                        <option value = ''>Choose a Time</option>
+                                        { data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                                    </select>
+                                    <input 
+                                        type='text'
+                                        name='name'
+                                        placeholder='Name of Renter'
+                                        value={this.state.name}
+                                        onChange={this.handleChange}
+                                        required
+                                        />
+                                    <input 
+                                        type='email'
+                                        name='email'
+                                        placeholder='Your Email Address'
+                                        value={this.state.email}
+                                        onChange={this.handleChange}
+                                        required
+                                        />
+                                    <input 
+                                        type='number'
+                                        name='phone'
+                                        placeholder='Phone Number'
+                                        value={this.state.phone}
+                                        onChange={this.handleChange}
+                                        required
+                                        />
+                                    <button>Submit</button>
+                                </form>
+                                    
+                                    <button onClick = {this.editToggler}>Bookings</button>
+                                    <button className = "button" onClick = {this.props.logout}>Log out </button>
+                                    <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
+                            </div>
+                            
+                            :
+
+                            <div className = "bookingContainer2">
+                                <div className = "booking2">
+                                    
+                                    <p className = "p3">{this.props.user.username.toUpperCase()}</p>
+                                    {mapBooking2}
+                                    
+                                </div>
+                                <button className = "button1" onClick = {this.editToggler}>Return</button>
+                            </div>
+                        }
+                    </div>
                     
                     :
-
-                    <div className = "bookingContainer2">
-                        <div className = "booking2">
-                        <p className = "p3">{this.props.user.username.toUpperCase()}</p>
                         
-                        {mapBooking2}
-                        </div>
-                        <button className = "button1" onClick = {this.editToggler}>Return</button>
-                        <button className = "button1" onClick = {this.props.logout}>Log out </button>
+                    <div>
+                            <h2>Professional  jet ski  racing!</h2>
+                            {this.props.toggle ?
+                            <div className = 'logIn'>
+                                <form  onSubmit = {this.props.handleLogin}className='loginForm'>
+                                    <h4>Bookings here:</h4>
+                                    <input
+                                        type ='text'
+                                        name ='username'
+                                        placeholder  ='Username:'
+                                        value = {this.props.username}
+                                        onChange= {this.props.handleChange}
+                                    />
+
+                                    <input
+                                        type ='text'
+                                        name ='password'
+                                        placeholder ='Password:'
+                                        value = {this.props.password}
+                                        onChange = {this.props.handleChange}
+                                    />
+
+                                    <button>Login</button>
+                                </form>
+                                <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
+                             </div>
+                            
+                            :
+                            
+                            <form onSubmit={this.props.handleSignup} className='signUp'>
+                                <h4>Sign Up:</h4>
+                                
+                                <input
+                                    type='text'
+                                    name='username'
+                                    placeholder ='enter a username:'
+                                    value ={this.props.username}
+                                    onChange ={this.props.handleChange}
+                                />
+
+                                <input
+                                    type ='text'
+                                    name ='password'
+                                    placeholder ='choose your password:'
+                                    value = {this.props.password}
+                                    onChange = {this.props.handleChange}
+                                />
+                                <button>Sign up</button>
+                            </form>
+                            }
                     </div>
                 }
-                </div>
-              
-                :
                 
-                <div>
-                    <h2>Professional  jet ski  racing!</h2>
-                { this.props.toggle ?
-                    <div className = 'logIn'>
-                        <form  onSubmit = {this.props.handleLogin}className='loginForm'>
-                            <h4>Bookings here:</h4>
-                            <input
-                                type ='text'
-                                name ='username'
-                                placeholder  ='Username:'
-                                value = {this.props.username}
-                                onChange= {this.props.handleChange}
-                            />
-
-                            <input
-                                type ='text'
-                                name ='password'
-                                placeholder ='Password:'
-                                value = {this.props.password}
-                                onChange = {this.props.handleChange}
-                            />
-
-                            <button>Login</button>
-                            
-                        </form>
-                        <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
-                    </div>
-                    
-                    :
-                    
-                    <form onSubmit={this.props.handleSignup} className='signUp'>
-                         <h4>Sign Up:</h4>
-                        
-                        <input
-                            type='text'
-                            name='username'
-                            placeholder ='enter a username:'
-                            value ={this.props.username}
-                            onChange ={this.props.handleChange}
-                        />
-
-                        <input
-                            type ='text'
-                            name ='password'
-                            placeholder ='choose your password:'
-                            value = {this.props.password}
-                            onChange = {this.props.handleChange}
-                        />
-                        <button>Sign up</button>
-                    </form>
-            }
-            </div>
-            }
-                  
             </div>
         )
     }
