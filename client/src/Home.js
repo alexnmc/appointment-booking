@@ -182,7 +182,7 @@ class Home extends Component {
                             <div className = "bookingContainer2">
                                 <div className = "booking2">
                                     
-                                    <p className = "p3">{`Your bookings ${this.props.user.username.toUpperCase()}:`}</p>
+                                    <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>
                                     {mapBooking2}
                                     
                                 </div>
