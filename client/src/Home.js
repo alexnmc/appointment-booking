@@ -33,7 +33,7 @@ class Home extends Component {
         e.preventDefault()
         
         const {date, time, name, email, phone, userID, username} = this.state
-        console.log(date, time, name, email, phone, userID, username)
+        
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
             
                 alert(res.data +' Date: '+ date +'  from '+ time)
@@ -83,7 +83,7 @@ class Home extends Component {
     showBooking = (id) => {
         
         axios.get(`/bookings/${id}`).then(res => { 
-            
+            console.log(res.data)
         this.setState({
                 
             booking2: res.data
@@ -95,9 +95,10 @@ class Home extends Component {
     
     
     handleErase = () => {
-       
+            console.log(this.props.user._id)
             this.props.handleDelete2(this.props.user._id)
             this.props.logout()
+            this.props.handleDelete3(this.props.user._id)
     }
 
 

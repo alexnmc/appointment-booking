@@ -17,6 +17,7 @@ bookingsRouter.get('/', (req, res) => {    // get all for testing with postman
 
 
 
+
 bookingsRouter.get('/:id', (req, res, next) => {    
     
     Booking.find({userID: req.params.id}, (err, user) => {
@@ -29,6 +30,8 @@ bookingsRouter.get('/:id', (req, res, next) => {
 })
 
 
+
+
 bookingsRouter.delete('/', (req, res, next) => {
     
     Booking.remove((err, data) => {      // for postman testing, deletes everything !
@@ -39,6 +42,7 @@ bookingsRouter.delete('/', (req, res, next) => {
         return res.status(202).send('all bookings were succesfully deleted!')
     })
 })
+
 
 
 
@@ -56,18 +60,23 @@ bookingsRouter.delete('/:id', (req, res, next) => {     //delete one by ID for a
 
 
 
-/*bookingsRouter.post('/', (req, res) => {   //for testing with postman
-    
-    const newBooking = new Booking(req.body)
-    
-    newBooking.save((err, booking) => {
-        if(err) {
+
+
+
+bookingsRouter.delete('/delete/:userID', (req, res, next) => {     
+     
+    Booking.deleteMany({userID: req.params.userID} , (err, data) => {
+        if (err) {
             res.status(500)
             return next(err)
         }
-        return res.status(201).send(booking)
+        return res.status(202).send('bookings deleted')
     })
-})*/
+})
+
+
+
+
 
 
 bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
@@ -84,7 +93,6 @@ bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the 
                         return next(err)
                     }
                     return res.status(201).send(updatedBooking)
-                    
                 }
             )
         }

@@ -18,7 +18,7 @@ class AdminProvider extends Component {
 
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
-            console.log("response.data=",response.data)
+            
             const updatedBooking = response.data
             this.setState(prevState => {
                 return {
@@ -28,6 +28,7 @@ class AdminProvider extends Component {
         })
     }
    
+    
     
     logout = () => {
         this.setState({
@@ -43,7 +44,6 @@ class AdminProvider extends Component {
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
             
-        
             this.setState({
                 bookings: res.data
             })
@@ -59,6 +59,22 @@ class AdminProvider extends Component {
     // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
             }))
         })
+          console.log(this.state.bookings)
+    }
+    
+    
+    
+    
+    handleDelete3 = (userID) => {
+        axios.delete(`bookings/delete/${userID}`).then(res => {
+                console.log("it goes to delete w userID")
+                this.setState(prevState => {
+                    return {
+                        bookings: prevState.bookings.filter(item => item.userID !== userID )
+                    }
+                })
+        })
+          
     }
     
     
@@ -99,6 +115,7 @@ class AdminProvider extends Component {
                     logout: this.logout,
                     showBookings: this.showBookings,
                     handleDelete: this.handleDelete,
+                    handleDelete3: this.handleDelete3,
                     handleEdit: this.handleEdit
                 }}>
                 {this.props.children}
