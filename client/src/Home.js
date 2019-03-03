@@ -109,7 +109,7 @@ class Home extends Component {
             
             return(
               <div className = "homeBooking" key = {item._id}>
-              <p className = "p2"> {`For: ${item.name.toUpperCase()}`}</p>   
+              <p className = "p2"> {`Name: ${item.name.toUpperCase()}`}</p>   
               <p className = "p2"> {`Date: ${moment(item.date).format("MMM Do YY ")}`}</p>
               <p className = "p2"> {`Time: ${item.time}`}</p>
               </div>
