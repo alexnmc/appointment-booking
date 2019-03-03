@@ -379,12 +379,14 @@ button{
 
 
 
+
 .homeBooking{
     border:3px solid rgb(255, 123, 0);
     border-radius: 5px;
-    margin: 5px;
+    margin: 15px;
     padding: 10px;
 }
+
 
 
 
