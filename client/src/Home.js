@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import data from './time.json'
-import {withAdmin} from './AdminProvider'
 import {withUser} from './UserProvider'
+import {withAdmin} from './AdminProvider'
 import moment from 'moment'
 
 
@@ -28,11 +28,12 @@ class Home extends Component {
     }
 
     
+    
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
         
         const {date, time, name, email, phone, userID, username} = this.state
-        
+        console.log(date, time, name, email, phone, userID, username)
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
             
                 alert(res.data +' Date: '+ date +'  from '+ time)
@@ -44,11 +45,12 @@ class Home extends Component {
             name: '',   
             email: '',
             phone: '',
-            userID: '',
-            username: ''
+            
         })
     }
 
+
+    
     
     
     handleChange = (e) => {
@@ -56,6 +58,10 @@ class Home extends Component {
         const {name, value} = e.target
         this.setState({
             [name]: value
+        })
+        this.setState({
+            userID: this.props.user._id,
+            username: this.props.user.username
         })
     }
 
@@ -95,8 +101,7 @@ class Home extends Component {
     }
 
 
-
-
+    
     render(){
        
         let mapBooking2 = this.state.booking2.map(item =>{
@@ -191,7 +196,7 @@ class Home extends Component {
                     <h2>Professional  jet ski  racing!</h2>
                 { this.props.toggle ?
                     <div className = 'logIn'>
-                        <form onSubmit={this.props.handleLogin} className='loginForm'>
+                        <form  onSubmit = {this.props.handleLogin}className='loginForm'>
                             <h4>Bookings here:</h4>
                             <input
                                 type ='text'
@@ -212,7 +217,7 @@ class Home extends Component {
                             <button>Login</button>
                             
                         </form>
-                        <button className ='signupButton' onClick = {this.props.editToggler}>Sign up</button>
+                        <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
                     </div>
                     
                     :
@@ -245,5 +250,6 @@ class Home extends Component {
         )
     }
 }
+
 
 export default withAdmin(withUser(Home))

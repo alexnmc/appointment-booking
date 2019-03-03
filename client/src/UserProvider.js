@@ -22,7 +22,7 @@ class UserProvider extends Component {
     
     
     
-    editToggler = () => {
+    editToggler2 = () => {
         this.setState(prevState => {
             return {
                 toggle: !prevState.toggle  //toggle from login to signin
@@ -94,7 +94,7 @@ class UserProvider extends Component {
                 password: '',
             })
 
-        this.editToggler()
+        this.editToggler2()
     }
 
 
@@ -137,12 +137,20 @@ class UserProvider extends Component {
     
     
     render() {
+
+        
         return (
+
             <Context.Provider
                 value={{
-                    ...this.state,
+                    
+                   username:this.state.username,
+                   password: this.state.password,
+                   adminPassword: this.state.adminPassword,
                    user: this.state.user,
-                   editToggler : this.editToggler,
+                   token: this.state.token,
+                   toggle: this.state.toggle,
+                   editToggler2 : this.editToggler2,
                    signup : this.signup,
                    login : this.login,
                    handleLogin: this.handleLogin,

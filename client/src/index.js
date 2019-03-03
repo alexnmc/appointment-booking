@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
-import AdminProvider from './AdminProvider'
 import UserProvider from './UserProvider'
+import AdminProvider from './AdminProvider'
 import './style.css'
 
 
@@ -11,10 +11,10 @@ import './style.css'
 
 ReactDOM.render(
     <BrowserRouter>
-    <AdminProvider>
     <UserProvider>   
+    <AdminProvider>
         <App/>
-    </UserProvider>
     </AdminProvider>
+    </UserProvider>   
     </BrowserRouter>, 
 document.getElementById('root'))
