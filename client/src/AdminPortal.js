@@ -124,7 +124,6 @@ render(){
         })
 
 
-
         let mapIt = arr.map(item => {
                                 
             return(
