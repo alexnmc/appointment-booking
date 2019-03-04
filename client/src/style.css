@@ -456,13 +456,13 @@ button{
         font-size: 16px;
     }
 
-    
+    .bookingContainer2,
     .bookingContainer{
         margin:auto;
         margin-top: 40px;
         width:auto;
         padding:10px;
-        height: 330px;
+        height: 430px;
     
     }
 
@@ -486,10 +486,10 @@ button{
         width:auto;
     }
 
-   
+    .home,
     .about{
        display:flex;
-       align-items: flex-start;
+       align-items: center;
        justify-content: center;
        position: fixed;
        padding:20px;
@@ -544,6 +544,23 @@ button{
         margin-top: 15px;
     }
 
+    .deleteButton{
+        width: 57px;
+        height: 30px;
+        margin: 10px;
+        font-size: 12px;
+
+    }
+    
+    
+    
+    .deleteButton2{
+        width: 47px;
+        height: 30px;
+        font-size: 7px;
+
+    }
+    
     
     .signupButton{
         position: relative;
