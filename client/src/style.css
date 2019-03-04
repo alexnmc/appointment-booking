@@ -554,10 +554,16 @@ button{
         margin-bottom: 400px;
     }
 
-     .homeContainer{
+     
+    
+    
+    .homeContainer{
          width: 80%;
      }
    
+    
+    
+    
     button{
         width:100px;
         height: 35px;
@@ -565,6 +571,8 @@ button{
         margin-top: 15px;
     }
 
+    
+    
     .deleteButton{
         width: 57px;
         height: 30px;
@@ -595,6 +603,7 @@ button{
         margin-top: 5px;
     }
 
+    
     .p3{
         font-size:17px;
     }
