@@ -67,14 +67,13 @@ class AdminProvider extends Component {
     
     handleDelete3 = (userID) => {
         axios.delete(`bookings/delete/${userID}`).then(res => {
-                console.log("it goes to delete w userID")
-                this.setState(prevState => {
-                    return {
-                        bookings: prevState.bookings.filter(item => item.userID !== userID )
-                    }
-                })
+                
+            this.setState(prevState => {
+                return {
+                    bookings: prevState.bookings.filter(item => item.userID !== userID )
+                }
+            })
         })
-          
     }
     
     
