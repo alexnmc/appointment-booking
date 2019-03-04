@@ -98,8 +98,6 @@ render(){
           
         })
         
-        
-        
         arr.sort(function(a, b){
             var nameA = a.username.toUpperCase()
             var nameB = b.username.toUpperCase()
@@ -111,7 +109,6 @@ render(){
             }
             return 0;
         })
-        
         
         
         let mapIt = arr.map(item => {
