@@ -501,9 +501,9 @@ button{
         display:flex;
         align-items: center;
         justify-content: flex-start;
-        position: fixed;
+        position: relative;
         padding:10px;
-        height: auto;
+        
      }
     
     
@@ -511,7 +511,7 @@ button{
        display:flex;
        align-items: flex-start;
        justify-content: center;
-       position: fixed;
+       position: relative;
        padding:10px;
     }
 
@@ -553,7 +553,7 @@ button{
         padding:10px;
         height: auto;
         margin: auto;
-        margin-bottom: 400px;
+        margin-bottom: 100%;
     }
 
      
@@ -607,7 +607,7 @@ button{
 
     h2{
         font-size: 24px;
-        margin-top: 10%;
+        margin-top: 20px;
         width:100%;
         color: orange;
     }
