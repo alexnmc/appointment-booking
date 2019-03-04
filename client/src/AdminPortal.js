@@ -7,8 +7,8 @@ import moment from 'moment' // formats the date displayed..
 
 class AdminPortal extends Component  {
     
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             
             date: '',
@@ -17,7 +17,8 @@ class AdminPortal extends Component  {
             email: '',
             phone: '',
             toggle: true,
-            currentId: ''
+            currentId: '',
+            
         }
     }
     
@@ -90,7 +91,30 @@ class AdminPortal extends Component  {
    
 render(){
        
-        let mapIt = this.props.bookings.map(item => {
+        let arr = this.props.bookings
+    
+        arr.sort(function (a, b) {
+            return new Date(a.date) - new Date(b.date)
+          
+        })
+        
+        
+        
+        arr.sort(function(a, b){
+            var nameA = a.username.toUpperCase()
+            var nameB = b.username.toUpperCase()
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+        })
+        
+        
+        
+        let mapIt = arr.map(item => {
                                 
             return(
                 

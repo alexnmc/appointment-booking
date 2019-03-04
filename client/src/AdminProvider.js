@@ -45,7 +45,7 @@ class AdminProvider extends Component {
     
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
-            
+           
             this.setState({
                 bookings: res.data
             })
@@ -111,6 +111,7 @@ class AdminProvider extends Component {
             <AdminContext.Provider
                 value={{
                     ...this.state,
+                    bookings: this.state.bookings,
                     signup: this.signup,    // sending all this with context
                     login: this.login,
                     logout: this.logout,
