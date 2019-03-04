@@ -183,7 +183,7 @@ class Home extends Component {
                     
                     :
                         
-                    <div>
+                    <div className = "homeContainer">
                             <h2>Professional  jet ski  racing!</h2>
                             {this.props.toggle ?
                                 <div className = 'logIn'>
