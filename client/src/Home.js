@@ -45,7 +45,6 @@ class Home extends Component {
             name: '',   
             email: '',
             phone: '',
-            
         })
     }
 
@@ -83,11 +82,9 @@ class Home extends Component {
     showBooking = (id) => {
         
         axios.get(`/bookings/${id}`).then(res => { 
-            console.log(res.data)
-        this.setState({
-                
-            booking2: res.data
-               
+            
+            this.setState({
+                booking2: res.data
             })
         })
     }
@@ -118,15 +115,12 @@ class Home extends Component {
     
         return(
             <div className = "home">
-                
                 { this.props.token ?
                     <div>
                         { this.state.toggle ?
                         
                             <div className='bookingContainer'>
-                        
                                 <form  className = 'bookingForm' onSubmit={this.handleSubmit}  >
-                            
                                     <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
                                     <p>Book your adventure:</p>
                                     <input className = "date"
@@ -171,7 +165,6 @@ class Home extends Component {
                                         />
                                     <button>Submit</button>
                                 </form>
-                                    
                                     <button onClick = {this.editToggler}>Bookings</button>
                                     <button className = "button" onClick = {this.props.logout}>Log out </button>
                                     <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
@@ -181,10 +174,8 @@ class Home extends Component {
 
                             <div className = "bookingContainer2">
                                 <div className = "booking2">
-                                    
                                     <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>
                                     {mapBooking2}
-                                    
                                 </div>
                                 <button className = "button1" onClick = {this.editToggler}>Return</button>
                             </div>
@@ -196,52 +187,52 @@ class Home extends Component {
                     <div>
                             <h2>Professional  jet ski  racing!</h2>
                             {this.props.toggle ?
-                            <div className = 'logIn'>
-                                <form  onSubmit = {this.props.handleLogin}className='loginForm'>
-                                    <h4>Bookings here:</h4>
+                                <div className = 'logIn'>
+                                    <form  onSubmit = {this.props.handleLogin}className='loginForm'>
+                                        <h4>Bookings here:</h4>
+                                        <input
+                                            type ='text'
+                                            name ='username'
+                                            placeholder  ='Username:'
+                                            value = {this.props.username}
+                                            onChange= {this.props.handleChange}
+                                        />
+
+                                        <input
+                                            type ='text'
+                                            name ='password'
+                                            placeholder ='Password:'
+                                            value = {this.props.password}
+                                            onChange = {this.props.handleChange}
+                                        />
+
+                                        <button>Login</button>
+                                    </form>
+                                    <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
+                                </div>
+                                
+                                :
+                                
+                                <form onSubmit={this.props.handleSignup} className='signUp'>
+                                    <h4>Sign Up:</h4>
+                                    
                                     <input
-                                        type ='text'
-                                        name ='username'
-                                        placeholder  ='Username:'
-                                        value = {this.props.username}
-                                        onChange= {this.props.handleChange}
+                                        type='text'
+                                        name='username'
+                                        placeholder ='enter a username:'
+                                        value ={this.props.username}
+                                        onChange ={this.props.handleChange}
                                     />
 
                                     <input
                                         type ='text'
                                         name ='password'
-                                        placeholder ='Password:'
+                                        placeholder ='choose your password:'
                                         value = {this.props.password}
                                         onChange = {this.props.handleChange}
                                     />
-
-                                    <button>Login</button>
+                                    <button>Sign up</button>
                                 </form>
-                                <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
-                             </div>
-                            
-                            :
-                            
-                            <form onSubmit={this.props.handleSignup} className='signUp'>
-                                <h4>Sign Up:</h4>
-                                
-                                <input
-                                    type='text'
-                                    name='username'
-                                    placeholder ='enter a username:'
-                                    value ={this.props.username}
-                                    onChange ={this.props.handleChange}
-                                />
-
-                                <input
-                                    type ='text'
-                                    name ='password'
-                                    placeholder ='choose your password:'
-                                    value = {this.props.password}
-                                    onChange = {this.props.handleChange}
-                                />
-                                <button>Sign up</button>
-                            </form>
                             }
                     </div>
                 }
