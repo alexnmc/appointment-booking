@@ -96,8 +96,8 @@ render(){
         arr.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date)
           
-        })
-        
+        })  
+
         
         arr.sort(function(a, b){
             var nameA = a.username.toUpperCase()
@@ -111,10 +111,21 @@ render(){
             return 0;
         })
 
-       
         
-        
-        
+        arr.sort(function(a, b){
+            var nameA = a.name.toUpperCase()
+            var nameB = b.name.toUpperCase()
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+        })
+
+
+
         let mapIt = arr.map(item => {
                                 
             return(
