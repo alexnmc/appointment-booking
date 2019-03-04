@@ -91,7 +91,7 @@ class AdminPortal extends Component  {
    
 render(){
        
-        let arr = this.props.bookings
+    let arr = this.props.bookings
     
         arr.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date)
@@ -100,8 +100,8 @@ render(){
 
         
         arr.sort(function(a, b){
-            var nameA = a.username.toUpperCase()
-            var nameB = b.username.toUpperCase()
+            var nameA = a.name.toUpperCase()
+            var nameB = b.name.toUpperCase()
             if (nameA < nameB) {
               return -1;
             }
@@ -111,10 +111,10 @@ render(){
             return 0;
         })
 
-        
+
         arr.sort(function(a, b){
-            var nameA = a.name.toUpperCase()
-            var nameB = b.name.toUpperCase()
+            var nameA = a.username.toUpperCase()
+            var nameB = b.username.toUpperCase()
             if (nameA < nameB) {
               return -1;
             }
