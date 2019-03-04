@@ -23,7 +23,6 @@ class AdminPortal extends Component  {
     }
     
     
-    
     componentDidMount(){        
         
         this.props.showBookings() // method comes from context, it shows all the bookings from the database in an array
