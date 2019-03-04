@@ -471,16 +471,10 @@ button{
         margin-top: 40px;
         width:auto;
         padding:10px;
-        height: 530px;
+        height: 70%;
     }
     
 
-    .homeBooking{
-
-
-    }
-    
-    
     
     .date,
     select,
@@ -505,7 +499,7 @@ button{
     .about{
        display:flex;
        align-items: center;
-       justify-content: center;
+       justify-content: flex-start;
        position: fixed;
        padding:20px;
     }
