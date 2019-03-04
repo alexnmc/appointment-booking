@@ -49,8 +49,9 @@
 .home {
     background-image: url('./Photos/jetski.png');
     background-size: cover ;
+    position: relative;
     height: 740px;
-    width: 100vw;
+    
 }
 
 
@@ -502,6 +503,7 @@ button{
         justify-content: flex-start;
         position: fixed;
         padding:10px;
+        height: auto;
      }
     
     
@@ -575,7 +577,6 @@ button{
         font-size: 12px;
 
     }
-    
     
     
     .deleteButton2{
