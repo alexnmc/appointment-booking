@@ -495,13 +495,22 @@ button{
         width:auto;
     }
 
-    .home,
+    
+    .home{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding:10px;
+     }
+    
+    
     .about{
        display:flex;
-       align-items: center;
-       justify-content: flex-start;
+       align-items: flex-start;
+       justify-content: center;
        position: fixed;
-       padding:20px;
+       padding:10px;
     }
 
 
