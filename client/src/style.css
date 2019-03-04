@@ -456,7 +456,7 @@ button{
         font-size: 16px;
     }
 
-    .bookingContainer2,
+    
     .bookingContainer{
         margin:auto;
         margin-top: 40px;
@@ -466,6 +466,21 @@ button{
     
     }
 
+    .bookingContainer2{
+        margin:auto;
+        margin-top: 40px;
+        width:auto;
+        padding:10px;
+        height: 530px;
+    }
+    
+
+    .homeBooking{
+
+
+    }
+    
+    
     
     .date,
     select,
@@ -556,7 +571,7 @@ button{
     
     .deleteButton2{
         width: 47px;
-        height: 30px;
+        height: 32px;
         font-size: 7px;
 
     }
@@ -567,4 +582,19 @@ button{
         margin: auto;
         margin-top:10px;
     }
+
+
+    .p2{
+        font-size:12px;
+        margin-top: 5px;
+    }
+
+    .p3{
+        font-size:17px;
+    }
+
 }
+
+
+
+
