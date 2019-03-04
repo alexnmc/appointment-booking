@@ -467,6 +467,7 @@ button{
     
     }
 
+    
     .bookingContainer2{
         margin:auto;
         margin-top: 40px;
@@ -562,14 +563,6 @@ button{
      }
    
     
-    button{
-        width:100px;
-        height: 35px;
-        font-size: 15px;
-        margin-top: 15px;
-    }
-
-    
     .deleteButton{
         width: 57px;
         height: 30px;
@@ -583,14 +576,17 @@ button{
         width: 47px;
         height: 32px;
         font-size: 7px;
-
+        margin-top:10px;
     }
     
+
     
     .signupButton{
         position: relative;
         margin: auto;
         margin-top:10px;
+        height: 30px;
+       
     }
 
 
