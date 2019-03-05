@@ -125,7 +125,7 @@
     justify-content: flex-start;
     position: relative;
     height: 665px;
-    width: 420px;
+    width: 400px;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
@@ -142,8 +142,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 625px;
-    width: 400px;
+    height: 615px;
+    width: 370px;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
