@@ -597,6 +597,14 @@ button{
     }
 
 
+    button{
+        position: relative;
+        margin: auto;
+        margin-top:10px;
+        height: 30px;
+    }
+
+
     .p2{
         font-size:12px;
         margin-top: 5px;
