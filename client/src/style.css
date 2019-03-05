@@ -586,7 +586,14 @@ button{
         margin: auto;
         margin-top:10px;
         height: 30px;
-       
+    }
+
+
+    .button{
+        position: relative;
+        margin: auto;
+        margin-top:10px;
+        height: 30px;
     }
 
 
