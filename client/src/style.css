@@ -463,7 +463,7 @@ button{
         margin-top: 40px;
         width:auto;
         padding:10px;
-        height: 430px;
+        height: 450px;
     
     }
 
@@ -473,9 +473,13 @@ button{
         margin-top: 40px;
         width:auto;
         padding:10px;
-        height: 70%;
+        height: 450px;
     }
     
+    .booking2{
+
+        height: 100%;
+    }
 
     
     .date,
@@ -585,7 +589,7 @@ button{
         position: relative;
         margin: auto;
         margin-top:10px;
-        height: 30px;
+        height: 33px;
     }
 
 
@@ -593,7 +597,7 @@ button{
         position: relative;
         margin: auto;
         margin-top:10px;
-        height: 30px;
+        height: 33px;
     }
 
 
@@ -601,7 +605,7 @@ button{
         position: relative;
         margin: auto;
         margin-top:10px;
-        height: 30px;
+        height: 33px;
     }
 
 
