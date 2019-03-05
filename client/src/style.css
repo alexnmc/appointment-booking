@@ -142,7 +142,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 615px;
+    height: 580px;
     width: 370px;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
@@ -259,7 +259,7 @@ select{
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 35px;
     width: 210px;
     border: 3px solid  rgb(255, 123, 0);
@@ -276,7 +276,7 @@ input{
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 35px;
     width: 210px;
     font-size: 15px;
