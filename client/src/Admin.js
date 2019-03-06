@@ -89,6 +89,7 @@ class Admin extends Component {
             <Fragment>
                 <div className="admin">
                 { this.state.toggle ?
+                        <div className = "adminContainer">
                         <div className = 'logIn'>
                             <form onSubmit={this.handleLogin} className='loginForm'>
                                 <h4>Admin only:</h4>
@@ -111,6 +112,7 @@ class Admin extends Component {
                                 <button>Login</button>
                             </form>
                             <button className='signupButton' onClick={this.editToggler}>Sign up</button>
+                        </div>
                         </div>
                         :
                         <form onSubmit={this.handleSignup} className='signUp'>

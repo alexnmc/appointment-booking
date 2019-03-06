@@ -572,6 +572,13 @@ button{
      }
    
     
+    
+     .adminContainer{
+        height:100%;
+    }
+    
+    
+    
     .deleteButton{
         width: 57px;
         height: 30px;
