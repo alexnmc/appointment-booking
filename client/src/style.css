@@ -19,6 +19,12 @@
 }
 
 
+.admin{
+
+    padding-top: 20px;
+    
+}
+
 
 .navbar a {
     text-decoration: none;
@@ -30,7 +36,6 @@
 .navbar a:hover{
     color: rgb(245, 217, 191);
 }
-
 
 
 .home {
@@ -556,15 +561,14 @@ button{
         width:auto;
         padding:10px;
         height: auto;
-        margin: auto;
+        margin:auto;
         margin-bottom: 100%;
-        margin-top:20px;
-
+    
     }
 
      
     .homeContainer{
-         width: 74%;
+         width: 220px;
      }
    
     
