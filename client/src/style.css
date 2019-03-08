@@ -431,7 +431,7 @@ button{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 
@@ -441,7 +441,7 @@ button{
     flex-direction: column;
     overflow: auto;
     max-height: auto;
-    height: 80vh;
+    height: 70%;
     border:3px solid rgb(255, 123, 0);
     padding:10px;
 }
