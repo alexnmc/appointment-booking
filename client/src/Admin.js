@@ -119,6 +119,7 @@ class Admin extends Component {
 
                         <div className = "adminContainer">
                         <form onSubmit={this.handleSignup} className='signUp'>
+                        <h4>Sign Up:</h4>
                        
                             <input
                                 type='text'
