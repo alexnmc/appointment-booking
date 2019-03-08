@@ -440,8 +440,8 @@ button{
     display: flex;
     flex-direction: column;
     overflow: auto;
-    max-height: 100vh;
-    height: 90vh;
+    max-height: auto;
+    height: 80vh;
     border:3px solid rgb(255, 123, 0);
     padding:10px;
 }
