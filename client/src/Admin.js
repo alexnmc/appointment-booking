@@ -114,7 +114,10 @@ class Admin extends Component {
                             <button className='signupButton' onClick={this.editToggler}>Sign up</button>
                         </div>
                         </div>
-                        :
+                        
+                        :     
+
+                        <div className = "adminContainer">
                         <form onSubmit={this.handleSignup} className='signUp'>
                        
                             <input
@@ -142,6 +145,7 @@ class Admin extends Component {
                             />
                             <button>Sign up</button>
                         </form>
+                        </div>
                 }
                 </div>
             </Fragment>
