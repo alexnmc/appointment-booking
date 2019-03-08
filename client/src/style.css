@@ -3,7 +3,10 @@
     margin: 0;
 }
 
-
+html, body {
+    height: 100vh;
+    margin: 0px;
+}
 
 
 .navbar {
@@ -45,6 +48,7 @@
     font-size: 30px;
     justify-content: center;
     align-items: flex-end;
+    height: 100vh;
 }
 
 
@@ -53,9 +57,9 @@
 .about,
 .home {
     background-image: url('./Photos/jetski.png');
-    background-size: cover ;
+    background-size: cover;
     position: relative;
-    height: 740px;
+    height: 100vh;
     
 }
 
@@ -426,7 +430,7 @@ button{
     background-color: #142b2bf1;
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 100vh;
     padding-bottom: 30px;
 }
 
@@ -437,7 +441,9 @@ button{
     flex-direction: column;
     overflow: auto;
     max-height: 100vh;
-    height: 700px;
+    height: 90vh;
+    border:3px solid rgb(255, 123, 0);
+    padding:10px;
 }
 
 .aboutText{
