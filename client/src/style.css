@@ -510,9 +510,7 @@ button{
         align-items: center;
         justify-content: flex-start;
         position: relative;
-        padding:10px;
-        
-     }
+    }
     
     
     .about{
@@ -620,6 +618,7 @@ button{
         width: 120px;
     }
 
+    
     button{
         position: relative;
         margin: auto;
