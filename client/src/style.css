@@ -130,6 +130,8 @@
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
     margin-right: 300px;
+    overflow: auto;
+    max-height: 100vh;
 
 }
 
@@ -151,14 +153,6 @@
     padding:20px;
 
 }
-
-
-
-.booking2{
-    height: 570px;
-    padding:15px;
-}
-
 
 
 .p2{
@@ -310,7 +304,7 @@ button{
     align-items: center;
     justify-content: center;
     margin:0px;
-    margin-top:20px;
+    margin-top:600px;
     height: 37px;
     width: 130px;
     border: 3px solid  rgb(206, 99, 0);
@@ -319,6 +313,7 @@ button{
     font-size: 19px;
     font-weight: 600;
     color:rgb(255, 208, 164);
+    position: fixed;
 }
 
 
