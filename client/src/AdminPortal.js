@@ -149,8 +149,9 @@ render(){
                 <div className = "adminPortal2">
                     <h1 className= 'h1'>Bookings:</h1>
                        { this.state.toggle ?
-                       
-                                mapIt
+                            <div className = "adminPortal3">
+                                {mapIt}
+                            </div>
 
                             :
             
