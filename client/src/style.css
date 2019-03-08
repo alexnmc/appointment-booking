@@ -37,6 +37,7 @@
 }
 
 
+
 .home {
     width: 100vw;
     display: flex;
@@ -68,7 +69,6 @@
     border-radius:10px;
     background-color:  rgba(5, 32, 36, 0.842);
     margin-left: 120px;
-    
 }
 
 
