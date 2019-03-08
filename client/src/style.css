@@ -254,7 +254,6 @@ h2{
 }
 
 
-
 .date,
 select{
     display: flex;
@@ -427,7 +426,8 @@ button{
     background-color: #142b2bf1;
     display: flex;
     flex-direction: column;
-    height:800px;
+    height:auto;
+    padding-bottom: 30px;
 }
 
 
