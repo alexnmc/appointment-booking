@@ -127,7 +127,7 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 74.5vh;
+    height: 75.5vh;
     width: 26vw;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
@@ -145,7 +145,7 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 72vh;
+    height: 74vh;
     width: 25vw;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
