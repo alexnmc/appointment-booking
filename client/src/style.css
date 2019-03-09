@@ -102,11 +102,11 @@ html, body {
 .signUp {
     display: block;
     height: 37vh;
-    width: 20px;
+    width: 20vw;
     border: 3px solid rgba(255, 123, 0, 0.918);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.842);
-    margin-left: 120px;
+    margin-left: 10vw;
 }
 
 
