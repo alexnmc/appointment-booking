@@ -25,7 +25,7 @@ html, body {
 
 .admin{
 
-    padding-top: 50px;
+    padding-top: 12vh;
 }
 
 
@@ -362,7 +362,7 @@ button{
         height: 100vh;
         width: 100%;
         display:flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 }
 
