@@ -128,12 +128,12 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 610px;
-    width: 390px;
+    height: 73.5vh;
+    width: 26vw;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
-    margin-right: 300px;
+    margin-right: 23vw;
    
 }
 
@@ -145,12 +145,12 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 580px;
-    width: 370px;
+    height: 70vh;
+    width: 25vw;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
-    margin-right: 300px;
+    margin-right: 23vw;
     padding:20px;
 
 }
