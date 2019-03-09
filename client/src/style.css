@@ -297,9 +297,9 @@ button{
     justify-content: center;
     margin:auto;
     margin-bottom: 0px;
-    margin-top:15px;
-    height: 37px;
-    width: 130px;
+    margin-top:2vh;
+    height: 4.5vh;
+    width: 9vw;
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
@@ -315,8 +315,8 @@ button{
     align-items: center;
     justify-content: center;
     margin:0px;
-    height: 37px;
-    width: 130px;
+    height: 4.5vh;
+    width: 9vw;
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
@@ -359,7 +359,7 @@ button{
 .admin{
         
         background-color: #142b2bf1;
-        height: 750px;
+        height: 100vh;
         width: 100%;
         display:flex;
         align-items: center;
@@ -419,7 +419,7 @@ button{
     display:block;
     position: fixed;
     background-color: rgb(36, 53, 50);
-    height: 740px;
+    height: 100vh;
 }
 
 
