@@ -263,9 +263,9 @@ select{
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 20px;
-    height: 35px;
-    width: 210px;
+    margin-top: 2vh;
+    height: 4.3vh;
+    width: 15vw;
     border: 3px solid  rgb(255, 123, 0);
     background-color:rgba(30, 30, 59, 0.205);
     color:rgb(240, 219, 161);
@@ -444,6 +444,7 @@ button{
     border:3px solid rgb(255, 123, 0);
     padding:10px;
 }
+
 
 .aboutText{
      color: #1c3a3a; 
