@@ -264,7 +264,7 @@ select{
     margin: auto;
     margin-top: 2vh;
     height: 4.3vh;
-    width: 15vw;
+    width: 14vw;
     border: 3px solid  rgb(255, 123, 0);
     background-color:rgba(30, 30, 59, 0.205);
     color:rgb(240, 219, 161);
@@ -281,7 +281,7 @@ input{
     margin: auto;
     margin-top: 2vh;
     height: 4.3vh;
-    width: 15vw;
+    width: 14vw;
     font-size: 15px;
     border: 3px solid  rgba(255, 123, 0, 0.877);
     border-radius: 5px;
@@ -298,7 +298,7 @@ button{
     margin-bottom: 0px;
     margin-top:2vh;
     height: 4.5vh;
-    width: 8.4vw;
+    width: 8vw;
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
@@ -315,7 +315,7 @@ button{
     justify-content: center;
     margin:0px;
     height: 4.5vh;
-    width: 8.4vw;
+    width: 8vw;
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
