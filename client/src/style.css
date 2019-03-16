@@ -145,13 +145,13 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 74vh;
+    height: 71.5vh;
     width: 25vw;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
     margin-right: 23vw;
-    padding:20px;
+    padding:10px;
     margin-top: 6vw;
 }
 
