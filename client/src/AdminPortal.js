@@ -129,13 +129,13 @@ render(){
             return(
                 
                 <div className = "bookingList" key = {item._id} > 
-                <div className = "bookingList2">
-                    { ` User: ${item.username} ,
-                        Name: ${item.name.toUpperCase()} ,
-                        Date: ${moment(item.date).format("MMM Do YY ")} ,
-                        Time: ${item.time} , Phone: ${item.phone} , 
-                        Email: ${item.email}`}
-                </div>  
+                    <div className = "bookingList2">
+                        { ` User: ${item.username} ,
+                            Name: ${item.name.toUpperCase()} ,
+                            Date: ${moment(item.date).format("MMM Do YY ")} ,
+                            Time: ${item.time} , Phone: ${item.phone} , 
+                            Email: ${item.email}`}
+                    </div>  
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email)}>Edit</button>
                 
