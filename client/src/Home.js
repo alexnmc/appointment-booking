@@ -177,7 +177,7 @@ class Home extends Component {
                                     
                                     {mapBooking2}
                                 </div>
-                                <button className = "button1" onClick = {this.editToggler}>Return</button>
+                                <button className = "button4" onClick = {this.editToggler}>Return</button>
                             </div>
                         }
                     </div>
