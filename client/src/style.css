@@ -134,6 +134,7 @@ html, body {
     background-color: rgba(5, 32, 36, 0.76);
     margin-right: 23vw;
     margin-top:7vh;
+    padding-bottom: 10px;
    
 }
 
@@ -176,7 +177,7 @@ html, body {
 
 .p3{
     margin-top: 10px;
-    margin-bottom:20px;
+    margin-bottom:5px;
     color:red;
     font-size:30px;
 }
@@ -206,11 +207,13 @@ html, body {
     display:inline-flex;
     align-items: center;
     justify-content: center;
-    height: 70px;
-    border: 3px solid rgb(224, 108, 0);
+    height: 60px;
+    width: 100%;
+    border: 2px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(3, 29, 31, 0.781);
     position: relative;
+    margin-top:15px;
 }
 
 
@@ -222,6 +225,7 @@ html, body {
     font-size:25px;
     font-weight: 900;
 }
+
 
 
 p{
