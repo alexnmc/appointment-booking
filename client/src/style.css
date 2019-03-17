@@ -127,8 +127,8 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 72vh;
-    width: 26vw;
+    height: 71.5vh;
+    width: 25vw;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(5, 32, 36, 0.76);
@@ -350,7 +350,7 @@ button{
     color: rgb(255, 220, 197);
     width: 4.2vw;
     height: 4vh;
-    margin-top: 4vh;
+    margin-top: 3vh;
     margin-left: 10px;
     font-size: 10px;
     border-radius: 10px;
