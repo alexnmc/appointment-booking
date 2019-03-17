@@ -380,9 +380,12 @@ button{
     padding:5px;
     width: 100%;
     text-align: center;
+    display: flex;
 }
 
-
+.bookingList2{
+    width: 90%
+}
 
 
 .homeBooking{
