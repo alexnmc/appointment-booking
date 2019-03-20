@@ -361,14 +361,14 @@ button{
 
     background-color: rgba(206, 0, 0, 0.87);
     color: rgb(255, 220, 197);
-    width: 4.2vw;
-    height: 4vh;
+    width: 3.6vw;
+    height: 3.7vh;
     margin-top: 3vh;
     margin-left: 10px;
-    font-size: 10px;
+    font-size: 9px;
     border-radius: 10px;
     border: 2px solid rgb(0, 0, 0);
-    display: inline;
+   
 }
 
 
