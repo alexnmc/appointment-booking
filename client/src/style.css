@@ -205,10 +205,11 @@ html, body {
 
 .editButton{
     width: 60px;
+    height: 30px;
     border-radius: 7px;
-    border:2px solid white;
-    background-color: green;
-    color: white;
+    border:2px solid rgb(41, 105, 47);
+    background-color: rgb(69, 124, 98);
+    color: rgb(241, 241, 241);
     margin:10px;
 }
 
