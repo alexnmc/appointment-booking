@@ -108,6 +108,7 @@ class Home extends Component {
           
         })  
 
+       
         let mapBooking2 = array.map(item =>{
             
             return(
