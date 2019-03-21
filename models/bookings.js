@@ -34,6 +34,11 @@ const bookingsSchema = new Schema({
     username: {
         type: String,
         required: true
+    },
+
+    toggle: {
+        type: Boolean,
+        default: true
     }
 })
 

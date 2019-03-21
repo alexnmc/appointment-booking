@@ -29,19 +29,39 @@ class AdminPortal extends Component  {
     }
 
     
+    editToggler2 = () => {
+        this.setState({
+            toggle: false
+        })
+    }
+    
+    
+    editToggler3 = () => {
+        this.setState({
+            toggle: true
+        })
+    }
+    
     
     editToggler = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
-        this.setState(prevState =>{
-            return{
-                toggle: !prevState.toggle,
-                currentId: id,                    // it saves the id in state
-                date: date,
-                time: time,      
-                name: name,
-                email: email,
-                phone: phone,
-            }
-        })
+        
+        
+        if(this.state.toggle === true){
+        
+            this.setState(prevState =>{
+                return{
+                
+                    currentId: id,                    // it saves the id in state
+                    date: date,
+                    time: time,      
+                    name: name,
+                    email: email,
+                    phone: phone,
+                }
+            })
+        }
+
+          
     }
     
     
@@ -52,6 +72,7 @@ class AdminPortal extends Component  {
             [name]: value
         })
     }
+    
     
     
     handleSubmit = (e, id) => {  // on submit we are sending a new booking object to the database
@@ -82,7 +103,11 @@ class AdminPortal extends Component  {
         console.log("this goes into the database for update=", updates)
         
         this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
-        this.editToggler(null)
+       
+        this.editToggler()
+        
+        this.editToggler3()
+        
     }
    
     
@@ -125,10 +150,14 @@ render(){
 
 
         let mapIt = arr.map(item => {
-                                
+                
             return(
                 
-                <div className = "bookingList" key = {item._id} > 
+                <div key = {item._id}>
+                    
+                {item.toggle  ?
+                <div className = "bookingList" > 
+                
                      <div className = "booking">
                     { ` User: ${item.username} ,
                         Name: ${item.name.toUpperCase()} ,
@@ -137,9 +166,58 @@ render(){
                         Email: ${item.email}`}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email)}>Edit</button>
+                    <button className = 'deleteButton' onClick={ this.state.toggle ?  () => {return this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email), item.toggle = false, this.editToggler2()} : null}>Edit</button>
                 
                 </div>  
+
+                :
+            
+                <form onSubmit={this.handleSubmit} className = 'bookingForm2'>
+                <p className = "p">Edit here:</p>
+                 <input 
+                     className = "edit"
+                     type='date' 
+                     name='date'
+                     value={this.state.date} 
+                     onChange={this.handleChange}
+                     />
+                 <select 
+                     className = "edit"
+                     name='time'
+                     value={this.state.time}
+                     onChange={this.handleChange}>
+                     <option value = ''>Choose a Time</option>
+                     {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                 </select>
+                 <input 
+                     className = "edit"
+                     type='text'
+                     name='name'
+                     placeholder='Name'
+                     value={this.state.name}
+                     onChange={this.handleChange}
+                     />
+                 <input 
+                     className = "edit"
+                     type='email'
+                     name='email'
+                     placeholder=' Email'
+                     value={this.state.email}
+                     onChange={this.handleChange}
+                     />
+                 <input 
+                     className = "edit"
+                     type='number'
+                     name='phone'
+                     placeholder='Phone'
+                     value={this.state.phone}
+                     onChange={this.handleChange}
+                     />
+                 <button className = "editButton">Save</button>
+                </form>
+            }
+            </div>
+                
         )})
        
        
@@ -148,60 +226,12 @@ render(){
             <Fragment>
                 <div className = "adminPortal2">
                     <h1 className= 'h1'>Bookings:</h1>
-                       { this.state.toggle ?
+                      
+                        {mapIt}
                            
-                                mapIt
-                           
-                        :
-            
-                                <form onSubmit={this.handleSubmit} className = 'bookingForm2'>
-                                   <p className = "p">Edit here:</p>
-                                    <input 
-                                        className = "edit"
-                                        type='date' 
-                                        name='date'
-                                        value={this.state.date} 
-                                        onChange={this.handleChange}
-                                        />
-                                    <select 
-                                        className = "edit"
-                                        name='time'
-                                        value={this.state.time}
-                                        onChange={this.handleChange}>
-                                        <option value = ''>Choose a Time</option>
-                                        {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
-                                    </select>
-                                    <input 
-                                        className = "edit"
-                                        type='text'
-                                        name='name'
-                                        placeholder='Name'
-                                        value={this.state.name}
-                                        onChange={this.handleChange}
-                                        />
-                                    <input 
-                                        className = "edit"
-                                        type='email'
-                                        name='email'
-                                        placeholder=' Email'
-                                        value={this.state.email}
-                                        onChange={this.handleChange}
-                                        />
-                                    <input 
-                                        className = "edit"
-                                        type='number'
-                                        name='phone'
-                                        placeholder='Phone'
-                                        value={this.state.phone}
-                                        onChange={this.handleChange}
-                                        />
-                                    <button className = "editButton">Save</button>
-                                </form>
-                       }
-                       
-                        <button onClick = {this.props.logout}>Log out </button>
+                    <button onClick = {this.props.logout}>Log out </button>
                 </div>
-                </Fragment>
+            </Fragment>
         )
     }
 }
