@@ -100,8 +100,15 @@ class Home extends Component {
 
     
     render(){
+
+        let array = this.state.booking2
        
-        let mapBooking2 = this.state.booking2.map(item =>{
+        array.sort(function (a, b) {
+            return new Date(a.date) - new Date(b.date)
+          
+        })  
+
+        let mapBooking2 = array.map(item =>{
             
             return(
               <div className = "homeBooking" key = {item._id}>
