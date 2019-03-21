@@ -339,12 +339,12 @@ button{
 
     background-color: rgba(153, 0, 0, 0.87);
     color:  rgb(255, 166, 83);
-    width: 57px;
-    height: 30px;
+    width: 56px;
+    height: 28px;
     margin: 10px;
     font-size: 12px;
     border-radius: 10px;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(51, 22, 22);
     display: inline;
 }
 
