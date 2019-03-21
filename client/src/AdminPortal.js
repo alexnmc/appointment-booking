@@ -122,7 +122,6 @@ render(){
           
         })  
 
-        
         arr.sort(function(a, b){
             var nameA = a.name.toUpperCase()
             var nameB = b.name.toUpperCase()
