@@ -403,7 +403,7 @@ button{
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 54px;
     width: 100%;
     border: 2px solid rgb(224, 108, 0);
     border-radius:7px;
