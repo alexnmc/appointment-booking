@@ -196,8 +196,8 @@ html, body {
     display:inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 20px;
-    height: 35px;
+    margin: 27px;
+    height: 34px;
     width: 170px;
     border: 2px solid rgb(255, 123, 0);
 }
