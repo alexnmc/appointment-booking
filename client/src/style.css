@@ -205,7 +205,7 @@ html, body {
 .editButton{
     width: 60px;
     border-radius: 7px;
-    border:3px solid black;
+    border:2px solid white;
     background-color: green;
     color: white;
     margin:10px;
