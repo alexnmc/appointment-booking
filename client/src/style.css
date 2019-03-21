@@ -198,14 +198,14 @@ html, body {
     justify-content: center;
     margin: 26px;
     height: 29px;
-    width: 170px;
+    width: 165px;
     border: 2px solid rgb(255, 123, 0);
 }
 
 
 .editButton{
     width: 60px;
-    height: 30px;
+    height: 27px;
     border-radius: 7px;
     border:2px solid rgb(41, 105, 47);
     background-color: rgb(69, 124, 98);
@@ -398,7 +398,6 @@ button{
     width: 100%;
     height: auto;
 }
-
 
 
 .bookingForm2{
