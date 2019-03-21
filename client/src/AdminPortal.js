@@ -176,30 +176,31 @@ render(){
             
                 <form onSubmit={this.handleSubmit} className = 'bookingForm2'>
                 <p className = "p">Edit here:</p>
-                 <input 
-                     className = "edit"
-                     type='date' 
-                     name='date'
-                     value={this.state.date} 
-                     onChange={this.handleChange}
-                     />
-                 <select 
-                     className = "edit"
-                     name='time'
-                     value={this.state.time}
-                     onChange={this.handleChange}>
-                     <option value = ''>Choose a Time</option>
-                     {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
-                 </select>
-                 <input 
+                
+                <input 
                      className = "edit"
                      type='text'
                      name='name'
                      placeholder='Name'
                      value={this.state.name}
                      onChange={this.handleChange}
+                />
+                <input 
+                     className = "edit"
+                     type='date' 
+                     name='date'
+                     value={this.state.date} 
+                     onChange={this.handleChange}
                      />
-                 <input 
+                <select 
+                     className = "edit"
+                     name='time'
+                     value={this.state.time}
+                     onChange={this.handleChange}>
+                     <option value = ''>Choose a Time</option>
+                     {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                </select>
+                <input 
                      className = "edit"
                      type='email'
                      name='email'
