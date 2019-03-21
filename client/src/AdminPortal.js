@@ -162,8 +162,10 @@ render(){
                     { ` User: ${item.username} ,
                         Name: ${item.name.toUpperCase()} ,
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
-                        Time: ${item.time} , Phone: ${item.phone} , 
-                        Email: ${item.email}`}
+                        Time: ${item.time} ,  
+                        Email: ${item.email} ,
+                        Phone: ${item.phone} ,
+                    `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' onClick={ this.state.toggle ?  () => {return this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email), item.toggle = false, this.editToggler2()} : null}>Edit</button>
