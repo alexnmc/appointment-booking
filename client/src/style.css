@@ -219,7 +219,8 @@ html, body {
     color: rgb(245, 217, 191);
     font-family: "verdana";
     margin:auto;
-    margin-left: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
     font-size:25px;
     font-weight: 900;
 }
