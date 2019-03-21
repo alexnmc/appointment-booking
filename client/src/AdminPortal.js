@@ -162,9 +162,9 @@ render(){
                     { ` User: ${item.username} ,
                         Name: ${item.name.toUpperCase()} ,
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
-                        Time: ${item.time} ,  
+                        Time: ${item.time} ,
                         Email: ${item.email} ,
-                        Phone: ${item.phone} ,
+                        Phone: ${item.phone} 
                     `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
