@@ -29,14 +29,14 @@ class AdminPortal extends Component  {
     }
 
     
-    editToggler2 = () => {
+    toggleFalse = () => {
         this.setState({
             toggle: false
         })
     }
     
     
-    editToggler3 = () => {
+    toggleTrue = () => {
         this.setState({
             toggle: true
         })
@@ -45,9 +45,8 @@ class AdminPortal extends Component  {
     
     editToggler = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
         
-        
         if(this.state.toggle === true){
-        
+       
             this.setState(prevState =>{
                 return{
                 
@@ -60,9 +59,7 @@ class AdminPortal extends Component  {
                 }
             })
         }
-
-          
-    }
+  }
     
     
     
@@ -106,13 +103,12 @@ class AdminPortal extends Component  {
        
         this.editToggler()
         
-        this.editToggler3()
+        this.toggleTrue()
         
     }
    
+
     
-   
-   
 render(){
        
     let arr = this.props.bookings
@@ -167,7 +163,7 @@ render(){
                     `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={ this.state.toggle ?  () => {return this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email), item.toggle = false, this.editToggler2()} : null}>Edit</button>
+                    <button className = 'deleteButton' onClick={ this.state.toggle ?  () => {return this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email), item.toggle = false, this.toggleFalse()} : null}>Edit</button>
                 
                 </div>  
 
