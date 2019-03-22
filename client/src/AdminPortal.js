@@ -45,8 +45,6 @@ class AdminPortal extends Component  {
     
     editToggler = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
         
-        if(this.state.toggle === true){
-       
             this.setState(prevState =>{
                 return{
                 
@@ -58,8 +56,7 @@ class AdminPortal extends Component  {
                     phone: phone,
                 }
             })
-        }
-  }
+    }
     
     
     
