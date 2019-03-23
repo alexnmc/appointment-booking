@@ -23,7 +23,7 @@ class AdminProvider extends Component {
 
        let array = this.state.bookings
        
-        for(let i = 0; i< array.length; i++){
+        for(let i = 0; i < array.length; i++){
             if( array[i]._id === id){
                 array[i].toggle = false       //genius...
             }else{
