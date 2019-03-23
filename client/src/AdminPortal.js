@@ -133,7 +133,6 @@ render(){
         let mapIt = arr.map(item => {
                 
             return(
-                
                 <div key = {item._id}>
                     
                 {item.toggle  ?
@@ -201,18 +200,15 @@ render(){
                 </form>
             }
             </div>
-                
-        )})
+            )
+        })
        
        
-    
     return (
             <Fragment>
                 <div className = "adminPortal2">
                     <h1 className= 'h1'>Bookings:</h1>
-                      
                         {mapIt}
-                           
                     <button onClick = {this.props.logout}>Log out </button>
                 </div>
             </Fragment>
