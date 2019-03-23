@@ -299,13 +299,13 @@ button{
     justify-content: center;
     margin:auto;
     margin-bottom: 0px;
-    margin-top:2vh;
+    margin-top: 1.7vh;
     height: 4.3vh;
     width: 8vw;
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     color:rgb(255, 208, 164);
 }
@@ -322,7 +322,7 @@ button{
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 600;
     color:rgb(255, 208, 164);
    
