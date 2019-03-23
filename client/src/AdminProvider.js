@@ -26,7 +26,7 @@ class AdminProvider extends Component {
         for(let i = 0; i < array.length; i++){
             if( array[i]._id === id){
                 array[i].toggle = false       //genius...
-            }else{
+            } else {
                 array[i].toggle = true
             }
         }
