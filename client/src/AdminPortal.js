@@ -34,13 +34,12 @@ class AdminPortal extends Component  {
         
             this.setState(prevState =>{
                 return{
-                    currentId: id,                    // it saves the id in state
+                    currentId: id,            // it saves the id in state
                     date: date,
                     time: time,      
                     name: name,
                     email: email,
                     phone: phone,
-                    
                 }
             })
 
