@@ -18,9 +18,20 @@ class AdminProvider extends Component {
     }
 
 
+    
+    handleToggle = (id) => {
+
+        this.setState({
+            bookings2: this.state.bookings.map(item => item._id === id ? item.toggle = false : item.toggle = true)
+        })
+    }
+    
+    
+    
+    
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
-            
+            console.log(response.data)
             const updatedBooking = response.data
             this.setState(prevState => {
                 return {
@@ -30,7 +41,7 @@ class AdminProvider extends Component {
         })
     }
    
-    
+
     
     logout = () => {
         this.setState({
@@ -45,12 +56,13 @@ class AdminProvider extends Component {
     
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
-           
+          
             this.setState({
                 bookings: res.data
             })
         })
     }
+    
     
     
     handleDelete = (id) => {
@@ -61,7 +73,7 @@ class AdminProvider extends Component {
     // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
             }))
         })
-          console.log(this.state.bookings)
+          
     }
     
     
@@ -111,14 +123,14 @@ class AdminProvider extends Component {
             <AdminContext.Provider
                 value={{
                     ...this.state,
-                    bookings: this.state.bookings,
                     signup: this.signup,    // sending all this with context
                     login: this.login,
                     logout: this.logout,
                     showBookings: this.showBookings,
                     handleDelete: this.handleDelete,
                     handleDelete3: this.handleDelete3,
-                    handleEdit: this.handleEdit
+                    handleEdit: this.handleEdit,
+                    handleToggle: this.handleToggle,
                 }}>
                 {this.props.children}
             </AdminContext.Provider>

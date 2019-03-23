@@ -29,21 +29,8 @@ class AdminPortal extends Component  {
     }
 
     
-    toggleFalse = () => {
-        this.setState({
-            toggle: false
-        })
-    }
     
-    
-    toggleTrue = () => {
-        this.setState({
-            toggle: true
-        })
-    }
-    
-    
-    editToggler = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
+    editToggle = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
         
             this.setState(prevState =>{
                 return{
@@ -53,16 +40,20 @@ class AdminPortal extends Component  {
                     name: name,
                     email: email,
                     phone: phone,
+                    
                 }
             })
+
+            this.props.handleToggle(id)
     }
+    
     
     
     
     handleChange = e => {
         const { name, value } = e.target
         this.setState({
-            [name]: value
+            [name]: value,
         })
     }
     
@@ -93,30 +84,29 @@ class AdminPortal extends Component  {
         if(!updates.phone.length) {
             delete updates.phone
         }
-        console.log("this goes into the database for update=", updates)
         
         this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
        
-        this.editToggler()
-        
-        this.toggleTrue()
-        
     }
-   
 
     
+
+   
 render(){
        
+   
     let arr = this.props.bookings
     
-        arr.sort(function (a, b) {
+    console.log("this.props.bookings before map!",arr)
+   
+    arr.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date)
           
         })  
 
         arr.sort(function(a, b){
-            var nameA = a.name.toUpperCase()
-            var nameB = b.name.toUpperCase()
+            var nameA = a.name.toUpperCase() 
+            var nameB = b.name.toUpperCase() 
             if (nameA < nameB) {
               return -1;
             }
@@ -128,8 +118,8 @@ render(){
 
 
         arr.sort(function(a, b){
-            var nameA = a.username.toUpperCase()
-            var nameB = b.username.toUpperCase()
+            var nameA = a.username.toUpperCase() 
+            var nameB = b.username.toUpperCase() 
             if (nameA < nameB) {
               return -1;
             }
@@ -159,7 +149,7 @@ render(){
                     `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={ this.state.toggle ?  () => {return this.editToggler(item._id, item.name, item.date, item.time, item.phone, item.email), item.toggle = false, this.toggleFalse()} : null}>Edit</button>
+                    <button className = 'deleteButton' onClick={() => { return this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email)}}>Edit</button>
                 
                 </div>  
 

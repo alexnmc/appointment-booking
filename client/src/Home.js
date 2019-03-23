@@ -91,7 +91,7 @@ class Home extends Component {
     
     
     handleErase = () => {
-            console.log(this.props.user._id)
+            
             this.props.handleDelete2(this.props.user._id)
             this.props.logout()
             this.props.handleDelete3(this.props.user._id)
