@@ -82,7 +82,6 @@ class AdminProvider extends Component {
     // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
             }))
         })
-          
     }
     
     
