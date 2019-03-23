@@ -305,11 +305,10 @@ button{
     border: 3px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 600;
     color:rgb(255, 208, 164);
 }
-
 
 
 
@@ -543,8 +542,7 @@ button{
     }
 
    
-   .editContainer,
-   .bookingForm2{
+   .editContainer{
        display:flex;
        flex-direction: column;
        align-content: center;
@@ -554,8 +552,37 @@ button{
        width: auto;
     }
     
+
+
+    .bookingForm2{
+        display:flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+        margin-top:15px;
+        height: 17vh;
+        
+    }
+
+     .edit{
+
+        width: 100%;
+        margin: auto;
+        font-size: 7px;
+     }
+
+     .editButton{
+         width:30px;
+         font-size: 10px;
+         margin:1%
+     }
     
-    .editContainer{
+    .p{
+       font-size:  0px;
+    }
+    
+     .editContainer{
         margin-bottom: 350px;
     }
     
