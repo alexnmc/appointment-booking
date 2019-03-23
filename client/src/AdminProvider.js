@@ -21,7 +21,7 @@ class AdminProvider extends Component {
     
     handleToggle = (id) => {
 
-       let array = this.state.bookings
+        let array = this.state.bookings
        
         for(let i = 0; i < array.length; i++){
             if( array[i]._id === id){
@@ -30,10 +30,9 @@ class AdminProvider extends Component {
                 array[i].toggle = true
             }
         }
-        
-        this.setState({
-            bookings: array
-        })
+            this.setState({
+                bookings: array
+            })
     }
     
     
@@ -130,7 +129,6 @@ class AdminProvider extends Component {
         return (
             <AdminContext.Provider
                 value={{
-                    bookings: this.state.bookings,
                     ...this.state,
                     signup: this.signup,    // sending all this with context
                     login: this.login,
