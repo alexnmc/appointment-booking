@@ -149,7 +149,7 @@ render(){
                     `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={() => { return this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email)}}>Edit</button>
+                    <button className = 'deleteButton' onClick={() => this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email)}>Edit</button>
                 
                 </div>  
 
