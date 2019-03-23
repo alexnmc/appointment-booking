@@ -93,12 +93,9 @@ class AdminPortal extends Component  {
    
 render(){
        
-   
     let arr = this.props.bookings
     
-    console.log("this.props.bookings before map!",arr)
-   
-    arr.sort(function (a, b) {
+        arr.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date)
           
         })  
