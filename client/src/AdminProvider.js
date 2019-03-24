@@ -21,12 +21,7 @@ class AdminProvider extends Component {
     
     handleToggle = (id) => {
 
-        let array = this.state.bookings
-        array.map(item => item._id === id ? item.toggle = false : item.toggle = true)
-        
-        this.setState({
-                bookings: array
-        })
+        this.state.bookings.map(item => item._id === id ? item.toggle = false : item.toggle = true)
     }
     
     
