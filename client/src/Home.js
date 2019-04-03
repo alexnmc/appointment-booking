@@ -198,6 +198,7 @@ class Home extends Component {
                                     <form  onSubmit = {this.props.handleLogin}className='loginForm'>
                                         <h4>Bookings here:</h4>
                                         <input
+                                            className = "login1"
                                             type ='text'
                                             name ='username'
                                             placeholder  ='Username:'
@@ -206,6 +207,7 @@ class Home extends Component {
                                         />
 
                                         <input
+                                            className = "login1"
                                             type ='text'
                                             name ='password'
                                             placeholder ='Password:'

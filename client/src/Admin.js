@@ -94,6 +94,7 @@ class Admin extends Component {
                             <form onSubmit={this.handleLogin} className='loginForm'>
                                 <h4>Admin only:</h4>
                                 <input
+                                    className = "login1"
                                     type='text'
                                     name='username'
                                     placeholder='Username'
@@ -102,6 +103,7 @@ class Admin extends Component {
                                 />
 
                                 <input
+                                    className = "login1"   
                                     type='text'
                                     name='password'
                                     placeholder='Password'
@@ -122,6 +124,7 @@ class Admin extends Component {
                         <h4>Sign Up:</h4>
                        
                             <input
+                                className = "login1"
                                 type='text'
                                 name='adminPassword'
                                 placeholder='enter code'
@@ -130,6 +133,7 @@ class Admin extends Component {
                             />
 
                             <input
+                                className = "login1"
                                 type='text'
                                 name='username'
                                 placeholder='enter a username'
@@ -138,6 +142,7 @@ class Admin extends Component {
                             />
 
                             <input
+                                className = "login1"
                                 type='text'
                                 name='password'
                                 placeholder='choose your password'

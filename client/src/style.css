@@ -91,7 +91,7 @@ html, body {
 
 
 .signupButton{
-   margin-top:-9vh;
+   margin-top:-10vh;
 }
 
 
@@ -286,6 +286,11 @@ input{
     border: 3px solid  rgba(255, 123, 0, 0.877);
     border-radius: 5px;
     background-color: bisque;
+}
+
+.login1{
+    width: 12vw;
+    height: 4vh;
 }
 
 
