@@ -505,6 +505,11 @@ button{
         margin-top: 10px;
     }
     
+    .login1{
+        width: 160px;
+        height: 32px;
+    }
+    
     
     p{
         font-size: 19px;
@@ -680,11 +685,15 @@ button{
     
 
     h2{
-        font-size: 24px;
+        font-size: 25px;
         margin-top: 10px;
         margin-bottom:10px;
         width:100%;
         color: rgb(255, 115, 0);
+    }
+
+    h4{
+        font-size:22px;
     }
 }
 

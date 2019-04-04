@@ -226,6 +226,7 @@ class Home extends Component {
                                     <h4>Sign Up:</h4>
                                     
                                     <input
+                                        className = "login1"
                                         type='text'
                                         name='username'
                                         placeholder ='enter a username:'
@@ -234,6 +235,7 @@ class Home extends Component {
                                     />
 
                                     <input
+                                        className = "login1"
                                         type ='text'
                                         name ='password'
                                         placeholder ='choose your password:'
