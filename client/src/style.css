@@ -319,7 +319,6 @@ button{
     margin-top: 10px;
     height: 36px;
     width: 9vw;
-    
 }
 
 
@@ -382,6 +381,7 @@ button{
 }
 
 
+
 .bookingList2{
     width: 100%;
     height: auto;
@@ -411,6 +411,7 @@ button{
     margin: 15px;
     padding: 10px;
 }
+
 
 
 .h1{
@@ -453,6 +454,7 @@ button{
      margin-top: 40px;
      position:absolute;
 }
+
 
 
 .aboutText2{
@@ -505,6 +507,7 @@ button{
         margin: auto;
         margin-top: 10px;
     }
+    
     
     .login1{
         width: 160px;
@@ -573,24 +576,28 @@ button{
         
     }
 
-     .edit{
+     
+    .edit{
 
         width: 100%;
         margin: auto;
         font-size: 7px;
      }
 
-     .editButton{
+     
+    .editButton{
          width:30px;
          font-size: 10px;
          margin:1%
-     }
+    }
+    
     
     .p{
        font-size:  0px;
     }
     
-     .editContainer{
+     
+    .editContainer{
         margin-bottom: 350px;
     }
     
