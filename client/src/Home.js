@@ -182,7 +182,7 @@ class Home extends Component {
                             <div className = "bookingContainer2">
                                 <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>
                                 <div className = "booking2">
-                                    {mapBooking2}
+                                    {mapBooking2.length === 0 ? <p>no bookings</p>: mapBooking2}
                                 </div>
                                 <button className = "button4" onClick = {this.editToggler}>Return</button>
                             </div>
