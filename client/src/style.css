@@ -58,7 +58,6 @@ html, body {
     background-size: cover;
     position: relative;
     height: 100vh;
-    
 }
 
 
@@ -67,7 +66,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid rgba(255, 123, 0, 0.911);
+    border: 2px solid rgba(255, 123, 0, 0.911);
     border-radius:10px;
     background-color:  rgba(5, 32, 36, 0.842);
     margin-left: 10vw;
@@ -195,8 +194,8 @@ html, body {
     justify-content: center;
     margin: 26px;
     height: 29px;
-    width: 165px;
-    border: 2px solid rgb(255, 123, 0);
+    width: 167px;
+    border: 2px solid rgb(255, 197, 144);
 }
 
 
@@ -230,8 +229,6 @@ p{
     font-size:25px;
     font-weight: 900;
     text-align: center;
-    
-   
 }
 
 
@@ -292,6 +289,7 @@ input{
 .login1{
     width: 12vw;
     height: 4vh;
+    border: 2px solid  rgba(223, 108, 0, 0.877);
 }
 
 
@@ -305,7 +303,7 @@ button{
     margin-top: 1.7vh;
     height: 33px;
     width: 9vw;
-    border: 3px solid  rgb(206, 99, 0);
+    border: 2.4px solid  rgb(206, 99, 0);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
     font-size: 19px;
