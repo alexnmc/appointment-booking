@@ -166,6 +166,7 @@ html, body {
 .booking{
     width: 100%;
     height: auto;
+    font-size: 19px;
 }
 
 
@@ -194,8 +195,12 @@ html, body {
     justify-content: center;
     margin: 26px;
     height: 29px;
-    width: 167px;
-    border: 2px solid rgb(255, 197, 144);
+    width: 170px;
+    border: 1px solid rgb(18, 56, 9);
+    border-radius: 3px;
+    background-color: rgb(255, 214, 177);
+    color: black;
+    padding-left: 5px;
 }
 
 

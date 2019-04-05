@@ -135,7 +135,7 @@ render(){
                 <div className = "bookingList" > 
                 
                      <div className = "booking">
-                    { ` User: ${item.username} ,
+                    { ` User: ${item.username},
                         Name: ${item.name.toUpperCase()} ,
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
                         Time: ${item.time} ,
