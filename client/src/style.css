@@ -31,7 +31,7 @@ html, body {
 .navbar a {
     text-decoration: none;
     
-    color: rgb(245, 217, 191);
+    color: rgba(255, 212, 172, 0.87);
 }
 
 
@@ -67,7 +67,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid  rgba(37, 52, 63, 0.924);
+    border: 3px solid  rgba(10, 57, 63, 0.425);
     border-radius:4px;
     background-color:  rgba(5, 32, 36, 0.767);
     margin-left: 10vw;
@@ -90,7 +90,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid rgba(37, 52, 63, 0.911);
+    border: 3px solid  rgba(10, 57, 63, 0.425);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.767);
     margin-left: 10vw;
@@ -221,7 +221,7 @@ html, body {
 
 
 p{
-    color: rgb(245, 217, 191);
+    color: rgb(243, 204, 168);
     font-family: "verdana";
     font-size:23px;
     font-weight: 900;
@@ -231,7 +231,7 @@ p{
 
 h4{
     text-align: center;
-    color: rgb(248, 217, 188);
+    color: rgba(255, 206, 161, 0.918);
     font-family: "verdana";
     margin-top:20px;
     font-size:26px;
@@ -249,14 +249,14 @@ to {opacity: 1}
 
 h2{
     text-align: center;
-    color: rgb(255, 231, 209);
+    color: rgba(39, 59, 65, 0.849);
     font-family: "verdana";
     margin-top:11vh;
     margin-bottom: 9vh;
     margin-right: 12vw;
     font-weight: 900;
     font-size: 37px;
-    animation: fade 4s;
+    animation: fade 3s;
 }
 
 
@@ -270,7 +270,7 @@ select{
     margin-top: 2vh;
     height: 4.3vh;
     width: 14vw;
-    border: 2.4px solid rgba(255, 225, 176, 0.945);
+    border: 2.4px solid rgba(255, 225, 176, 0.87);
     background-color:rgba(30, 30, 59, 0.205);
     color:rgb(240, 219, 161);
     font-size: 15px;
@@ -312,11 +312,11 @@ input{
     height: 33px;
     width: 9vw;
     border: 2px solid   rgba(9, 19, 17, 0.233);
-    background-color:rgba(10, 24, 23, 0.979);
+    background-color:rgba(0, 29, 25, 0.972);
     border-radius: 2px;
     font-size: 17px;
     font-weight: 600;
-    color:rgb(255, 208, 164);
+    color:rgba(255, 208, 164, 0.856);
 }
 
 
