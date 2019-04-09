@@ -300,13 +300,14 @@ input{
     font-size: 15px;
     border: 2.4px solid rgb(253, 231, 195);
     border-radius: 5px;
-    background-color: bisque;
+    background-color: rgba(255, 228, 196, 0.938);
+   
 }
 
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgba(14, 39, 0, 0.877);
+    border: 2px solid  rgba(0, 26, 22, 0.883);
 }
 
 
@@ -320,9 +321,9 @@ input{
     margin-top: 1.7vh;
     height: 33px;
     width: 9vw;
-    border: 2px solid   rgba(255, 208, 164, 0.712);
-    background-color:rgba(12, 31, 30, 0.979);
-    border-radius: 5px;
+    border: 2px solid   rgba(9, 19, 17, 0.233);
+    background-color:rgba(10, 24, 23, 0.979);
+    border-radius: 2px;
     font-size: 19px;
     font-weight: 600;
     color:rgb(255, 208, 164);
@@ -359,7 +360,7 @@ input{
 
 .deleteButton2{
 
-    background-color: rgba(167, 0, 0, 0.87);
+    background-color: rgba(133, 0, 0, 0.87);
     color: rgb(255, 220, 197);
     width: 3.6vw;
     height: 3.7vh;
@@ -367,7 +368,7 @@ input{
     margin-left: 10px;
     font-size: 9px;
     border-radius: 2px;
-    border: 2px solid rgb(88, 0, 0);
+    border: 2px solid rgba(88, 0, 0, 0.801);
    
 }
 
