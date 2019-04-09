@@ -67,21 +67,11 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid  rgba(5, 32, 36, 0.932);
+    border: 3px solid  rgba(37, 52, 63, 0.924);
     border-radius:4px;
-    background-color:  rgba(5, 32, 36, 0.842);
+    background-color:  rgba(5, 32, 36, 0.767);
     margin-left: 10vw;
     animation: fade 0.2s;
-}
-
-
-.logIn2{
-    display: block;
-    height: 37vh;
-    width: 20vw;
-    border: 3px solid rgba(255, 123, 0, 0.911);
-    border-radius:3px;
-    background-color: rgba(5, 44, 49, 0.842);
 }
 
 
@@ -100,9 +90,9 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid rgba(37, 52, 63, 0.918);
+    border: 3px solid rgba(37, 52, 63, 0.911);
     border-radius:3px;
-    background-color: rgba(5, 32, 36, 0.842);
+    background-color: rgba(5, 32, 36, 0.767);
     margin-left: 10vw;
 }
 
@@ -129,7 +119,7 @@ html, body {
     width: 25vw;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
-    background-color: rgba(5, 32, 36, 0.822);
+    background-color: rgba(5, 32, 36, 0.705);
     margin-right: 23vw;
     margin-top: 5vh;
     padding-bottom: 15px;
@@ -150,7 +140,7 @@ html, body {
     width: 25vw;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
-    background-color: rgba(5, 32, 36, 0.822);
+    background-color: rgba(5, 32, 36, 0.705);
     margin-right: 23vw;
     margin-top: 6vh;
 }
@@ -307,7 +297,7 @@ input{
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgba(0, 26, 22, 0.883);
+    border: 2px solid  rgba(0, 42, 36, 0.808);
 }
 
 
