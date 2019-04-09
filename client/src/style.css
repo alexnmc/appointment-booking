@@ -11,12 +11,12 @@ html, body {
 
 .navbar {
     width: 100vw;
-    height: 10vh;
+    height: 9vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color:  #142b2bf1; 
-    font-size: 25px;
+    font-size: 23px;
     font-family:'verdana';
     font-weight: 600;
    
@@ -254,8 +254,9 @@ h2{
     font-family: "verdana";
     margin-top:14vh;
     margin-bottom: 50px;
-    margin-right: 100px;
+    margin-right: 12vw;
     font-weight: 900;
+    font-size: 37px;
 }
 
 

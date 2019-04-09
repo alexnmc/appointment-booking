@@ -129,7 +129,7 @@ render(){
         let mapIt = arr.map(item => {
                 
             return(
-                <div key = {item._id}>
+                <div key = {item._id} >
                     
                 {item.toggle  ?
                 <div className = "bookingList" > 
@@ -149,8 +149,8 @@ render(){
                 </div>  
 
                 :
-            
-                <form onSubmit={this.handleSubmit} className = 'bookingForm2'>
+                
+                <form onSubmit={this.handleSubmit}  className = 'bookingForm2'>
                 <p className = "p">Edit here:</p>
                 
                 <input 
@@ -193,7 +193,7 @@ render(){
                      onChange={this.handleChange}
                      />
                  <button className = "editButton">Save</button>
-                </form>
+                 </form>
             }
             </div>
             )
@@ -201,8 +201,8 @@ render(){
        
        
     return (
-            <Fragment>
-                <div className = "adminPortal2">
+            <Fragment >
+                <div className = "adminPortal2"  >
                     <h1 className= 'h1'>Bookings:</h1>
                         {mapIt}
                     <button onClick = {this.props.logout}>Log out </button>
