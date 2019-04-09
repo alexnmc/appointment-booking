@@ -127,7 +127,7 @@ html, body {
     position: relative;
     height: 70vh;
     width: 25vw;
-    border: 2px solid rgba(0, 33, 48, 0.527);
+    border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.822);
     margin-right: 23vw;
@@ -148,7 +148,7 @@ html, body {
     position: relative;
     height: 70vh;
     width: 25vw;
-    border: 2px solid rgba(0, 33, 48, 0.527);
+    border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.822);
     margin-right: 23vw;
@@ -241,7 +241,7 @@ p{
 
 h4{
     text-align: center;
-    color: rgb(245, 217, 191);
+    color: rgb(248, 217, 188);
     font-family: "verdana";
     margin-top:20px;
     font-size:26px;
@@ -259,7 +259,7 @@ to {opacity: 1}
 
 h2{
     text-align: center;
-    color: rgb(245, 217, 191);
+    color: rgb(255, 231, 209);
     font-family: "verdana";
     margin-top:11vh;
     margin-bottom: 9vh;
@@ -324,7 +324,7 @@ input{
     border: 2px solid   rgba(9, 19, 17, 0.233);
     background-color:rgba(10, 24, 23, 0.979);
     border-radius: 2px;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 600;
     color:rgb(255, 208, 164);
 }
