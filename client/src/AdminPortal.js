@@ -205,7 +205,7 @@ render(){
                 <div className = "adminPortal2"  >
                     <h1 className= 'h1'>Bookings:</h1>
                         {mapIt}
-                    <button onClick = {this.props.logout}>Log out </button>
+                    <button className = 'adminButton' onClick = {this.props.logout}>Log out </button>
                 </div>
             </Fragment>
         )

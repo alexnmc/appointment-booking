@@ -30,13 +30,15 @@ html, body {
 
 .navbar a {
     text-decoration: none;
-    color: rgb(255, 123, 0);
+    
+    color: rgb(245, 217, 191);
 }
 
 
 
 .navbar a:hover{
-    color: rgb(245, 217, 191);
+   
+    color: rgb(255, 123, 0);
 }
 
 
@@ -65,8 +67,8 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid rgba(255, 123, 0, 0.911);
-    border-radius:10px;
+    border: 3px solid  rgba(5, 32, 36, 0.932);
+    border-radius:4px;
     background-color:  rgba(5, 32, 36, 0.842);
     margin-left: 10vw;
     animation: fade 0.2s;
@@ -78,7 +80,7 @@ html, body {
     height: 37vh;
     width: 20vw;
     border: 3px solid rgba(255, 123, 0, 0.911);
-    border-radius:10px;
+    border-radius:3px;
     background-color: rgba(5, 44, 49, 0.842);
 }
 
@@ -98,8 +100,8 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid rgba(255, 123, 0, 0.918);
-    border-radius:10px;
+    border: 3px solid rgba(37, 52, 63, 0.918);
+    border-radius:3px;
     background-color: rgba(5, 32, 36, 0.842);
     margin-left: 10vw;
 }
@@ -125,8 +127,8 @@ html, body {
     position: relative;
     height: 70vh;
     width: 25vw;
-    border: 3px solid rgb(224, 108, 0);
-    border-radius:10px;
+    border: 2px solid rgba(0, 33, 48, 0.527);
+    border-radius:3px;
     background-color: rgba(5, 32, 36, 0.822);
     margin-right: 23vw;
     margin-top: 5vh;
@@ -146,8 +148,8 @@ html, body {
     position: relative;
     height: 70vh;
     width: 25vw;
-    border: 3px solid rgb(224, 108, 0);
-    border-radius:10px;
+    border: 2px solid rgba(0, 33, 48, 0.527);
+    border-radius:3px;
     background-color: rgba(5, 32, 36, 0.822);
     margin-right: 23vw;
     margin-top: 6vh;
@@ -256,7 +258,7 @@ to {opacity: 1}
 
 h2{
     text-align: center;
-    color: rgb(255, 230, 210);
+    color: rgb(245, 217, 191);
     font-family: "verdana";
     margin-top:14vh;
     margin-bottom: 50px;
@@ -277,7 +279,7 @@ select{
     margin-top: 2vh;
     height: 4.3vh;
     width: 14vw;
-    border: 2.4px solid  rgb(255, 123, 0);
+    border: 2.4px solid rgba(255, 225, 176, 0.945);
     background-color:rgba(30, 30, 59, 0.205);
     color:rgb(240, 219, 161);
     font-size: 15px;
@@ -295,7 +297,7 @@ input{
     height: 4.3vh;
     width: 14vw;
     font-size: 15px;
-    border: 2.4px solid  rgba(255, 123, 0, 0.877);
+    border: 2.4px solid rgb(253, 231, 195);
     border-radius: 5px;
     background-color: bisque;
 }
@@ -303,7 +305,7 @@ input{
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgba(223, 108, 0, 0.877);
+    border: 2px solid  rgba(14, 39, 0, 0.877);
 }
 
 
@@ -317,7 +319,7 @@ button{
     margin-top: 1.7vh;
     height: 33px;
     width: 9vw;
-    border: 2.4px solid  rgb(206, 99, 0);
+    border: 2px solid   rgba(255, 208, 164, 0.63);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
     font-size: 19px;
@@ -325,7 +327,9 @@ button{
     color:rgb(255, 208, 164);
 }
 
-
+.adminButton{
+    border: 2px solid rgba(255, 123, 0, 0.911);
+}
 
 .button4{
     margin-top: 10px;
@@ -350,7 +354,7 @@ button{
 
 .deleteButton2{
 
-    background-color: rgba(206, 0, 0, 0.87);
+    background-color: rgba(167, 0, 0, 0.87);
     color: rgb(255, 220, 197);
     width: 3.6vw;
     height: 3.7vh;
@@ -358,7 +362,7 @@ button{
     margin-left: 10px;
     font-size: 9px;
     border-radius: 2px;
-    border: 2px solid rgb(66, 0, 0);
+    border: 2px solid rgb(88, 0, 0);
    
 }
 
