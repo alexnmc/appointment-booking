@@ -19,7 +19,6 @@ html, body {
     font-size: 23px;
     font-family:'verdana';
     font-weight: 600;
-   
 }
 
 
@@ -70,6 +69,7 @@ html, body {
     border-radius:10px;
     background-color:  rgba(5, 32, 36, 0.842);
     margin-left: 10vw;
+    animation: fade 0.2s;
 }
 
 
@@ -247,6 +247,12 @@ h4{
 }
 
 
+@keyframes fade{
+from {opacity: 0}
+to {opacity: 1}
+}
+
+
 
 h2{
     text-align: center;
@@ -257,7 +263,9 @@ h2{
     margin-right: 12vw;
     font-weight: 900;
     font-size: 37px;
+    animation: fade 4s;
 }
+
 
 
 .date,
