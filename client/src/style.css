@@ -233,7 +233,7 @@ html, body {
 p{
     color: rgb(245, 217, 191);
     font-family: "verdana";
-    font-size:25px;
+    font-size:23px;
     font-weight: 900;
     text-align: center;
 }
@@ -246,6 +246,7 @@ h4{
     margin-top:20px;
     font-size:26px;
     font-weight: 900;
+    
 }
 
 
@@ -260,8 +261,8 @@ h2{
     text-align: center;
     color: rgb(245, 217, 191);
     font-family: "verdana";
-    margin-top:14vh;
-    margin-bottom: 50px;
+    margin-top:11vh;
+    margin-bottom: 9vh;
     margin-right: 12vw;
     font-weight: 900;
     font-size: 37px;
@@ -310,7 +311,7 @@ input{
 
 
 .button,
-button{
+ button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,7 +320,7 @@ button{
     margin-top: 1.7vh;
     height: 33px;
     width: 9vw;
-    border: 2px solid   rgba(255, 208, 164, 0.63);
+    border: 2px solid   rgba(255, 208, 164, 0.712);
     background-color:rgba(12, 31, 30, 0.979);
     border-radius: 5px;
     font-size: 19px;
@@ -327,9 +328,13 @@ button{
     color:rgb(255, 208, 164);
 }
 
+
+
 .adminButton{
     border: 2px solid rgba(255, 123, 0, 0.911);
 }
+
+
 
 .button4{
     margin-top: 10px;
@@ -454,7 +459,7 @@ button{
 
 .adminPortal2{
     background-color: #142b2bf1;
-    height: 90vh;
+    height: 100vh;
     padding: 20px;
     overflow: scroll;
     
