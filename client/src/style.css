@@ -315,8 +315,8 @@ input{
 
 
 .adminButton{
-    border: 2px solid rgba(255, 123, 0, 0.911);
-    border-radius:3px;
+    border: 2px solid rgba(230, 111, 0, 0.952);
+    border-radius:5px;
     margin-top:3%
 }
 
@@ -371,7 +371,7 @@ input{
 
 
 .bookingList {
-    border: 2px solid rgb(255, 123, 0);
+    border: 2px solid rgba(1, 31, 32, 0.329);
     border-radius: 7px;
     background-color: rgba(12, 36, 41, 0.918);
     color:rgb(255, 232, 210);
@@ -402,7 +402,7 @@ input{
     justify-content: center;
     height: 52px;
     width: 100%;
-    border: 2px solid rgb(224, 108, 0);
+    border: 2px solid rgb(1, 31, 32);
     border-radius:7px;
     background-color: rgba(3, 29, 31, 0.781);
     position: relative;
