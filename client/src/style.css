@@ -18,7 +18,8 @@ html, body {
     background-color:  #142b2bf1; 
     font-size: 22px;
     font-family:'helvetica';
-    font-weight: 600
+    font-weight: 600;
+    animation: fade 2s;
 }
 
 
@@ -67,11 +68,11 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid  rgba(10, 57, 63, 0.425);
+    border: 3px solid  rgba(10, 57, 63, 0.315);
     border-radius:4px;
-    background-color:  rgba(5, 32, 36, 0.767);
+    background-color:  rgba(5, 32, 36, 0.746);
     margin-left: 8vw;
-    animation: fade 0.2s;
+   
 }
 
 
@@ -94,6 +95,7 @@ html, body {
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.767);
     margin-left: 8vw;
+   
 }
 
 
@@ -244,8 +246,8 @@ h2{
     border-radius:15px;
     padding:15px;
     font-family: "verdana";
-    margin-top:9vh;
-    margin-bottom: 7vh;
+    margin-top: 6vh;
+    margin-bottom: 9vh;
     margin-right: 13vw;
     font-weight: 900;
     font-size: 32px;
