@@ -95,7 +95,6 @@ html, body {
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.767);
     margin-left: 8vw;
-   
 }
 
 
@@ -116,7 +115,6 @@ html, body {
     margin-top: 5vh;
     padding-bottom: 15px;
     padding-top: 5px;
-   
 }
 
 
@@ -201,7 +199,7 @@ html, body {
 
 
 .p{
-    color: rgb(245, 217, 191);
+    color: rgb(255, 227, 200);
     font-family: "verdana";
     margin:auto;
     margin-right: 20px;
@@ -228,7 +226,6 @@ h4{
     margin-top:20px;
     font-size:24px;
     font-weight: 900;
-    
 }
 
 
@@ -250,7 +247,7 @@ h2{
     margin-bottom: 9vh;
     margin-right: 13vw;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 30px;
     animation: fade 3s;
 }
 
@@ -286,7 +283,6 @@ input{
     border: 2.4px solid rgb(253, 231, 195);
     border-radius: 5px;
     background-color: rgba(255, 228, 196, 0.938);
-   
 }
 
 .login1{
@@ -356,7 +352,6 @@ input{
     font-size: 9px;
     border-radius: 2px;
     border: 2px solid rgba(88, 0, 0, 0.801);
-   
 }
 
 
