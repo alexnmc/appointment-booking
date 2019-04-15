@@ -31,14 +31,13 @@ html, body {
 
 .navbar a {
     text-decoration: none;
-    color: rgb(255, 212, 173);
+    color: rgb(255, 123, 0);
 }
 
 
 
 .navbar a:hover{
-   
-    color: rgb(255, 123, 0);
+    color: rgb(255, 212, 173);
 }
 
 
