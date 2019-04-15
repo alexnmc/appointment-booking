@@ -70,7 +70,7 @@ html, body {
     border: 3px solid  rgba(10, 57, 63, 0.315);
     border-radius:4px;
     background-color:  rgba(5, 32, 36, 0.746);
-    margin-left: 6vw;
+    margin-left: 6.5vw;
 }
 
 
@@ -92,7 +92,7 @@ html, body {
     border: 3px solid  rgba(10, 57, 63, 0.425);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.767);
-    margin-left: 8vw;
+    margin-left: 6.5vw;
 }
 
 
@@ -109,7 +109,7 @@ html, body {
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
-    margin-right: 18vw;
+    margin-right: 20vw;
     margin-top: 5vh;
     padding-bottom: 15px;
     padding-top: 5px;
@@ -129,7 +129,7 @@ html, body {
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
-    margin-right: 18vw;
+    margin-right: 20vw;
     margin-top: 5vh;
 }
 
@@ -243,8 +243,8 @@ h2{
     padding:15px;
     font-family: "verdana";
     margin-top: 6vh;
-    margin-bottom: 9vh;
-    margin-right: 13vw;
+    margin-bottom: 4.5vh;
+    margin-right: 16vw;
     font-weight: 900;
     font-size: 30px;
     animation: fade 3s;
