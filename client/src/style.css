@@ -31,7 +31,7 @@ html, body {
 
 .navbar a {
     text-decoration: none;
-    color: rgb(255, 123, 0);
+    color: rgb(252, 107, 10);
 }
 
 
@@ -71,6 +71,7 @@ html, body {
     border-radius:4px;
     background-color:  rgba(5, 32, 36, 0.746);
     margin-left: 8vw;
+    
    
 }
 
@@ -225,6 +226,7 @@ h4{
     margin-top:20px;
     font-size:24px;
     font-weight: 900;
+    color: rgb(252, 107, 10);
 }
 
 
@@ -237,7 +239,7 @@ to {opacity: 1}
 
 h2{
     text-align: center;
-    color: rgb(165, 79, 29);
+    color:  rgba(255, 213, 174, 0.904);
     background-color:rgba(3, 22, 20, 0.02);
     border-radius:15px;
     padding:15px;
@@ -307,6 +309,7 @@ input{
     font-size: 17px;
     font-weight: 600;
     color:rgba(255, 208, 164, 0.856);
+    color: rgb(255, 114, 20);
 }
 
 
