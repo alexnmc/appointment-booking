@@ -237,14 +237,14 @@ to {opacity: 1}
 
 h2{
     text-align: center;
-    color:  rgba(255, 213, 174, 0.904);
+    color:  rgba(255, 217, 182, 0.952);
     background-color:rgba(3, 22, 20, 0.02);
     border-radius:15px;
     padding:15px;
     font-family: "verdana";
-    margin-top: 5vh;
-    margin-bottom: 4.5vh;
-    margin-right: 19vw;
+    margin-top: 4vh;
+    margin-bottom: 2.5vh;
+    margin-right: 20vw;
     font-weight: 900;
     font-size: 30px;
     animation: fade 3s;
@@ -311,7 +311,7 @@ input{
     font-size: 17px;
     font-weight: 600;
     color:rgba(255, 208, 164, 0.856);
-    color: rgb(255, 108, 9);
+   
 }
 
 
