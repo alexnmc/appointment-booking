@@ -20,6 +20,8 @@ html, body {
     font-family:'helvetica';
     font-weight: 600;
     animation: fade 2s;
+    border-top: 1px solid rgb(255, 212, 173);
+    border-bottom: 1px solid rgb(255, 212, 173);
 }
 
 
