@@ -288,7 +288,7 @@ input{
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgba(255, 94, 0, 0.911);
+    border: 2px solid  rgba(255, 94, 0, 0.74);
     background-color:  rgba(255, 228, 196, 0.938);
     color:black;
     border-radius: 3px;
@@ -305,7 +305,7 @@ input{
     margin-top: 1.7vh;
     height: 33px;
     width: 9vw;
-    border: 2px solid  rgba(255, 105, 18, 0.925);
+    border: 2px solid  rgba(255, 105, 18, 0.877);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
     font-size: 17px;
