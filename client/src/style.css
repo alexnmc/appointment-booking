@@ -68,7 +68,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid  rgb(251, 105, 20);
+    border: 3px solid  rgba(255, 116, 36, 0.911);
     border-radius: 7px;
     background-color:  rgba(5, 32, 36, 0.781);
     margin-left: 6.5vw;
@@ -90,7 +90,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid  rgb(255, 107, 22);
+    border: 2px solid  rgb(255, 107, 22);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
     margin-left: 6.5vw;
@@ -225,7 +225,7 @@ h4{
     margin-top:20px;
     font-size:24px;
     font-weight: 900;
-    color: rgb(252, 107, 10);
+   
 }
 
 
@@ -289,7 +289,7 @@ input{
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgb(255, 105, 19);
+    border: 2px solid  rgba(255, 106, 19, 0.877);
     background-color:  rgba(255, 228, 196, 0.938);
     color:black;
     border-radius: 2px;
@@ -306,9 +306,9 @@ input{
     margin-top: 1.7vh;
     height: 33px;
     width: 9vw;
-    border: 2px solid  rgb(228, 83, 0);
+    border: 2px solid  rgba(255, 105, 18, 0.925);
     background-color:rgba(0, 27, 29, 0.972);
-    border-radius: 2px;
+    border-radius: 3px;
     font-size: 17px;
     font-weight: 600;
     color:rgba(255, 208, 164, 0.856);
