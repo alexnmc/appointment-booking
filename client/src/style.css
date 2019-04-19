@@ -68,7 +68,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 3px solid  rgba(255, 116, 36, 0.911);
+    border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color:  rgba(5, 32, 36, 0.781);
     margin-left: 6.5vw;
@@ -90,7 +90,7 @@ html, body {
     display: block;
     height: 37vh;
     width: 20vw;
-    border: 2px solid  rgb(255, 107, 22);
+    border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
     margin-left: 6.5vw;
@@ -225,7 +225,6 @@ h4{
     margin-top:20px;
     font-size:24px;
     font-weight: 900;
-   
 }
 
 
@@ -289,10 +288,10 @@ input{
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgba(255, 106, 19, 0.877);
+    border: 2px solid  rgba(255, 94, 0, 0.911);
     background-color:  rgba(255, 228, 196, 0.938);
     color:black;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 
@@ -312,7 +311,6 @@ input{
     font-size: 17px;
     font-weight: 600;
     color:rgba(255, 208, 164, 0.856);
-   
 }
 
 
@@ -397,6 +395,7 @@ input{
 }
 
 
+
 .bookingForm2{
     height:auto;
     display:flex;
@@ -409,7 +408,6 @@ input{
     background-color: rgba(3, 29, 31, 0.781);
     position: relative;
     margin-top: 20px;
-   
 }
 
 
