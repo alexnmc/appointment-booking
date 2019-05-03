@@ -238,7 +238,6 @@ to {opacity: 1}
 h2{
     text-align: center;
     color:  rgba(255, 217, 182, 0.658);
-    background-color:rgba(3, 22, 20, 0.061);
     border-radius:15px;
     padding:15px;
     font-family: "verdana";
@@ -281,14 +280,13 @@ input{
     font-size: 15px;
     border: 2.4px solid rgb(228, 91, 0);
     border-radius: 5px;
-    
     background-color:rgb(255, 219, 175);
 }
 
 .login1{
     width: 12vw;
     height: 4vh;
-    border: 2px solid  rgba(255, 94, 0, 0.74);
+    border: 1px solid  rgba(2, 2, 2, 0.74);
     background-color:  rgba(255, 228, 196, 0.938);
     color:black;
     border-radius: 3px;
