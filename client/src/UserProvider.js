@@ -42,6 +42,7 @@ class UserProvider extends Component {
             
         })
         .catch(err => alert(err.response.data.errMsg))
+       
     }
 
     
@@ -56,7 +57,6 @@ class UserProvider extends Component {
             this.setState({ user: user, token })
         })
         .catch(err => alert(err.response.data.errMsg))
-        
     }
    
    
@@ -75,6 +75,7 @@ class UserProvider extends Component {
             username: '',
             password: ''
         })
+        
     }
 
 

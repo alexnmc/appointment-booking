@@ -72,7 +72,6 @@ class Home extends Component {
                 toggle: !prevState.toggle  
             }
         })
-        
         this.showBooking(this.props.user._id)
     }
 
