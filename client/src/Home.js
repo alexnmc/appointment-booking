@@ -103,13 +103,11 @@ class Home extends Component {
         let array = this.state.booking2
        
         array.sort(function (a, b) {
-            return new Date(a.date) - new Date(b.date)
-          
+            return new Date(a.date) - new Date(b.date) 
         })  
 
        
         let mapBooking2 = array.map(item =>{
-            
             return(
               <div className = "homeBooking" key = {item._id}>
               <p className = "p2"> {`Name: ${item.name.toUpperCase()}`}</p>   
@@ -124,7 +122,6 @@ class Home extends Component {
                 { this.props.token ?
                     <div>
                         { this.state.toggle ?
-                        
                             <div className='bookingContainer'>
                                 <form  className = 'bookingForm' onSubmit={this.handleSubmit}  >
                                     <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>

@@ -220,10 +220,10 @@ p{
 
 h4{
     text-align: center;
-    color: rgba(255, 206, 161, 0.918);
+    color:rgba(255, 217, 182, 0.904);
     font-family: "verdana";
     margin-top:20px;
-    font-size:24px;
+    font-size:21px;
     font-weight: 900;
 }
 
@@ -300,9 +300,9 @@ input{
     justify-content: center;
     margin:auto;
     margin-bottom: 0px;
-    margin-top: 1.7vh;
+    margin-top: 2.5vh;
     height: 33px;
-    width: 9vw;
+    width: 8.5vw;
     border: 2px solid  rgba(255, 105, 18, 0.877);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
@@ -329,7 +329,6 @@ input{
 
 
 .deleteButton{
-
     background-color: rgba(153, 0, 0, 0.87);
     color:  rgb(255, 175, 101);
     width: 56px;
@@ -422,7 +421,7 @@ input{
 .h1{
     text-align: center;
     font-family: verdana;
-    font-size:45px;
+    font-size:35px;
     color:rgb(226, 102, 0);
     margin-bottom: 20px;
 }
