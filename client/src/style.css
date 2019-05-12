@@ -36,11 +36,9 @@ html, body {
 }
 
 
-
 .navbar a:hover{
     color: rgb(255, 212, 173);
 }
-
 
 
 .home {
@@ -52,16 +50,13 @@ html, body {
 }
 
 
-
 .about,
 .home {
     background-image: url('./Photos/jetski.png');
     background-size: cover;
     position: relative;
     height: 100vh;
-    
 }
-
 
 
 .logIn{
@@ -75,7 +70,6 @@ html, body {
 }
 
 
-
 .loginForm{
     height: 90%;
 }
@@ -84,7 +78,6 @@ html, body {
 .signupButton{
    margin-top:-10vh;
 }
-
 
 .signUp {
     display: block;
@@ -132,6 +125,7 @@ html, body {
     background-color: rgba(5, 32, 36, 0.705);
     margin-right: 22vw;
     margin-top: 5vh;
+    padding-top:10pt;
 }
 
 
@@ -153,7 +147,7 @@ html, body {
 
 .p2{
     margin:4px;
-    font-size: 21px;
+    font-size: 19px;
 }
 
 
@@ -161,7 +155,7 @@ html, body {
     margin-top: 10px;
     margin-bottom:5px;
     color:red;
-    font-size:30px;
+    font-size:25px;
 }
 
 
@@ -410,7 +404,7 @@ input{
 
 
 .homeBooking{
-    border: 3px solid rgb(255, 213, 173);;
+    border: 2px solid rgb(255, 213, 173);;
     border-radius: 5px;
     margin: 15px;
     padding: 10px;
@@ -439,7 +433,6 @@ input{
 }
 
 
-
 .adminPortal2{
     background-color: #142b2bf1;
     height: 100vh;
@@ -447,7 +440,6 @@ input{
     overflow: scroll;
     
 }
-
 
 
 .aboutText{
@@ -460,7 +452,6 @@ input{
 }
 
 
-
 .aboutText2{
     color: #1c3a3a; 
     font-family: verdana;
@@ -470,7 +461,12 @@ input{
     text-align: center;
 }
 
-
+.buttonS{
+    margin-top:10pt;
+}
+.buttonS2{
+    margin-top:15pt;
+}
 
 @media only screen and (max-width: 1024px) {
 

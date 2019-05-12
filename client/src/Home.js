@@ -166,10 +166,10 @@ class Home extends Component {
                                         onChange={this.handleChange}
                                         required
                                         />
-                                    <button>Submit</button>
+                                    <button className = "buttonS2">Submit</button>
                                 </form>
-                                    <button onClick = {this.editToggler}>Bookings</button>
-                                    <button className = "button" onClick = {this.props.logout}>Log out </button>
+                                    <button className = "buttonS" onClick = {this.editToggler}>Bookings</button>
+                                    <button className = "buttonS" onClick = {this.props.logout}>Log out </button>
                                     <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
                             </div>
                             
