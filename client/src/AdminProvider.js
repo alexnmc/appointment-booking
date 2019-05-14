@@ -18,11 +18,9 @@ class AdminProvider extends Component {
     }
 
 
-    
     handleToggle = (id) => {
         this.state.bookings.map(item => item._id === id ? item.toggle = false : item.toggle = true)  
     }
-    
     
     
     handleEdit = (id, updates) => {
@@ -37,7 +35,6 @@ class AdminProvider extends Component {
     }
    
 
-    
     logout = () => {
         this.setState({
             user:'',   // we logout by removing the token from state and local storage
@@ -48,7 +45,6 @@ class AdminProvider extends Component {
     }
 
     
-    
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
             this.setState({
@@ -56,7 +52,6 @@ class AdminProvider extends Component {
             })
         })
     }
-    
     
     
     handleDelete = (id) => {
@@ -69,8 +64,6 @@ class AdminProvider extends Component {
     }
     
     
-    
-    
     handleDelete3 = (userID) => {
         axios.delete(`bookings/delete/${userID}`).then(res => {
             this.setState(prevState => {
@@ -80,7 +73,6 @@ class AdminProvider extends Component {
             })
         })
     }
-    
     
     
     signup = userInfo => {
@@ -95,7 +87,6 @@ class AdminProvider extends Component {
     }
 
     
-    
     login = userInfo => {
         axios.post('/auth/login', userInfo).then(res => {
             const { token, admin } = res.data          // when the token and user comes back from the database we store it in local storage
@@ -106,7 +97,6 @@ class AdminProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
 
-    
     
     render() {
         return (

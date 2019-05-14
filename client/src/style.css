@@ -8,7 +8,6 @@ html, body {
     margin: 0px;
 }
 
-
 .navbar {
     width: 100vw;
     height: 8vh;
@@ -23,23 +22,18 @@ html, body {
     border-bottom: 1px solid rgb(255, 212, 173);
 }
 
-
 .admin{
-
-    padding-top: 12vh;
+   padding-top: 12vh;
 }
-
 
 .navbar a {
     text-decoration: none;
     color: rgb(252, 107, 10);
 }
 
-
 .navbar a:hover{
     color: rgb(255, 212, 173);
 }
-
 
 .home {
     display: flex;
@@ -49,7 +43,6 @@ html, body {
     align-items: flex-end;
 }
 
-
 .about,
 .home {
     background-image: url('./Photos/jetski.png');
@@ -57,7 +50,6 @@ html, body {
     position: relative;
     height: 100vh;
 }
-
 
 .logIn{
     display: block;
@@ -69,11 +61,9 @@ html, body {
     margin-left: 6.5vw;
 }
 
-
 .loginForm{
     height: 90%;
 }
-
 
 .signupButton{
    margin-top:-10vh;
@@ -89,10 +79,7 @@ html, body {
     margin-left: 6.5vw;
 }
 
-
-
 .bookingContainer2{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,10 +96,7 @@ html, body {
     padding-top: 5px;
 }
 
-
-
 .bookingContainer{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,8 +112,6 @@ html, body {
     padding-top:10pt;
 }
 
-
-
 .booking2{
     height: 550px;
     padding:15px;
@@ -137,19 +119,16 @@ html, body {
     max-height: 100vh;
 }
 
-
 .booking{
     width: 100%;
     height: auto;
     font-size: 19px;
 }
 
-
 .p2{
     margin:4px;
     font-size: 19px;
 }
-
 
 .p3{
     margin-top: 10px;
@@ -158,11 +137,9 @@ html, body {
     font-size:25px;
 }
 
-
 .time1{
     color: red;
 }
-
 
 .edit{
     display:inline-flex;
@@ -178,7 +155,6 @@ html, body {
     padding-left: 5px;
 }
 
-
 .editButton{
     width: 60px;
     height: 28px;
@@ -188,8 +164,6 @@ html, body {
     color: rgb(241, 241, 241);
     margin:10px;
 }
-
-
 
 .p{
     color: rgb(255, 227, 200);
@@ -201,8 +175,6 @@ html, body {
     font-weight: 600;
 }
 
-
-
 p{
     color: rgb(243, 204, 168);
     font-family: "verdana";
@@ -210,7 +182,6 @@ p{
     font-weight: 900;
     text-align: center;
 }
-
 
 h4{
     text-align: center;
@@ -227,8 +198,6 @@ from {opacity: 0}
 to {opacity: 1}
 }
 
-
-
 h2{
     text-align: center;
     color:  rgba(255, 217, 182, 0.658);
@@ -242,8 +211,6 @@ h2{
     font-size: 30px;
     animation: fade 3s;
 }
-
-
 
 .date,
 select{
@@ -260,8 +227,6 @@ select{
     font-size: 15px;
     border-radius: 5px;
 }
-
-
 
 input{
     display: flex;
@@ -286,7 +251,6 @@ input{
     border-radius: 3px;
 }
 
-
 .button,
  button{
     display: flex;
@@ -305,22 +269,23 @@ input{
     color:rgba(255, 208, 164, 0.856);
 }
 
-
-
 .adminButton{
-    border: 2px solid rgba(230, 111, 0, 0.952);
+    border: 1px solid rgba(0, 54, 27, 0.952);
     border-radius:5px;
-    margin-top:3%
+    margin-right:3%;
+    margin-top:-30pt;
+    margin-bottom:50pt;
+    height:23pt;
+    width:70pt;
+    font-size:11pt;
+    cursor: pointer;
 }
-
-
 
 .button4{
     margin-top: 10px;
     height: 36px;
     width: 9vw;
 }
-
 
 .deleteButton{
     background-color: rgba(153, 0, 0, 0.87);
@@ -334,9 +299,7 @@ input{
     display: inline;
 }
 
-
 .deleteButton2{
-
     background-color: rgba(133, 0, 0, 0.87);
     color: rgb(255, 161, 98);
     width: 3.6vw;
@@ -348,9 +311,7 @@ input{
     border: 2px solid rgba(88, 0, 0, 0.801);
 }
 
-
 .admin{
-        
         background-color: #142b2bf1;
         height: 100vh;
         width: 100%;
@@ -358,8 +319,6 @@ input{
         align-items: flex-start;
         justify-content: center;
 }
-
-
 
 .bookingList {
     border: 2px solid rgba(1, 31, 32, 0.822);
@@ -378,14 +337,10 @@ input{
     align-items: center;
 }
 
-
-
 .bookingList2{
     width: 100%;
     height: auto;
 }
-
-
 
 .bookingForm2{
     height:auto;
@@ -401,16 +356,12 @@ input{
     margin-top: 20px;
 }
 
-
-
 .homeBooking{
     border: 2px solid rgb(255, 213, 173);;
     border-radius: 5px;
     margin: 15px;
     padding: 10px;
 }
-
-
 
 .h1{
     text-align: center;
@@ -419,7 +370,6 @@ input{
     color:rgb(226, 102, 0);
     margin-bottom: 20px;
 }
-
 
 .contact{
     background-image:url('./Photos/admin.jpeg') ;
@@ -432,15 +382,12 @@ input{
     width:100vw;
 }
 
-
 .adminPortal2{
     background-color: #142b2bf1;
     height: 100vh;
     padding: 20px;
     overflow: scroll;
-    
 }
-
 
 .aboutText{
      color: #1c3a3a; 
@@ -450,7 +397,6 @@ input{
      margin-top: 40px;
      position:absolute;
 }
-
 
 .aboutText2{
     color: #1c3a3a; 
@@ -474,17 +420,14 @@ input{
         font-size: 16px;
     }
 
-    
     .bookingContainer{
         margin:auto;
         margin-top: 40px;
         width:auto;
         padding:10px;
         height: 450px;
-    
     }
 
-    
     .bookingContainer2{
         margin:auto;
         margin-top: 40px;
@@ -498,7 +441,6 @@ input{
         height: 100%;
     }
 
-    
     .date,
     select,
     input{
@@ -508,12 +450,10 @@ input{
         margin-top: 10px;
     }
     
-    
     .login1{
         width: 160px;
         height: 32px;
     }
-    
     
     p{
         font-size: 19px;
@@ -524,7 +464,6 @@ input{
         width:auto;
     }
 
-    
     .home{
         display:flex;
         align-items: center;
@@ -533,7 +472,6 @@ input{
         height: auto;
         padding-bottom: 30px;
     }
-    
     
     .about{
        display:flex;
@@ -544,8 +482,8 @@ input{
     }
 
 
-   .aboutText2,
-   .aboutText{
+    .aboutText2,
+    .aboutText{
       margin:auto;
       width:auto;
       height: auto;
@@ -553,7 +491,7 @@ input{
     }
 
    
-   .editContainer{
+    .editContainer{
        display:flex;
        flex-direction: column;
        align-content: center;
@@ -563,8 +501,6 @@ input{
        width: auto;
     }
     
-
-
     .bookingForm2{
         display:flex;
         flex-direction: row;
@@ -576,9 +512,7 @@ input{
         
     }
 
-     
     .edit{
-
         width: 100%;
         margin: auto;
         font-size: 7px;
@@ -591,21 +525,17 @@ input{
          margin:1%
     }
     
-    
     .p{
        font-size:  0px;
     }
     
-     
     .editContainer{
         margin-bottom: 350px;
     }
     
-    
     .bookingList{
         font-size: 15px;
     }
-    
     
     .signUp,
     .logIn{
@@ -616,17 +546,14 @@ input{
         margin-bottom: 100%;
     }
 
-     
     .homeContainer{
          width: 220px;
-     }
+    }
    
     
     .adminContainer{
         height:100%;
     }
-    
-    
     
     .deleteButton{
         width: 57px;
@@ -635,7 +562,6 @@ input{
         font-size: 12px;
     }
     
-    
     .deleteButton2{
         width: 47px;
         height: 32px;
@@ -643,7 +569,6 @@ input{
         margin-top:10px;
     }
     
-
     .signupButton{
         position: relative;
         margin: auto;
@@ -652,7 +577,6 @@ input{
         width: 60%;
     }
 
-    
     .button{
         position: relative;
         margin: auto;
@@ -661,17 +585,14 @@ input{
         width: 60%;
     }
 
-
     .button1{
         position: relative;
         margin: auto;
         margin-top:10px;
         height: 33px;
         width:60%;
-       
     }
 
-    
     button{
         position: relative;
         margin: auto;
@@ -680,18 +601,15 @@ input{
         width: 60%;
     }
 
-
     .p2{
         font-size:12px;
         margin-top: 5px;
     }
 
-    
     .p3{
         font-size:17px;
     }
     
-
     h2{
         font-size: 25px;
         margin-top: 10px;
