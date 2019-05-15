@@ -53,8 +53,8 @@ html, body {
 
 .logIn{
     display: block;
-    height: 37vh;
-    width: 20vw;
+    height: 230pt;
+    width: 220pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color:  rgba(5, 32, 36, 0.781);
@@ -66,13 +66,13 @@ html, body {
 }
 
 .signupButton{
-   margin-top:-10vh;
+   margin-top:-65pt;
 }
 
 .signUp {
     display: block;
-    height: 37vh;
-    width: 20vw;
+    height: 230pt;
+    width: 220pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
@@ -85,8 +85,8 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 70vh;
-    width: 25vw;
+    height: 420pt;
+    width: 270pt;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
@@ -102,8 +102,8 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 70vh;
-    width: 25vw;
+    height: 420pt;
+    width: 270pt;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
@@ -218,9 +218,9 @@ select{
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 2vh;
-    height: 4.3vh;
-    width: 14vw;
+    margin-top: 12pt;
+    height: 27pt;
+    width: 152pt;
     border: 2.4px solid rgb(252, 107, 10);
     background-color:rgba(30, 30, 59, 0.205);
     color:rgb(240, 219, 161);
@@ -233,9 +233,9 @@ input{
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 2vh;
-    height: 4.3vh;
-    width: 14vw;
+    margin-top:12pt;
+    height: 27pt;
+    width: 152pt;
     font-size: 15px;
     border: 2.4px solid rgb(228, 91, 0);
     border-radius: 5px;
@@ -243,8 +243,8 @@ input{
 }
 
 .login1{
-    width: 12vw;
-    height: 4vh;
+    width: 135pt;
+    height: 25pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
     background-color:  rgba(255, 228, 196, 0.938);
     color:black;
@@ -258,9 +258,9 @@ input{
     justify-content: center;
     margin:auto;
     margin-bottom: 0px;
-    margin-top: 2.5vh;
-    height: 33px;
-    width: 8.5vw;
+    margin-top: 14pt;
+    height: 25pt;
+    width: 95pt;
     border: 2px solid  rgba(255, 105, 18, 0.877);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
@@ -283,8 +283,8 @@ input{
 
 .button4{
     margin-top: 10px;
-    height: 36px;
-    width: 9vw;
+    height: 25pt;
+    width: 94pt;
 }
 
 .deleteButton{
@@ -302,13 +302,14 @@ input{
 .deleteButton2{
     background-color: rgba(133, 0, 0, 0.87);
     color: rgb(255, 161, 98);
-    width: 3.6vw;
-    height: 3.7vh;
-    margin-top: 6.5vh;
+    width: 34pt;
+    height: 20pt;
+    margin-top: 30pt;
     margin-left: 10px;
-    font-size: 9px;
+    font-size: 8px;
     border-radius: 2px;
     border: 2px solid rgba(88, 0, 0, 0.801);
+    cursor: pointer;
 }
 
 .admin{
