@@ -53,8 +53,8 @@ html, body {
 
 .logIn{
     display: block;
-    height: 230pt;
-    width: 220pt;
+    height: 220pt;
+    width: 210pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color:  rgba(5, 32, 36, 0.781);
@@ -66,7 +66,7 @@ html, body {
 }
 
 .signupButton{
-   margin-top:-65pt;
+   margin-top:-55pt;
 }
 
 .signUp {
@@ -85,14 +85,14 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 420pt;
+    height: 415pt;
     width: 270pt;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
     margin-right: 22vw;
     margin-top: 5vh;
-    padding-bottom: 15px;
+    padding-bottom: 5pt;
     padding-top: 5px;
 }
 
@@ -102,14 +102,14 @@ html, body {
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 420pt;
+    height: 415pt;
     width: 270pt;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
     margin-right: 22vw;
     margin-top: 5vh;
-    padding-top:10pt;
+    padding-top:4pt;
 }
 
 .booking2{
@@ -260,7 +260,7 @@ input{
     margin-bottom: 0px;
     margin-top: 14pt;
     height: 25pt;
-    width: 95pt;
+    width: 94pt;
     border: 2px solid  rgba(255, 105, 18, 0.877);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
@@ -284,7 +284,7 @@ input{
 .button4{
     margin-top: 10px;
     height: 25pt;
-    width: 94pt;
+    width: 95pt;
 }
 
 .deleteButton{
