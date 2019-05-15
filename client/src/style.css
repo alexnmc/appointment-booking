@@ -71,8 +71,8 @@ html, body {
 
 .signUp {
     display: block;
-    height: 230pt;
-    width: 220pt;
+    height: 220pt;
+    width: 210pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
