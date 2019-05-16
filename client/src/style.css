@@ -53,8 +53,8 @@ html, body {
 
 .logIn{
     display: block;
-    height: 220pt;
-    width: 210pt;
+    height: 205pt;
+    width: 205pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color:  rgba(5, 32, 36, 0.781);
@@ -66,13 +66,22 @@ html, body {
 }
 
 .signupButton{
-   margin-top:-55pt;
+   margin-top:-50pt;
+   width:90pt;
+   height:24pt;
+   font-size:12pt;
+}
+
+.loginButton{
+   width:90pt;
+   height:24pt;
+   font-size:12pt;
 }
 
 .signUp {
     display: block;
-    height: 220pt;
-    width: 210pt;
+    height: 205pt;
+    width: 205pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
@@ -188,7 +197,8 @@ h4{
     color:rgba(255, 213, 174, 0.904);
     font-family: "verdana";
     margin-top:20px;
-    font-size:21px;
+    margin-bottom: 12pt;
+    font-size:23px;
     font-weight: 900;
 }
 
@@ -243,12 +253,14 @@ input{
 }
 
 .login1{
-    width: 135pt;
-    height: 25pt;
+    width: 132pt;
+    height: 23.5pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
     background-color:  rgba(255, 228, 196, 0.938);
     color:black;
     border-radius: 3px;
+    margin-top:7pt;
+    padding-left:3.5pt;
 }
 
 .button,
@@ -261,7 +273,7 @@ input{
     margin-top: 14pt;
     height: 25pt;
     width: 94pt;
-    border: 2px solid  rgba(255, 105, 18, 0.877);
+    border: 2px solid  rgba(255, 105, 18, 0.822);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
     font-size: 17px;

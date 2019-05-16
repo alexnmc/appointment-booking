@@ -27,7 +27,6 @@ class Home extends Component {
     }
 
     
-    
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
         
@@ -37,7 +36,6 @@ class Home extends Component {
             
                 alert(res.data +' Date: '+ date +'  from '+ time)
         })
-        
         this.setState({
             date: '',
             time: '',               // reseting all the inputs to be empty after submit
@@ -48,9 +46,6 @@ class Home extends Component {
     }
 
 
-    
-    
-    
     handleChange = (e) => {
         e.preventDefault()
         const {name, value} = e.target
@@ -64,8 +59,6 @@ class Home extends Component {
     }
 
     
-    
-    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -76,7 +69,6 @@ class Home extends Component {
     }
 
 
-    
     showBooking = (id) => {
         
         axios.get(`/bookings/${id}`).then(res => { 
@@ -88,9 +80,7 @@ class Home extends Component {
     }
     
     
-    
     handleErase = () => {
-            
             this.props.handleDelete2(this.props.user._id)
             this.props.logout()
             this.props.handleDelete3(this.props.user._id)
@@ -211,7 +201,7 @@ class Home extends Component {
                                             onChange = {this.props.handleChange}
                                         />
 
-                                        <button>Login</button>
+                                        <button className = 'loginButton'>Login</button>
                                     </form>
                                     <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
                                 </div>
