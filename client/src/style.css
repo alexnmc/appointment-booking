@@ -51,6 +51,15 @@ html, body {
     height: 100vh;
 }
 
+
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20.5vw;
+}
+
 .logIn{
     display: block;
     height: 205pt;
@@ -58,7 +67,7 @@ html, body {
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color:  rgba(5, 32, 36, 0.781);
-    margin-left: 6.5vw;
+   
 }
 
 .loginForm{
@@ -85,7 +94,7 @@ html, body {
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
-    margin-left: 6.5vw;
+    
 }
 
 .bookingContainer2{
@@ -214,9 +223,8 @@ h2{
     border-radius:15px;
     padding:15px;
     font-family: "verdana";
-    margin-top: 4vh;
+    margin-top: 7vh;
     margin-bottom: 4vh;
-    margin-right: 20vw;
     font-weight: 900;
     font-size: 30px;
     animation: fade 3s;
@@ -406,8 +414,8 @@ input{
      font-family: verdana;
      margin-left: 700px;
      width: 700px;
-     margin-top: 40px;
-     position:absolute;
+     margin-top: 20vh;
+    position:absolute;
 }
 
 .aboutText2{
@@ -415,7 +423,7 @@ input{
     font-family: verdana;
     margin:auto;
     width: auto;
-    margin-top: 40px;
+    margin-top: 30vh;
     text-align: center;
 }
 
@@ -426,7 +434,7 @@ input{
     margin-top:15pt;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 724px) {
 
     .navbar{
         font-size: 16px;

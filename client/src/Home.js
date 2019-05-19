@@ -178,6 +178,7 @@ class Home extends Component {
                     :
                         
                     <div className = "homeContainer">
+                            
                             <h2>Professional  jet ski  racing!</h2>
                             {this.props.toggle ?
                                 <div className = 'logIn'>
@@ -205,6 +206,7 @@ class Home extends Component {
                                     </form>
                                     <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
                                 </div>
+                                
                                 
                                 :
                                 
