@@ -8,6 +8,7 @@ import moment from 'moment'
 
 
 
+
 class Home extends Component {
     constructor(props){
         super(props)
@@ -22,8 +23,7 @@ class Home extends Component {
             username: this.props.user.username,
             toggle: true,
             booking2: [],
-            availb: [] ,
-            times:  [
+            times:[
                     "09:00 - 10:00", 
                     "10:00 - 11:00",
                     "11:00 - 12:00", 
@@ -32,7 +32,7 @@ class Home extends Component {
                     "02:00 - 03:00",
                     "03:00 - 04:00",
                     "04:00 - 05:00"
-                ]
+                  ]
         }
     }
 
@@ -56,15 +56,13 @@ class Home extends Component {
     }
 
 
-    
     checkTime = (date) => {
         axios.get(`bookings/date/${date}`).then(res => {
             let arr = res.data
             for(let i = 0; i < arr.length; i++){
                 this.setState({
-                   times: this.state.times.filter(item => arr[i].time !== item)
+                   times: arr.length === 8 ? ["no available time"] : this.state.times.filter(item => arr[i].time !== item)
                 })
-                console.log(this.state.times)
             }
         })
     }
@@ -82,13 +80,12 @@ class Home extends Component {
         })
     }
 
-
     handleChange2 = (e) => {
         e.preventDefault()
         const {name, value} = e.target
         this.setState({
             [name]: value,
-            times:[
+             times:[
                     "09:00 - 10:00", 
                     "10:00 - 11:00",
                     "11:00 - 12:00", 
@@ -106,7 +103,6 @@ class Home extends Component {
         this.checkTime(e.target.value)
     }
 
-    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -115,7 +111,6 @@ class Home extends Component {
         })
         this.showBooking(this.props.user._id)
     }
-
 
     showBooking = (id) => {
         axios.get(`/bookings/${id}`).then(res => { 
@@ -126,33 +121,32 @@ class Home extends Component {
     }
     
     handleErase = () => {
-            this.props.handleDelete2(this.props.user._id)
-            this.props.logout()
-            this.props.handleDelete3(this.props.user._id)
+        this.props.handleDelete2(this.props.user._id)
+        this.props.logout()
+        this.props.handleDelete3(this.props.user._id)  
     }
 
     
     render(){
 
         let array = this.state.booking2
-       
-        array.sort(function (a, b) {
+        array.sort(function (a, b){
             return new Date(a.date) - new Date(b.date) 
         })  
 
         let mapBooking2 = array.map(item =>{
             return(
               <div className = "homeBooking" key = {item._id}>
-              <p className = "p2"> {`Name: ${item.name.toUpperCase()}`}</p>   
-              <p className = "p2"> {`Date: ${moment(item.date).format("MMM Do YY ")}`}</p>
-              <p className = "p2"> {`Time: ${item.time}`}</p>
+                <p className = "p2"> {`Name: ${item.name.toUpperCase()}`}</p>   
+                <p className = "p2"> {`Date: ${moment(item.date).format("MMM Do YY ")}`}</p>
+                <p className = "p2"> {`Time: ${item.time}`}</p>
               </div>
             )
         })
     
         return(
             <div className = "home">
-                { this.props.token ?
+                {this.props.token ?
                     <div>
                         {this.state.toggle ?
                             <div className='bookingContainer'>
@@ -175,6 +169,7 @@ class Home extends Component {
                                         <option value = ''>Available times:</option>
                                         {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
                                     </select>
+                                    
                                     <input 
                                         type='text'
                                         name='name'
@@ -249,7 +244,6 @@ class Home extends Component {
                                     </form>
                                     <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
                                 </div>
-                                
                                 
                                 :
                                 

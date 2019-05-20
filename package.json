@@ -21,7 +21,7 @@
     "moment": "^2.24.0",
     "mongoose": "^5.4.16",
     "morgan": "^1.9.1",
-    "react-select": "^2.4.2"
+    "react-select": "^2.4.3"
   },
   "devDependencies": {
     "react-responsive-select": "^4.6.3"
