@@ -42,11 +42,8 @@ class AdminPortal extends Component  {
                     phone: phone,
                 }
             })
-
-            this.props.handleToggle(id)
+                this.props.handleToggle(id)
     }
-    
-    
     
     
     handleChange = e => {
@@ -55,7 +52,6 @@ class AdminPortal extends Component  {
             [name]: value,
         })
     }
-    
     
     
     handleSubmit = (e, id) => {  // on submit we are sending a new booking object to the database
@@ -83,21 +79,17 @@ class AdminPortal extends Component  {
         if(!updates.phone.length) {
             delete updates.phone
         }
-        
         this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
-       
     }
 
     
 
-   
 render(){
        
     let arr = this.props.bookings
     
         arr.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date)
-          
         })  
 
         arr.sort(function(a, b){
@@ -112,7 +104,6 @@ render(){
             return 0;
         })
 
-
         arr.sort(function(a, b){
             var nameA = a.username.toUpperCase() 
             var nameB = b.username.toUpperCase() 
@@ -125,16 +116,14 @@ render(){
             return 0;
         })
 
-
         let mapIt = arr.map(item => {
                 
             return(
                 <div key = {item._id} >
-                    
-                {item.toggle  ?
+                {item.toggle ?
+
                 <div className = "bookingList" > 
-                
-                     <div className = "booking">
+                    <div className = "booking">
                     { ` User: ${item.username},
                         Name: ${item.name.toUpperCase()} ,
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
@@ -203,7 +192,7 @@ render(){
     return (
             <Fragment >
                 <div className = "adminPortal2"  >
-                    <h1 className= 'h1'>Bookings:</h1>
+                    <h1 className= 'h1'>{this.props.bookings.length} bookings</h1>
                     <button className = 'adminButton' onClick = {this.props.logout}>Log out </button>
                         {mapIt}
                 </div>
