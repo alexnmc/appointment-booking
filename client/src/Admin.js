@@ -11,8 +11,9 @@ class Admin extends Component {
         this.state = {
             username: '',
             password: '',
+            password2: '',
             toggle: true,
-            adminPassword: ''
+            adminCode: ''
         }
     }
 
@@ -20,22 +21,21 @@ class Admin extends Component {
     editToggler = () => {
         this.setState(prevState => {
             return {
-                toggle: !prevState.toggle  //toggle from login to signin
+                toggle: !prevState.toggle, //toggle from login to signin
+                username: '',
+                password: ''
             }
         })
     }
 
 
-    
     handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
         e.preventDefault()
         const newAdmin = {
             username: this.state.username,
             password: this.state.password
         }
-
         this.props.login(newAdmin) // we are receiving this function from the context and we call it here 
-
         this.setState({
             username: '',
             password: ''
@@ -43,34 +43,33 @@ class Admin extends Component {
     }
 
 
+    adminSignup = () => {
+        const newAdmin = {
+            username: this.state.username,
+            password: this.state.password
+        }
+        this.props.signup(newAdmin)
+        this.setState({
+            username: '',
+            password: '',
+        })
+    }
+    
     
     handleSignup = (e) => {
         e.preventDefault()
-       
-        if (this.state.adminPassword === process.env.REACT_APP_CODE) {
-            
-            const newAdmin = {
-                username: this.state.username,
-                password: this.state.password
-            }
-
-            this.props.signup(newAdmin)
-
-            this.setState({
-                username: '',
-                password: '',
-            })
-
-        } else {
-            if(this.state.adminPassword === "") {
-                alert("please enter secret code: vschool")
-            } else {
-                alert("wrong code")
-            }
-        }
+        this.state.password === this.state.password2 ?    
+            this.state.adminCode === process.env.REACT_APP_CODE ?
+                this.adminSignup()
+                :
+                this.state.adminPassword === "" ? 
+                    alert("please enter secret code: vschool")
+                    :
+                    alert("wrong code")
+        :
+        alert('passwords does not match')
         this.editToggler()
     }
-
 
 
     handleChange = (e) => {
@@ -84,7 +83,6 @@ class Admin extends Component {
 
     
     render() {
-
         return (
             <Fragment>
                 <div className="admin">
@@ -120,15 +118,15 @@ class Admin extends Component {
                         :     
 
                         <div className = "adminContainer">
-                        <form onSubmit={this.handleSignup} className='signUp'>
+                        <form onSubmit={this.handleSignup} className='signUpAdmin'>
                         <h4>Sign Up:</h4>
                        
                             <input
                                 className = "login1"
                                 type='text'
-                                name='adminPassword'
+                                name='adminCode'
                                 placeholder='enter code'
-                                value={this.state.adminPassword}
+                                value={this.state.adminCode}
                                 onChange={this.handleChange}
                             />
 
@@ -147,6 +145,15 @@ class Admin extends Component {
                                 name='password'
                                 placeholder='choose your password'
                                 value={this.state.password}
+                                onChange={this.handleChange}
+                            />
+
+                            <input
+                                className = "login1"
+                                type='text'
+                                name='password2'
+                                placeholder='repeat password'
+                                value={this.state.password2}
                                 onChange={this.handleChange}
                             />
                             <button className = 'loginButton'>Sign up</button>

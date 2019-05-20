@@ -11,6 +11,7 @@ class UserProvider extends Component {
         this.state = {
             username: '',
             password: '',
+            paswword2: '',
             toggle: true,
             adminPassword: '',
             user: JSON.parse(localStorage.getItem("user")) || {},
@@ -34,6 +35,8 @@ class UserProvider extends Component {
    
     
     signup = userInfo => {
+        this.state.password === this.state.paswword2 ?
+        
         axios.post('/user/signup', userInfo).then(res => {
             const { token, user } = res.data
             localStorage.setItem("user", JSON.stringify(user))//stores the token and the user  in local storage in case of page refresh...
@@ -42,6 +45,8 @@ class UserProvider extends Component {
             
         })
         .catch(err => alert(err.response.data.errMsg))
+        :
+        alert('passwords does not match')
        
     }
 
