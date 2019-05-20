@@ -21,15 +21,25 @@ class Home extends Component {
             userID: this.props.user._id,
             username: this.props.user.username,
             toggle: true,
-            booking2: []
-            
+            booking2: [],
+            availb: [] ,
+            times:  [
+                    "09:00 - 10:00", 
+                    "10:00 - 11:00",
+                    "11:00 - 12:00", 
+                    "12:00 - 01:00",
+                    "01:00 - 02:00",
+                    "02:00 - 03:00",
+                    "03:00 - 04:00",
+                    "04:00 - 05:00"
+                ]
         }
     }
 
     
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        
+      
         const {date, time, name, email, phone, userID, username} = this.state
         
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
@@ -41,7 +51,21 @@ class Home extends Component {
             time: '',               // reseting all the inputs to be empty after submit
             name: '',   
             email: '',
-            phone: '',
+            phone: ''
+        })
+    }
+
+
+    
+    checkTime = (date) => {
+        axios.get(`bookings/date/${date}`).then(res => {
+            let arr = res.data
+            for(let i = 0; i < arr.length; i++){
+                this.setState({
+                   times: this.state.times.filter(item => arr[i].time !== item)
+                })
+                console.log(this.state.times)
+            }
         })
     }
 
@@ -58,6 +82,30 @@ class Home extends Component {
         })
     }
 
+
+    handleChange2 = (e) => {
+        e.preventDefault()
+        const {name, value} = e.target
+        this.setState({
+            [name]: value,
+            times:  [
+                "09:00 - 10:00", 
+                "10:00 - 11:00",
+                "11:00 - 12:00", 
+                "12:00 - 01:00",
+                "01:00 - 02:00",
+                "02:00 - 03:00",
+                "03:00 - 04:00",
+                "04:00 - 05:00"
+            ]
+        })
+        this.setState({
+            userID: this.props.user._id,
+            username: this.props.user.username
+        })
+        this.checkTime(e.target.value)
+    }
+
     
     editToggler = () => {
         this.setState(prevState => {
@@ -70,22 +118,18 @@ class Home extends Component {
 
 
     showBooking = (id) => {
-        
         axios.get(`/bookings/${id}`).then(res => { 
-            
             this.setState({
                 booking2: res.data
             })
         })
     }
     
-    
     handleErase = () => {
             this.props.handleDelete2(this.props.user._id)
             this.props.logout()
             this.props.handleDelete3(this.props.user._id)
     }
-
 
     
     render(){
@@ -96,7 +140,6 @@ class Home extends Component {
             return new Date(a.date) - new Date(b.date) 
         })  
 
-       
         let mapBooking2 = array.map(item =>{
             return(
               <div className = "homeBooking" key = {item._id}>
@@ -111,26 +154,26 @@ class Home extends Component {
             <div className = "home">
                 { this.props.token ?
                     <div>
-                        { this.state.toggle ?
+                        {this.state.toggle ?
                             <div className='bookingContainer'>
-                                <form  className = 'bookingForm' onSubmit={this.handleSubmit}  >
+                                <form className = 'bookingForm' onSubmit={this.handleSubmit}  >
                                     <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
                                     <p>Book your adventure:</p>
                                     <input className = "date"
                                         type='date' 
                                         name='date'
                                         value={this.state.date} 
-                                        onChange={this.handleChange}
+                                        onChange={this.handleChange2}
                                         required
-                                        />
+                                    />
                                     <select 
                                         required 
                                         aria-required="true" 
                                         name='time'
                                         value={this.state.time}
                                         onChange={this.handleChange}>
-                                        <option value = ''>Choose a Time</option>
-                                        { data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                                        <option value = ''>Available times:</option>
+                                        {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
                                     </select>
                                     <input 
                                         type='text'
@@ -139,7 +182,7 @@ class Home extends Component {
                                         value={this.state.name}
                                         onChange={this.handleChange}
                                         required
-                                        />
+                                    />
                                     <input 
                                         type='email'
                                         name='email'
@@ -147,7 +190,7 @@ class Home extends Component {
                                         value={this.state.email}
                                         onChange={this.handleChange}
                                         required
-                                        />
+                                    />
                                     <input 
                                         type='number'
                                         name='phone'
@@ -155,7 +198,7 @@ class Home extends Component {
                                         value={this.state.phone}
                                         onChange={this.handleChange}
                                         required
-                                        />
+                                    />
                                     <button className = "buttonS2">Submit</button>
                                 </form>
                                     <button className = "buttonS" onClick = {this.editToggler}>Bookings</button>
