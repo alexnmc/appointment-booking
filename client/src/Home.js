@@ -55,7 +55,6 @@ class Home extends Component {
             jetski: '',
             jetskiStyle1: {opacity: 0},
             jetskiStyle2: {opacity: 0},
-            
         })
     }
 
