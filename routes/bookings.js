@@ -43,6 +43,7 @@ bookingsRouter.get('/date/:date', (req, res, next) => {
 
 
 
+
 bookingsRouter.delete('/', (req, res, next) => {
     
     Booking.remove((err, data) => {      // for postman testing, deletes everything !

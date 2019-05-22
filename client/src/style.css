@@ -286,9 +286,11 @@ input{
     margin:auto;
     margin-top: 15pt;
     margin-bottom: 30pt;
-    height: 75pt;
+    height: 80pt;
     width: 300pt;
+    
 }
+
 
 
 .chooseJet{
@@ -301,18 +303,19 @@ input{
     background-image: url('./Photos/bombardier.jpg');
     background-size: cover;
     background-position: center;
-    height: 85pt;
-    width:115pt;
+    height: 87pt;
+    width:117pt;
     margin:auto;
-    border: 1px solid rgb(255, 123, 0);
-   
-   
 }
 
-.jetski1:hover,
-.jetski2:hover{
-    height:83pt;
-    width:113pt;
+.jetski1:hover{
+    height:85pt;
+    width:115pt;
+ }
+
+ .jetski2:hover{
+    height:85pt;
+    width:115pt;
  }
 
 
@@ -320,23 +323,22 @@ input{
     background-image: url('./Photos/kawasaki.jpeg');
     background-size: cover;
     background-position: center;
-    height: 85pt;
-    width:115pt;
+    height: 87pt;
+    width:117pt;
     margin:auto;
-    border: 1px solid rgb(255, 123, 0);
-    
 }
 
 .selected{
-    background-color: rgba(14, 14, 14, 0.801);
-    height: 85pt;
-    width: 115pt;
+    background-color: rgba(14, 14, 14, 0.87);
+    height: 87pt;
+    width: 117pt;
+    border: 1px solid rgb(255, 123, 0);
     opacity:0;
 }
 
 .selected:hover{
-    height:  83pt;
-    width: 113pt;
+    height:  85pt;
+    width: 115pt;
  }
 
  .p1{

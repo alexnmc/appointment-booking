@@ -20,6 +20,8 @@ class Home extends Component {
             jetski:'',
             jetskiStyle1: {opacity: 0},
             jetskiStyle2: {opacity: 0},
+            lightOn1: {color: ''},
+            lightOn2: {color: ''},
             userID: this.props.user._id,
             username: this.props.user.username,
             toggle: true,
@@ -57,11 +59,12 @@ class Home extends Component {
             jetski: '',
             jetskiStyle1: {opacity: 0},
             jetskiStyle2: {opacity: 0},
+            lightOn1: {color: ''},
+            lightOn2: {color: ''},
         })
         :
         alert("Don't forget to choose a jet ski!")
     }
-
 
     checkTime = (date) => {
         axios.get(`bookings/date/${date}`).then(res => {
@@ -74,17 +77,12 @@ class Home extends Component {
         })
     }
 
-    
     changeBackground = (jet) => {
-         
             jet === 'Bombardier' ? 
-            this.setState({ jetskiStyle1:{opacity:1}, jetskiStyle2:{opacity:0} })
+            this.setState({ jetskiStyle1:{opacity:1},lightOn1: {color: 'rgb(243, 204, 168)'}, jetskiStyle2:{opacity:0}, lightOn2: {color: ''} })
           :
-            jet === 'Kawasaki' && this.setState({ jetskiStyle1:{opacity:0}, jetskiStyle2:{opacity:1} })
-                
+            jet === 'Kawasaki' && this.setState({ jetskiStyle1:{opacity:0},lightOn1: {color: ''}, jetskiStyle2:{opacity:1},  lightOn2: {color: 'rgb(243, 204, 168)'}})
     }
-    
-    
     
     saveJetski = (jet) => {
         this.setState({
@@ -93,7 +91,6 @@ class Home extends Component {
         })
         this.changeBackground(jet)
     }
-
 
     handleChange = (e) => {
         e.preventDefault()
@@ -107,7 +104,6 @@ class Home extends Component {
         })
     }
 
-    
     handleChange2 = (e) => {
         e.preventDefault()
         const {name, value} = e.target
@@ -132,7 +128,6 @@ class Home extends Component {
         this.checkTime(e.target.value)
     }
 
-    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -142,7 +137,6 @@ class Home extends Component {
         this.showBooking(this.props.user._id)
     }
 
-    
     showBooking = (id) => {
         axios.get(`/bookings/${id}`).then(res => { 
             this.setState({
@@ -161,9 +155,9 @@ class Home extends Component {
     render(){
 
         let array = this.state.booking2
-        array.sort(function (a, b){
-            return new Date(a.date) - new Date(b.date) 
-        })  
+            array.sort(function (a, b){
+                return new Date(a.date) - new Date(b.date) 
+            })  
 
         let mapBooking2 = array.map(item =>{
             return(
@@ -175,7 +169,8 @@ class Home extends Component {
               </div>
             )
         })
-    
+
+        
         return(
             <div className = "home">
                 {this.props.token ?
@@ -229,9 +224,8 @@ class Home extends Component {
                                     
                                     <p className = "chooseJet"> Choose your jet ski:</p>
                                     <div className = "jetskiWrap">
-                                        
-                                        <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}><p className = "p1">Bombardier</p><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
-                                        <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}><p className = "p1">Kawasaki</p><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
+                                        <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}><p className = "p1" style = {this.state.lightOn1}>Bombardier</p><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
+                                        <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}><p className = "p1" style = {this.state.lightOn2}>Kawasaki</p><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
                                     </div>
                                     <button className = "buttonS2">Submit</button>
                                 </form>
