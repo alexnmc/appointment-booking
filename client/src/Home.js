@@ -73,10 +73,10 @@ class Home extends Component {
     
     changeBackground = (jet) => {
          
-            jet === 'Kawasaki' ? 
+            jet === 'Bombardier' ? 
             this.setState({ jetskiStyle1:{opacity:1}, jetskiStyle2:{opacity:0} })
           :
-            jet === 'Bombardier' && this.setState({ jetskiStyle1:{opacity:0}, jetskiStyle2:{opacity:1} })
+            jet === 'Kawasaki' && this.setState({ jetskiStyle1:{opacity:0}, jetskiStyle2:{opacity:1} })
                 
     }
     
@@ -225,8 +225,8 @@ class Home extends Component {
                                     
                                     <p className = "chooseJet"> Choose your jet ski:</p>
                                     <div className = "jetskiWrap">
-                                        <div className = "jetski1" onClick = {() => this.saveJetski('Kawasaki')}><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
-                                        <div className = "jetski2" onClick = {() => this.saveJetski('Bombardier')}><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
+                                        <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
+                                        <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
                                     </div>
                                     <button className = "buttonS2">Submit</button>
                                 </form>
