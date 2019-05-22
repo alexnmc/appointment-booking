@@ -10,7 +10,7 @@ html, body {
 
 .navbar {
     width: 100vw;
-    height: 38pt;
+    height: 37pt;
     background-color:#fcfcfc; 
     display:flex;
     align-items: center;
@@ -58,7 +58,7 @@ html, body {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color:  rgba(5, 32, 36, 0.651);
+    background-color:  rgba(5, 32, 36, 0.575);
 }
 
 .logIn{
