@@ -225,8 +225,9 @@ class Home extends Component {
                                     
                                     <p className = "chooseJet"> Choose your jet ski:</p>
                                     <div className = "jetskiWrap">
-                                        <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
-                                        <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
+                                        
+                                        <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}><p className = "p1">Bombardier</p><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
+                                        <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}><p className = "p1">Kawasaki</p><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
                                     </div>
                                     <button className = "buttonS2">Submit</button>
                                 </form>
