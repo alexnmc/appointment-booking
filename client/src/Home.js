@@ -40,13 +40,15 @@ class Home extends Component {
     
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        const {date, time, name, email, phone, jetski, userID, username} = this.state
         
+        const {date, time, name, email, phone, jetski, userID, username} = this.state
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
             
                 alert(res.data +' Date: '+ date +'  from '+ time)
         })
-        this.setState({
+        
+        this.state.jetski.length ?
+         this.setState({
             date: '',
             time: '',               // reseting all the inputs to be empty after submit
             name: '',   
@@ -56,6 +58,8 @@ class Home extends Component {
             jetskiStyle1: {opacity: 0},
             jetskiStyle2: {opacity: 0},
         })
+        :
+        alert("Don't forget to choose a jet ski!")
     }
 
 
