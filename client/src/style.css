@@ -11,7 +11,7 @@ html, body {
 .navbar {
     width: 100vw;
     height: 38pt;
-    background-color:  #142b2b00; 
+    background-color:#fcfcfc; 
     display:flex;
     align-items: center;
     font-size: 17px;
@@ -236,7 +236,7 @@ h2{
     border-radius:15px;
     padding:15px;
     font-family: "helvetica";
-    margin-top: 4vh;
+    margin-top: 2vh;
     margin-bottom: 0pt;
     font-weight: 600;
     font-size: 20px;
