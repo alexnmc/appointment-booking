@@ -249,10 +249,11 @@ class Home extends Component {
                     :
                         
                     <div className = "homeContainer">
-                            
-                            <h2>Professional  jet ski  racing!</h2>
+                        
                             {this.props.toggle ?
                                 <div className = 'logIn'>
+                                    <h2 className = 'rent'>Jet Ski Rental</h2>
+                                    <h2>Kawasaki - Honda - Bombardier</h2>
                                     <form  onSubmit = {this.props.handleLogin}className='loginForm'>
                                         <h4>Bookings here:</h4>
                                         <input

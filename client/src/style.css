@@ -10,12 +10,11 @@ html, body {
 
 .navbar {
     width: 100vw;
-    height: 8vh;
-    display: flex;
-    justify-content: space-around;
+    height: 38pt;
+    background-color:  #142b2b00; 
+    display:flex;
     align-items: center;
-    background-color:  #142b2bf1; 
-    font-size: 22px;
+    font-size: 17px;
     font-family:'helvetica';
     font-weight: 600;
     border-top: 1px solid rgb(255, 212, 173);
@@ -29,6 +28,7 @@ html, body {
 .navbar a {
     text-decoration: none;
     color: rgb(252, 107, 10);
+    margin:30pt;
 }
 
 .navbar a:hover{
@@ -37,11 +37,11 @@ html, body {
 
 .home {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 30px;
-    justify-content: flex-start;
-    align-items: flex-end;
 }
+
 
 .about,
 .home {
@@ -51,23 +51,21 @@ html, body {
     height: 100vh;
 }
 
-
 .homeContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 25vw;
+    height: 100vh;
+    width: 100vw;
+    background-color:  rgba(5, 32, 36, 0.651);
 }
 
 .logIn{
     display: block;
-    height: 205pt;
-    width: 205pt;
-    border: 3px solid  rgba(0, 23, 32, 0.425);
+    height: 100vh;
+    width: 50vw;
     border-radius: 7px;
-    background-color:  rgba(5, 32, 36, 0.781);
-   
 }
 
 .loginForm{
@@ -75,7 +73,7 @@ html, body {
 }
 
 .signupButton{
-   margin-top:-50pt;
+   margin-top:-68.7vh;
    width:90pt;
    height:24pt;
    font-size:12pt;
@@ -88,12 +86,10 @@ html, body {
 }
 
 .signUp {
+    margin-top:20vh;
     display: block;
-    height: 205pt;
-    width: 205pt;
-    border: 3px solid  rgba(0, 23, 32, 0.425);
-    border-radius: 7px;
-    background-color: rgba(5, 32, 36, 0.767);
+    height: 100vh;
+    width: 50vw;
 }
 
 .signUpAdmin{
@@ -112,13 +108,11 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 500pt;
-    width: 290pt;
+    height: 100vh;
+    width: 100vw;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
-    margin-right: 22vw;
-    margin-top: 2vh;
     padding-bottom: 5pt;
     padding-top: 5px;
 }
@@ -129,13 +123,11 @@ html, body {
     align-items: center;
     justify-content: flex-start;
     position: relative;
-    height: 545pt;
-    width: 300pt;
+    height: 100vh;
+    width:100vw;
     border: 3px solid rgba(0, 33, 48, 0.527);
     border-radius:3px;
     background-color: rgba(5, 32, 36, 0.705);
-    margin-right: 22vw;
-    margin-top: 2vh;
     padding-top:15pt;
 }
 
@@ -228,14 +220,26 @@ to {opacity: 1}
 
 h2{
     text-align: center;
+    color:  rgb(221, 99, 0);
+    border-radius:15px;
+    font-family: "helvetica";
+    margin-bottom: 4vh;
+    font-weight: 900;
+    font-size: 25px;
+    animation: fade 3s;
+    margin-bottom:10vh;
+}
+
+.rent{
+    text-align: center;
     color:  rgba(255, 217, 182, 0.658);
     border-radius:15px;
     padding:15px;
     font-family: "helvetica";
-    margin-top: 7vh;
-    margin-bottom: 4vh;
-    font-weight: 900;
-    font-size: 29px;
+    margin-top: 4vh;
+    margin-bottom: 0pt;
+    font-weight: 600;
+    font-size: 20px;
     animation: fade 3s;
 }
 
