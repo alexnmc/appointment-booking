@@ -129,7 +129,8 @@ render(){
                         Date: ${moment(item.date).format("MMM Do YY ")} ,
                         Time: ${item.time} ,
                         Email: ${item.email} ,
-                        Phone: ${item.phone} 
+                        Phone: ${item.phone} ,
+                        Jetski: ${item.jetski}
                     `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  

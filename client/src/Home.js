@@ -7,8 +7,6 @@ import moment from 'moment'
 
 
 
-
-
 class Home extends Component {
     constructor(props){
         super(props)
@@ -19,6 +17,9 @@ class Home extends Component {
             name: '',
             email: '',
             phone: '',
+            jetski:'',
+            jetskiStyle1: {opacity: 0},
+            jetskiStyle2: {opacity: 0},
             userID: this.props.user._id,
             username: this.props.user.username,
             toggle: true,
@@ -39,10 +40,9 @@ class Home extends Component {
     
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-      
-        const {date, time, name, email, phone, userID, username} = this.state
+        const {date, time, name, email, phone, jetski, userID, username} = this.state
         
-        axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, userID, username}).then(res => {
+        axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
             
                 alert(res.data +' Date: '+ date +'  from '+ time)
         })
@@ -51,7 +51,11 @@ class Home extends Component {
             time: '',               // reseting all the inputs to be empty after submit
             name: '',   
             email: '',
-            phone: ''
+            phone: '',
+            jetski: '',
+            jetskiStyle1: {opacity: 0},
+            jetskiStyle2: {opacity: 0},
+            
         })
     }
 
@@ -67,6 +71,26 @@ class Home extends Component {
         })
     }
 
+    
+    changeBackground = (jet) => {
+         
+            jet === 'Kawasaki' ? 
+            this.setState({ jetskiStyle1:{opacity:1}, jetskiStyle2:{opacity:0} })
+          :
+            jet === 'Bombardier' && this.setState({ jetskiStyle1:{opacity:0}, jetskiStyle2:{opacity:1} })
+                
+    }
+    
+    
+    
+    saveJetski = (jet) => {
+        this.setState({
+            jetski: jet,
+           
+        })
+        this.changeBackground(jet)
+    }
+
 
     handleChange = (e) => {
         e.preventDefault()
@@ -76,10 +100,11 @@ class Home extends Component {
         })
         this.setState({
             userID: this.props.user._id,
-            username: this.props.user.username
+            username: this.props.user.username,
         })
     }
 
+    
     handleChange2 = (e) => {
         e.preventDefault()
         const {name, value} = e.target
@@ -100,9 +125,11 @@ class Home extends Component {
             userID: this.props.user._id,
             username: this.props.user.username
         })
+        
         this.checkTime(e.target.value)
     }
 
+    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -112,6 +139,7 @@ class Home extends Component {
         this.showBooking(this.props.user._id)
     }
 
+    
     showBooking = (id) => {
         axios.get(`/bookings/${id}`).then(res => { 
             this.setState({
@@ -140,6 +168,7 @@ class Home extends Component {
                 <p className = "p2"> {`Name: ${item.name.toUpperCase()}`}</p>   
                 <p className = "p2"> {`Date: ${moment(item.date).format("MMM Do YY ")}`}</p>
                 <p className = "p2"> {`Time: ${item.time}`}</p>
+                <p className = "p2"> {`JetSki: ${item.jetski}`}</p>
               </div>
             )
         })
@@ -194,6 +223,12 @@ class Home extends Component {
                                         onChange={this.handleChange}
                                         required
                                     />
+                                    
+                                    <p className = "chooseJet"> Choose your jet ski:</p>
+                                    <div className = "jetskiWrap">
+                                        <div className = "jetski1" onClick = {() => this.saveJetski('Kawasaki')}><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
+                                        <div className = "jetski2" onClick = {() => this.saveJetski('Bombardier')}><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
+                                    </div>
                                     <button className = "buttonS2">Submit</button>
                                 </form>
                                     <button className = "buttonS" onClick = {this.editToggler}>Bookings</button>

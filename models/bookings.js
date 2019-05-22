@@ -10,13 +10,18 @@ const bookingsSchema = new Schema({
     },
     email: {
         type: String,
-        required: true,
-        
+        required: true
     },
     phone: {
         type: Number,
         required: true
     },
+
+    jetski: {
+        type: String,
+        required: true
+    },
+
     time: {
         type: String,
         required: true
