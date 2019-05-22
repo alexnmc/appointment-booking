@@ -193,7 +193,7 @@ render(){
     return (
             <Fragment >
                 <div className = "adminPortal2"  >
-                    <h1 className= 'h1'>{this.props.bookings.length === 1 ? '1 booking' : this.props.bookings.length + 'bookings'}</h1>
+                    <h1 className= 'h1'>{this.props.bookings.length === 1 ? '1 booking' : this.props.bookings.length + ' bookings'}</h1>
                     <button className = 'adminButton' onClick = {this.props.logout}>Log out </button>
                         {mapIt}
                 </div>
