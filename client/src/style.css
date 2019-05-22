@@ -329,14 +329,14 @@ input{
 
 .selected{
     background-color: rgba(14, 14, 14, 0.801);
-    height: 87pt;
-    width: 117pt;
+    height: 85pt;
+    width: 115pt;
     opacity:0;
 }
 
 .selected:hover{
-    height:  87pt;
-    width: 117pt;
+    height:  83pt;
+    width: 113pt;
  }
 
  .p1{
