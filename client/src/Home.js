@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import data from './time.json'
-import {withUser} from './UserProvider'
 import {withAdmin} from './AdminProvider'
 import moment from 'moment'
+import Login from './Login'
+import {withUser} from './UserProvider'
 
 
 
@@ -333,75 +333,8 @@ class Home extends Component {
                     </div>
                     
                     :
-                        
-                    <div className = "homeContainer">
-                        
-                            {this.props.toggle ?
-                                <div className = 'logIn'>
-                                    <h2 className = 'rent'>Jet Ski Rental</h2>
-                                    <h2>Kawasaki - Honda - Bombardier</h2>
-                                    <form  onSubmit = {this.props.handleLogin}className='loginForm'>
-                                        <h4>Bookings here:</h4>
-                                        <input
-                                            className = "login1"
-                                            type ='text'
-                                            name ='username'
-                                            placeholder  ='Username:'
-                                            value = {this.props.username}
-                                            onChange= {this.props.handleChange}
-                                        />
-
-                                        <input
-                                            className = "login1"
-                                            type ='text'
-                                            name ='password'
-                                            placeholder ='Password:'
-                                            value = {this.props.password}
-                                            onChange = {this.props.handleChange}
-                                        />
-
-                                        <button className = 'loginButton'>Login</button>
-                                    </form>
-                                    <button className ='signupButton' onClick = {this.props.editToggler2}>Sign up</button>
-                                </div>
-                                
-                                :
-                                
-                                <form onSubmit={this.props.handleSignup} className='signUp'>
-                                    <h4>Sign Up:</h4>
-                                    
-                                    <input
-                                        className = "login1"
-                                        type='text'
-                                        name='username'
-                                        placeholder ='enter a username:'
-                                        value ={this.props.username}
-                                        onChange ={this.props.handleChange}
-                                    />
-
-                                    <input
-                                        className = "login1"
-                                        type ='text'
-                                        name ='password'
-                                        placeholder ='choose your password:'
-                                        value = {this.props.password}
-                                        onChange = {this.props.handleChange}
-                                    />
-
-                                    <input
-                                        className = "login1"
-                                        type ='text'
-                                        name ='password2'
-                                        placeholder ='repeat password:'
-                                        value = {this.props.password2}
-                                        onChange = {this.props.handleChange}
-                                    />
-                                    <button>Sign up</button>
-                                </form>
-                            }
-                    </div>
+                        <Login/>
                 }
-                
             </div>
         )
     }
