@@ -45,7 +45,6 @@ class Home extends Component {
         }
     }
 
-    
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
         
@@ -103,7 +102,6 @@ class Home extends Component {
         return arr4
     }
     
-    
     checkTime = (date) => {
         this.setState({targetDate: date})
         axios.get(`bookings/date/${date}`).then(res => {
@@ -138,7 +136,6 @@ class Home extends Component {
             jet === 'Honda' && this.setState({jetskiStyle1:{opacity:0},lightOn1: {color: ''}, jetskiStyle2:{opacity:0},  lightOn2: {color: ''}, jetskiStyle3:{opacity:1},lightOn3: {color: 'rgb(243, 204, 168)'}})
     }
     
-    
     saveJetski = (jet) => {
         this.setState({
             jetski: jet,
@@ -147,7 +144,6 @@ class Home extends Component {
         this.changeBackground(jet)
     }
 
-    
     handleChange = (e) => {
         e.preventDefault()
         const {name, value} = e.target
@@ -200,7 +196,6 @@ class Home extends Component {
         this.checkJetski(e.target.value)
     }
     
-    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -243,7 +238,6 @@ class Home extends Component {
             )
         })
 
-        
         return(
             <div className = "home">
                 {this.props.token ?
@@ -333,7 +327,8 @@ class Home extends Component {
                     </div>
                     
                     :
-                        <Login/>
+                        
+                    <Login/>
                 }
             </div>
         )
