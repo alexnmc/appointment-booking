@@ -165,7 +165,7 @@ class Home extends Component {
         const {name, value} = e.target
         this.setState({
             [name]: value,
-             times:[
+            times:[
                     "09:00 - 10:00", 
                     "10:00 - 11:00",
                     "11:00 - 12:00", 
@@ -174,7 +174,8 @@ class Home extends Component {
                     "02:00 - 03:00",
                     "03:00 - 04:00",
                     "04:00 - 05:00"
-                   ]
+                   ],
+            time:''
         })
         this.setState({
             userID: this.props.user._id,
