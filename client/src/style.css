@@ -58,7 +58,7 @@ html, body {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color:  rgba(5, 32, 36, 0.479);
+    background-color:  rgba(5, 32, 36, 0.424);
 }
 
 .logIn{
@@ -132,7 +132,7 @@ html, body {
 }
 
 .booking2{
-    height: 550px;
+    height: 80vh;
     padding:15px;
     overflow: auto;
     max-height: 100vh;
@@ -232,7 +232,7 @@ h2{
 
 .rent{
     text-align: center;
-    color:  rgba(255, 217, 182, 0.753);
+    color:  rgba(255, 224, 195, 0.966);
     border-radius:15px;
     padding:15px;
     font-family: "helvetica";
@@ -290,59 +290,61 @@ input{
     margin:auto;
     margin-top: 15pt;
     margin-bottom: 30pt;
-    height: 80pt;
-    width: 300pt;
-    
+    height: 100pt;
+    width: 40vw;
 }
-
-
 
 .chooseJet{
     font-size:13pt;
     margin-top:15pt;
 }
 
-
 .jetski1{
     background-image: url('./Photos/bombardier.jpg');
     background-size: cover;
     background-position: center;
-    height: 87pt;
-    width:117pt;
+    height: 90pt;
+    width:120pt;
     margin:auto;
 }
-
-.jetski1:hover{
-    height:85pt;
-    width:115pt;
- }
-
- .jetski2:hover{
-    height:85pt;
-    width:115pt;
- }
-
 
 .jetski2{
     background-image: url('./Photos/kawasaki.jpeg');
     background-size: cover;
     background-position: center;
-    height: 87pt;
-    width:117pt;
+    height: 90pt;
+    width:120pt;
     margin:auto;
 }
 
+.jetski3{
+    background-image: url('./Photos/honda.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90pt;
+    width:120pt;
+    margin:auto;
+}
+
+
+.jetski3:hover,
+.jetski2:hover,
+.jetski1:hover{
+    height:92pt;
+    width:121pt;
+ }
+
 .selected{
-    background-color: rgba(14, 14, 14, 0.87);
-    height: 87pt;
-    width: 117pt;
-    border: 1px solid rgb(255, 123, 0);
+    background-color: rgba(4, 28, 29, 0.904);
+    height: 90pt;
+    width: 120pt;
+    border: 2px solid rgb(255, 123, 0);
     opacity:0;
 }
 
 .selected:hover{
-    height:  85pt;
-    width: 115pt;
+    height: 92pt;
+    width: 121pt;
  }
 
  .p1{
@@ -351,7 +353,6 @@ input{
     position:fixed;
     margin-left:2pt;
  }
-
 
 
  .button,

@@ -5,8 +5,36 @@ const Booking = require("../models/bookings")
 
 
 bookingsRouter.get('/', (req, res) => {    // get all for testing with postman 
-    
+   
     Booking.find((err, data) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+    })
+    
+})
+
+
+
+bookingsRouter.get('/:id', (req, res, next) => {    
+    
+    Booking.find({userID: req.params.id}, (err, data) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+    })
+   
+})
+
+
+
+bookingsRouter.get('/date/:date', (req, res, next) => {    
+    
+    Booking.find({date: req.params.date}, (err, data) => {
         if(err) {
             res.status(500)
             return next(err)
@@ -16,32 +44,18 @@ bookingsRouter.get('/', (req, res) => {    // get all for testing with postman
 })
 
 
-
-bookingsRouter.get('/:id', (req, res, next) => {    
+bookingsRouter.get('/jet/1', (req, res, next) => {  
     
-    Booking.find({userID: req.params.id}, (err, user) => {
+    Booking.find({date: req.query.date, time:req.query.time}, (err, data) => {
         if(err) {
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(user)
+        return res.status(200).send(data)
+        
     })
-})
-
-
-
-bookingsRouter.get('/date/:date', (req, res, next) => {    
     
-    Booking.find({date: req.params.date}, (err, user) => {
-        if(err) {
-            res.status(500)
-            return next(err)
-        }
-        return res.status(200).send(user)
-    })
 })
-
-
 
 
 bookingsRouter.delete('/', (req, res, next) => {
@@ -100,20 +114,15 @@ bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the 
 
 
 
-// checks if the booking is in the database and if the time and date requested is availabale 
+/*/ checks if the booking is in the database and if the time and date requested is availabale 
 bookingsRouter.post('/:date', (req, res, next) => {
-   
     Booking.findOne({date: req.params.date, time: req.body.time}, (err, booking) => {
         if (err) {
-            
             res.status(500)
             return next(err)
         }
-            
         if(booking){ 
-            
             return res.status(200).send("Not available")
-
         } else {
             
             const newBooking = new Booking(req.body)
@@ -126,8 +135,22 @@ bookingsRouter.post('/:date', (req, res, next) => {
             })
         }
     })
-})
+})*/
 
+
+
+bookingsRouter.post('/:date', (req, res, next) => { // regular post request without checking anything in the database
+    
+            const newBooking = new Booking(req.body)
+            newBooking.save((err, booking) => {
+                if (err) {
+                    res.status(500)
+                    return next(err)
+                }
+                return res.status(201).send("You are booked!")
+            })
+        }
+)
 
 
 

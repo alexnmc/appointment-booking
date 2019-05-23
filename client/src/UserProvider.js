@@ -20,9 +20,6 @@ class UserProvider extends Component {
         }
     }
 
-    
-    
-    
     editToggler2 = () => {
         this.setState(prevState => {
             return {
@@ -31,28 +28,19 @@ class UserProvider extends Component {
         })
     }
 
-
-   
-    
     signup = userInfo => {
-        this.state.password === this.state.paswword2 ?
-        
+        this.state.password === this.state.password2 ?
         axios.post('/user/signup', userInfo).then(res => {
             const { token, user } = res.data
             localStorage.setItem("user", JSON.stringify(user))//stores the token and the user  in local storage in case of page refresh...
             localStorage.setItem("token", token)
             this.setState({ user: user, token })
-            
         })
         .catch(err => alert(err.response.data.errMsg))
         :
         alert('passwords does not match')
-       
     }
 
-    
-    
-    
     login = userInfo => {
         axios.post('/user/login', userInfo).then(res => {
             
@@ -64,9 +52,6 @@ class UserProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
    
-   
-   
-    
     handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
         e.preventDefault()
         const newUser = {
@@ -78,14 +63,11 @@ class UserProvider extends Component {
 
         this.setState({
             username: '',
-            password: ''
+            password: '',
+            password2: ''
         })
-        
     }
 
-
-    
-    
     handleSignup = (e) => {
         e.preventDefault()
             const newUser = {
@@ -94,19 +76,15 @@ class UserProvider extends Component {
             }
 
             this.signup(newUser)
-
             this.setState({
                 username: '',
                 password: '',
+                password2:''
             })
 
         this.editToggler2()
     }
 
-
-
-    
-    
     handleChange = (e) => {
         e.preventDefault()
         const { name, value } = e.target
@@ -115,20 +93,11 @@ class UserProvider extends Component {
         })
     }
 
-    
-    
-    
-    
     handleDelete2 = (id) => {
-      
         axios.delete(`/user/${id}`).then(res => {
-                
-           alert(res.data)
+            alert(res.data)
         })
     }
-    
-    
-    
     
     logout = () => {
         this.setState({
@@ -140,16 +109,12 @@ class UserProvider extends Component {
     }
 
     
-    
-    
     render() {
 
-        
         return (
 
             <Context.Provider
                 value={{
-                    
                    username:this.state.username,
                    password: this.state.password,
                    adminPassword: this.state.adminPassword,
