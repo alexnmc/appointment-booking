@@ -103,6 +103,7 @@ class Home extends Component {
     }
     
     checkTime = (date) => {
+       
         this.setState({targetDate: date})
         axios.get(`bookings/date/${date}`).then(res => {
             let arr2 = res.data

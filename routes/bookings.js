@@ -97,8 +97,8 @@ bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the 
             
         Booking.findOneAndUpdate(
                 {_id: req.params.id},
-                req.body,                   // update existing booking with this object this is the 2nd argument of the axios.put
-                {new: true, runValidators: true}, // making sure the enum validation is enforced                  
+                req.body,                           // update existing booking with this object this is the 2nd argument of the axios.put
+                {new: true, runValidators: true},   // making sure the enum validation is enforced                  
                 (err, updatedBooking) => {
                     if (err) {
                         res.status(500)
@@ -134,7 +134,6 @@ bookingsRouter.post('/:date', (req, res, next) => {
         }
     })
 })*/
-
 
 
 bookingsRouter.post('/:date', (req, res, next) => { // regular post request without checking anything in the database
