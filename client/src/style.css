@@ -195,7 +195,7 @@ html, body {
 }
 
 p{
-    color: rgb(243, 204, 168);
+    color: rgb(255, 224, 195);
     font-family: "verdana";
     font-size: 19px;
     font-weight: 900;
@@ -269,14 +269,14 @@ input{
     width: 152pt;
     font-size: 15px;
     border-radius: 5px;
-    background-color:rgb(255, 219, 175);
+    background-color:rgb(255, 229, 198);
 }
 
 .login1{
     width: 132pt;
     height: 23.5pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
-    background-color:  rgba(255, 228, 196, 0.938);
+    background-color:  rgb(255, 235, 209);
     color:black;
     border-radius: 3px;
     margin-top:7pt;
@@ -291,38 +291,39 @@ input{
     margin-top: 15pt;
     margin-bottom: 30pt;
     height: 100pt;
-    width: 40vw;
+    width: 50vw;
 }
 
 .chooseJet{
-    font-size:13pt;
+    font-size:14pt;
     margin-top:15pt;
+    color: rgb(255, 220, 189)
 }
 
 .jetski1{
     background-image: url('./Photos/bombardier.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    height: 90pt;
-    width:120pt;
+    height: 100pt;
+    width:130pt;
     margin:auto;
 }
 
 .jetski2{
-    background-image: url('./Photos/kawasaki.jpeg');
-    background-size: cover;
+    background-image: url('./Photos/kawasaki.jpg');
+    background-size: contain;
     background-position: center;
-    height: 90pt;
-    width:120pt;
+    height: 100pt;
+    width:130pt;
     margin:auto;
 }
 
 .jetski3{
     background-image: url('./Photos/honda.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    height: 90pt;
-    width:120pt;
+    height: 100pt;
+    width:130pt;
     margin:auto;
 }
 
@@ -330,26 +331,26 @@ input{
 .jetski3:hover,
 .jetski2:hover,
 .jetski1:hover{
-    height:92pt;
-    width:121pt;
+    height:102pt;
+    width:132pt;
  }
 
 .selected{
     background-color: rgba(4, 28, 29, 0.904);
-    height: 90pt;
-    width: 120pt;
+    height: 100pt;
+    width: 130pt;
     border: 2px solid rgb(255, 123, 0);
     opacity:0;
 }
 
 .selected:hover{
-    height: 92pt;
-    width: 121pt;
+    height: 102pt;
+    width: 132pt;
  }
 
  .p1{
     font-size:10pt;
-    color:black;
+    color:rgb(173, 69, 0);
     position:fixed;
     margin-left:2pt;
  }
