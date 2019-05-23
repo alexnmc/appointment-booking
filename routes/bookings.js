@@ -17,9 +17,8 @@ bookingsRouter.get('/', (req, res) => {    // get all for testing with postman
 })
 
 
-
 bookingsRouter.get('/:id', (req, res, next) => {    
-    
+    console.log(req.params.id)
     Booking.find({userID: req.params.id}, (err, data) => {
         if(err) {
             res.status(500)

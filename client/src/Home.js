@@ -31,7 +31,7 @@ class Home extends Component {
             username: this.props.user.username,
             toggle: true,
             targetDate:'',
-            booking2: [],
+            booking2:[],
             times:[
                     "09:00 - 10:00", 
                     "10:00 - 11:00",
@@ -63,6 +63,7 @@ class Home extends Component {
             email: '',
             phone: '',
             jetski: '',
+            userID:'',
             jetskiStyle1: {opacity: 0},
             jetskiStyle2: {opacity: 0},
             jetskiStyle3: {opacity: 0},
@@ -323,7 +324,7 @@ class Home extends Component {
                             <div className = "bookingContainer2">
                                 <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>
                                 <div className = "booking2">
-                                    {mapBooking2.length === 0 ? <p>no bookings</p>: mapBooking2}
+                                    {this.state.booking2.length === 0 ? <p>no bookings</p>: mapBooking2}
                                 </div>
                                 <button className = "button4" onClick = {this.editToggler}>Return</button>
                             </div>
