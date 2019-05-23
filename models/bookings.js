@@ -17,10 +17,11 @@ const bookingsSchema = new Schema({
         required: true
     },
 
-    jetski: {
-        type: String,
-        required: true
-    },
+    jetski: 
+        [{type: String,
+          enum: ["Bombardier", "Kawasaki", "Honda"],
+          required: true
+    }],
 
     time: {
         type: String,

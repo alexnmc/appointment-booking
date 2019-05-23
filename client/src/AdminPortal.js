@@ -18,7 +18,7 @@ class AdminPortal extends Component  {
             phone: '',
             jetski:'',
             toggle: true,
-            currentId: '', // the is of the booking we want to edit...
+            currentId: '', // the id of the booking we want to edit...
             
         }
     }

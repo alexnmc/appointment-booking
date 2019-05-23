@@ -94,13 +94,12 @@ bookingsRouter.delete('/delete/:userID', (req, res, next) => {
 
 
 bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
-    
-            Booking.findOneAndUpdate(
+            
+        Booking.findOneAndUpdate(
                 {_id: req.params.id},
-                req.body,                       // update existing booking with this object(this is the 2nd argument of the axios.put)
-                {new: true},                   // 3rd argument of the axios.put..it tells the database to get the new updated version of the booking
+                req.body,                   // update existing booking with this object this is the 2nd argument of the axios.put
+                {new: true, runValidators: true}, // making sure the enum validation is enforced                  
                 (err, updatedBooking) => {
-                   
                     if (err) {
                         res.status(500)
                         return next(err)

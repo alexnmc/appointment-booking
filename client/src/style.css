@@ -529,26 +529,13 @@ input{
 
 @media only screen and (max-width: 724px) {
 
+    
+    
     .navbar{
         font-size: 16px;
+        align-items: center;
     }
 
-    .bookingContainer{
-        margin:auto;
-        margin-top: 40px;
-        width:auto;
-        padding:10px;
-        height: 450px;
-    }
-
-    .bookingContainer2{
-        margin:auto;
-        margin-top: 40px;
-        width:auto;
-        padding:10px;
-        height: 400px;
-    }
-    
     .booking2{
 
         height: 100%;
@@ -570,20 +557,6 @@ input{
     
     p{
         font-size: 19px;
-    }
-    
-    
-    .login{
-        width:auto;
-    }
-
-    .home{
-        display:flex;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        height: auto;
-        padding-bottom: 30px;
     }
     
     .about{
@@ -650,20 +623,6 @@ input{
         font-size: 15px;
     }
     
-    .signUp,
-    .logIn{
-        width:auto;
-        padding:10px;
-        height: auto;
-        margin:auto;
-        margin-bottom: 100%;
-    }
-
-    .homeContainer{
-         width: 220px;
-    }
-   
-    
     .adminContainer{
         height:100%;
     }
@@ -682,31 +641,8 @@ input{
         margin-top:10px;
     }
     
+    .loginButton,
     .signupButton{
-        position: relative;
-        margin: auto;
-        margin-top:10px;
-        height: 33px;
-        width: 60%;
-    }
-
-    .button{
-        position: relative;
-        margin: auto;
-        margin-top:10px;
-        height: 33px;
-        width: 60%;
-    }
-
-    .button1{
-        position: relative;
-        margin: auto;
-        margin-top:10px;
-        height: 33px;
-        width:60%;
-    }
-
-    button{
         position: relative;
         margin: auto;
         margin-top:10px;
@@ -734,6 +670,7 @@ input{
     h4{
         font-size:22px;
     }
+    
 }
 
 
