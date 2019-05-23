@@ -43,8 +43,9 @@ class AdminProvider extends Component {
 
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
+            console.log(res.data)
             this.setState({
-                bookings: res.data
+                bookings: res.data 
             })
         })
     }

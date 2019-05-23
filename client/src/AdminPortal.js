@@ -16,21 +16,20 @@ class AdminPortal extends Component  {
             name: '',
             email: '',
             phone: '',
+            jetski:'',
             toggle: true,
-            currentId: '',
+            currentId: '', // the is of the booking we want to edit...
             
         }
     }
     
     
     componentDidMount(){        
-        
         this.props.showBookings() // method comes from context, it shows all the bookings from the database in an array
     }
 
     
-    
-    editToggle = (id, name, date, time, phone, email) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
+    editToggle = (id, name, date, time, phone, email, jetski) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
         
             this.setState(prevState =>{
                 return{
@@ -40,6 +39,7 @@ class AdminPortal extends Component  {
                     name: name,
                     email: email,
                     phone: phone,
+                    jetski: jetski
                 }
             })
                 this.props.handleToggle(id)
@@ -63,8 +63,10 @@ class AdminPortal extends Component  {
                 name: this.state.name,
                 email: this.state.email,
                 phone: this.state.phone,
+                jetski: this.state.jetski
         }
-        if(!updates.date.length) { // if state did not get any data from the inputs than we delete all those from our updates object so we dont loose the saved booking details
+       
+        if(!updates.date.length) { // if state did not get any data from the inputs than we delete all those from our update object so we dont loose the saved booking details
             delete updates.date   // we dont want to send any empty items to the database because the booking object  will get updated with the new empty values
         }
         if(!updates.time.length) {
@@ -78,6 +80,9 @@ class AdminPortal extends Component  {
         }
         if(!updates.phone.length) {
             delete updates.phone
+        }
+        if(!updates.jetski.length) {
+            delete updates.jetski
         }
         this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
     }
@@ -121,7 +126,6 @@ render(){
             return(
                 <div key = {item._id} >
                 {item.toggle ?
-
                 <div className = "bookingList" > 
                     <div className = "booking">
                     { ` User: ${item.username},
@@ -134,15 +138,12 @@ render(){
                     `}
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick={() => this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email)}>Edit</button>
-                
+                    <button className = 'deleteButton' onClick={() => this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email, item.jetski)}>Edit</button>
                 </div>  
 
                 :
                 
                 <form onSubmit={this.handleSubmit}  className = 'bookingForm2'>
-                <p className = "p">Edit here:</p>
-                
                 <input 
                      className = "edit"
                      type='text'
@@ -157,7 +158,7 @@ render(){
                      name='date'
                      value={this.state.date} 
                      onChange={this.handleChange}
-                     />
+                />
                 <select 
                      className = "edit"
                      name='time'
@@ -170,18 +171,26 @@ render(){
                      className = "edit"
                      type='email'
                      name='email'
-                     placeholder=' Email'
+                     placeholder='Email'
                      value={this.state.email}
                      onChange={this.handleChange}
-                     />
-                 <input 
+                />
+                <input 
                      className = "edit"
                      type='number'
                      name='phone'
                      placeholder='Phone'
                      value={this.state.phone}
                      onChange={this.handleChange}
-                     />
+                 />
+                <input 
+                     className = "edit"
+                     type='text'
+                     name='jetski'
+                     placeholder='Jetski'
+                     value={this.state.jetski}
+                     onChange={this.handleChange}
+                />
                  <button className = "editButton">Save</button>
                  </form>
             }

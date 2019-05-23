@@ -11,6 +11,7 @@ const Login = (props) => {
             <div className = 'logIn'>
                 <h2 className = 'rent'>Jet Ski Rental</h2>
                 <h2>Kawasaki - Honda - Bombardier</h2>
+                <div className = 'login2'>
                 <form  onSubmit = {props.handleLogin}className='loginForm'>
                     <h4>Bookings here:</h4>
                     <input
@@ -34,6 +35,7 @@ const Login = (props) => {
                     <button className = 'loginButton'>Login</button>
                 </form>
                 <button className ='signupButton' onClick = {props.editToggler2}>Sign up</button>
+                </div>
             </div>
             
             :

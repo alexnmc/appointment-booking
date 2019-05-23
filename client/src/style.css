@@ -72,8 +72,12 @@ html, body {
     height: 90%;
 }
 
+.login2{
+    height:auto;
+}
+
 .signupButton{
-   margin-top:-69vh;
+   margin-top:3pt;
    width:90pt;
    height:24pt;
    font-size:12pt;
@@ -307,6 +311,7 @@ input{
     height: 100pt;
     width:130pt;
     margin:auto;
+    cursor:pointer
 }
 
 .jetski2{
@@ -316,6 +321,7 @@ input{
     height: 100pt;
     width:130pt;
     margin:auto;
+    cursor: pointer;
 }
 
 .jetski3{
@@ -325,6 +331,7 @@ input{
     height: 100pt;
     width:130pt;
     margin:auto;
+    cursor: pointer;
 }
 
 
