@@ -17,7 +17,6 @@ class Admin extends Component {
         }
     }
 
-    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -27,7 +26,6 @@ class Admin extends Component {
             }
         })
     }
-
 
     handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
         e.preventDefault()
@@ -42,7 +40,6 @@ class Admin extends Component {
         })
     }
 
-
     adminSignup = () => {
         const newAdmin = {
             username: this.state.username,
@@ -54,7 +51,6 @@ class Admin extends Component {
             password: '',
         })
     }
-    
     
     handleSignup = (e) => {
         e.preventDefault()
@@ -70,7 +66,6 @@ class Admin extends Component {
         alert('passwords does not match')
         this.editToggler()
     }
-
 
     handleChange = (e) => {
         e.preventDefault()
