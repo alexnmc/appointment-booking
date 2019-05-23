@@ -96,7 +96,7 @@ class Home extends Component {
             }
         }
         for(let i = 0; i<arr3.length; i++){
-            if(arr3[i].length === 3){
+            if(arr3[i].length >= 3){
             arr4.push(arr3[i][0])
             }
         }
