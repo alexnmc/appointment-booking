@@ -305,6 +305,15 @@ input{
     width: 50vw;
 }
 
+.loading{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    width:100pt;
+    height:100pt;
+}
+
 .chooseJet{
     font-size:14pt;
     margin-top:15pt;

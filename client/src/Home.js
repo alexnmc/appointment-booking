@@ -4,6 +4,7 @@ import {withAdmin} from './AdminProvider'
 import moment from 'moment'
 import Login from './Login'
 import {withUser} from './UserProvider'
+import Loading from './Loading'
 
 
 
@@ -12,6 +13,7 @@ class Home extends Component {
         super(props)
         this.state = {
             
+            loading:'off',
             date: '',
             time: '',      //we store all the data from the inputs here and after that we send it to the database
             name: '',
@@ -117,6 +119,7 @@ class Home extends Component {
     }
 
     checkJetski = (time) => {
+        this.setState({loading:"on"})
         axios.get(`bookings/jet/1?date=${this.state.targetDate}&time=${time}`).then(res => {
             let arr = res.data
             for(let i = 0; i < arr.length; i++){
@@ -124,6 +127,9 @@ class Home extends Component {
                 if(arr[i].jetski === 'Bombardier'){this.setState({notAvailable1: true})}
                 if(arr[i].jetski === 'Honda'){this.setState({notAvailable3: true})}
             }
+            this.setState({
+                loading: "off"
+            })
         })
     }
 
@@ -192,7 +198,8 @@ class Home extends Component {
             username: this.props.user.username,
             notAvailable1:false,
             notAvailable2:false,
-            notAvailable3:false
+            notAvailable3:false,
+            
         })
         this.checkJetski(e.target.value)
     }
@@ -292,6 +299,12 @@ class Home extends Component {
                                     
                                     <p className = "chooseJet"> Choose your jet ski:</p>
                                     <div className = "jetskiWrap">
+                                    {this.state.loading === 'on' ?
+
+                                    <Loading/>
+
+                                    :
+                                    <div className = "jetskiWrap">
                                     {this.state.notAvailable1 ?
                                         <div></div>
                                         :
@@ -306,6 +319,8 @@ class Home extends Component {
                                         <div></div>
                                         :
                                         <div className = "jetski3" onClick = {() => this.saveJetski('Honda')}><p className = "p1" style = {this.state.lightOn3}>Honda</p><div className = 'selected' style={this.state.jetskiStyle3}></div></div>
+                                    }
+                                    </div>
                                     }
                                     </div>
                                     <button className = "buttonS2">Submit</button>
