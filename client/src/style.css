@@ -105,7 +105,6 @@ html, body {
     background-color: rgba(5, 32, 36, 0.767);
 }
 
-
 .bookingContainer2{
     display: flex;
     flex-direction: column;
@@ -311,7 +310,8 @@ input{
     height: 100pt;
     width:130pt;
     margin:auto;
-    cursor:pointer
+    cursor:pointer;
+    border-radius:3px;
 }
 
 .jetski2{
@@ -322,6 +322,7 @@ input{
     width:130pt;
     margin:auto;
     cursor: pointer;
+    border-radius:3px;
 }
 
 .jetski3{
@@ -332,6 +333,7 @@ input{
     width:130pt;
     margin:auto;
     cursor: pointer;
+    border-radius:3px;
 }
 
 
@@ -348,6 +350,7 @@ input{
     width: 130pt;
     border: 2px solid rgb(255, 123, 0);
     opacity:0;
+    border-radius:3px;
 }
 
 .selected:hover{
@@ -358,8 +361,10 @@ input{
  .p1{
     font-size:10pt;
     color:rgb(173, 69, 0);
-    position:fixed;
+    position:absolute;
     margin-left:2pt;
+    margin-top:1pt;
+    pointer-events: none;
  }
 
 
