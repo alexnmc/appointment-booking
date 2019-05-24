@@ -379,6 +379,7 @@ input{
     font-size: 17px;
     font-weight: 600;
     color:rgba(255, 208, 164, 0.856);
+    cursor: pointer;
 }
 
 .adminButton{
