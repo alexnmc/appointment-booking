@@ -81,7 +81,7 @@ class Admin extends Component {
             <Fragment>
                 <div className="admin">
                 { this.state.toggle ?
-                    <div className = "logIn">
+                    <div className = "logInA">
                         <div className = 'login2'>
                             <form onSubmit={this.handleLogin} className='loginForm'>
                                 <h4>Admin only:</h4>
