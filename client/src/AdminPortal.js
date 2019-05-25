@@ -183,15 +183,17 @@ render(){
                      value={this.state.phone}
                      onChange={this.handleChange}
                  />
-                <input 
-                     className = "edit"
-                     type='text'
-                     name='jetski'
-                     placeholder='Jetski'
-                     value={this.state.jetski}
-                     onChange={this.handleChange}
-                />
-                 <button className = "editButton">Save</button>
+               
+                <select 
+                    className = 'edit'
+                    name='jetski'
+                    value={this.state.jetski}
+                    onChange={this.handleChange}>
+                    <option value = 'Kawasaki'>Kawasaki</option>    
+                    <option value = 'Bombardier'>Bombardier</option>
+                    <option value = 'Honda'>Honda</option>
+                </select>
+                <button className = "editButton">Save</button>
                  </form>
             }
             </div>
