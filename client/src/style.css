@@ -191,7 +191,7 @@ html, body {
 
 .p{
     color: rgb(255, 227, 200);
-    font-family: "verdana";
+    font-family: "helvetica";
     margin:auto;
     margin-right: 20px;
     margin-left: 10px;
@@ -201,7 +201,7 @@ html, body {
 
 p{
     color: rgb(255, 224, 195);
-    font-family: "verdana";
+    font-family: "helvetica";
     font-size: 19px;
     font-weight: 900;
     text-align: center;
@@ -462,7 +462,7 @@ input{
     border-radius: 7px;
     background-color: rgba(12, 36, 41, 0.918);
     color:rgb(255, 232, 210);
-    font-family: verdana;
+    font-family: helvetica;
     margin-top:20px;
     margin-bottom: 0%;
     width: 100%;
@@ -502,7 +502,7 @@ input{
 
 .h1{
     text-align: center;
-    font-family: verdana;
+    font-family: helvetica;
     font-size:27px;
     color:rgb(226, 102, 0);
     margin-bottom: 20px;
@@ -537,7 +537,7 @@ input{
 
 .aboutText{
      color: #ffeac3ec; 
-     font-family: verdana;
+     font-family: helvetica;
      margin-left: 700px;
      width: 700px;
      margin-top: 20vh;
@@ -546,7 +546,7 @@ input{
 
 .aboutText2{
     color: #fff0bf; 
-    font-family: verdana;
+    font-family: helvetica;
     margin:auto;
     width: auto;
     margin-top: 30vh;
