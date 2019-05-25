@@ -365,7 +365,7 @@ input{
     background-color: rgba(4, 28, 29, 0.904);
     height: 100pt;
     width: 130pt;
-    border: 2px solid rgb(252, 107, 10);
+    border: 2.4px solid rgb(252, 107, 10);
     opacity:0;
     border-radius:5px;
 }
