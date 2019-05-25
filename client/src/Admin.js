@@ -108,7 +108,7 @@ class Admin extends Component {
                         </div>
                     </div>
                         
-                        :     
+                    :     
 
                     <div className = "adminContainer">
                         <form onSubmit={this.handleSignup} className='signUpAdmin'>
