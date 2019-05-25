@@ -301,20 +301,26 @@ class Home extends Component {
                                         <Loading/>
                                         :
                                         <div className = "jetskiWrap">
-                                            {!this.state.notAvailable1 && <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}>
-                                                                            <p className = "p1" style = {this.state.lightOn1}>Bombardier</p>
-                                                                            <div className = 'selected' style={this.state.jetskiStyle1}></div>
-                                                                        </div>
+                                            {!this.state.notAvailable1 && <div className = 'jetskiWrap2'>
+                                                                            <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}>
+                                                                                <p className = "p1" style = {this.state.lightOn1}>Bombardier</p>
+                                                                                <div className = 'selected' style={this.state.jetskiStyle1}></div>
+                                                                            </div>
+                                                                          </div>
                                             } 
-                                            {!this.state.notAvailable2 && <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}>
-                                                                            <p className = "p1" style = {this.state.lightOn2}>Kawasaki</p>
-                                                                            <div className = 'selected' style={this.state.jetskiStyle2}></div>
-                                                                        </div>
+                                            {!this.state.notAvailable2 && <div className = 'jetskiWrap2'>
+                                                                                <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}>
+                                                                                    <p className = "p1" style = {this.state.lightOn2}>Kawasaki</p>
+                                                                                    <div className = 'selected' style={this.state.jetskiStyle2}></div>
+                                                                                </div>
+                                                                          </div>
                                             }  
-                                            {!this.state.notAvailable3 && <div className = "jetski3" onClick = {() => this.saveJetski('Honda')}>
-                                                                            <p className = "p1" style = {this.state.lightOn3}>Honda</p>
-                                                                            <div className = 'selected' style={this.state.jetskiStyle3}></div>
-                                                                        </div>
+                                            {!this.state.notAvailable3 && <div className = 'jetskiWrap2'>
+                                                                            <div className = "jetski3" onClick = {() => this.saveJetski('Honda')}>
+                                                                                <p className = "p1" style = {this.state.lightOn3}>Honda</p>
+                                                                                <div className = 'selected' style={this.state.jetskiStyle3}></div>
+                                                                            </div>
+                                                                          </div>
                                             }
                                         </div>
                                     }

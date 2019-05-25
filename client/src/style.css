@@ -294,8 +294,14 @@ input{
     margin:auto;
     margin-top: 15pt;
     margin-bottom: 30pt;
-    height: 100pt;
-    width: 50vw;
+    height: 102pt;
+    width: 525pt;
+}
+
+.jetskiWrap2{
+    height: 102pt;
+    width: 132pt;
+    margin:auto;
 }
 
 .loading{
