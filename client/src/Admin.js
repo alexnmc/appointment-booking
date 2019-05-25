@@ -102,7 +102,6 @@ class Admin extends Component {
                                     value={this.state.password}
                                     onChange={this.handleChange}
                                 />
-
                                 <button className = 'loginButton'>Login</button>
                             </form>
                             <button className='signupButton' onClick={this.editToggler}>Sign up</button>
@@ -111,7 +110,7 @@ class Admin extends Component {
                         
                         :     
 
-                        <div className = "adminContainer">
+                    <div className = "adminContainer">
                         <form onSubmit={this.handleSignup} className='signUpAdmin'>
                         <h4>Sign Up:</h4>
                        
@@ -152,7 +151,7 @@ class Admin extends Component {
                             />
                             <button className = 'loginButton'>Sign up</button>
                         </form>
-                        </div>
+                    </div>
                 }
                 </div>
             </Fragment>

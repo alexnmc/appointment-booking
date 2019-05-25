@@ -89,12 +89,7 @@ html, body {
    font-size:12pt;
 }
 
-.signUp {
-    margin-top:20vh;
-    display: block;
-    height: 100vh;
-    width: 50vw;
-}
+
 
 .signUpAdmin{
     display: block;
@@ -524,9 +519,9 @@ input{
 }
 
 .about2{
-height:100vh;
-width:100vw;
-background-color: rgba(5, 32, 36, 0.424);
+    height:100vh;
+    width:100vw;
+    background-color: rgba(5, 32, 36, 0.424);
 }
 
 .aboutText{

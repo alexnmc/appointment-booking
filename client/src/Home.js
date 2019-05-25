@@ -343,7 +343,7 @@ class Home extends Component {
                     </div>
                     
                     :
-                        
+                    
                     <Login/>
                 }
             </div>
