@@ -296,31 +296,28 @@ class Home extends Component {
                                         onChange={this.handleChange}
                                         required
                                     />
-                                    
                                     <p className = "chooseJet"> Choose your jet ski:</p>
                                     <div className = "jetskiWrap">
                                     {this.state.loading === 'on' ?
-
-                                    <Loading/>
-
-                                    :
-                                    <div className = "jetskiWrap">
-                                    {this.state.notAvailable1 ?
-                                        <div></div>
+                                        <Loading/>
                                         :
-                                        <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}><p className = "p1" style = {this.state.lightOn1}>Bombardier</p><div className = 'selected' style={this.state.jetskiStyle1}></div></div>
-                                    } 
-                                    {this.state.notAvailable2 ?
-                                        <div></div>
-                                        :
-                                        <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}><p className = "p1" style = {this.state.lightOn2}>Kawasaki</p><div className = 'selected' style={this.state.jetskiStyle2}></div></div>
-                                    }  
-                                    {this.state.notAvailable3 ?
-                                        <div></div>
-                                        :
-                                        <div className = "jetski3" onClick = {() => this.saveJetski('Honda')}><p className = "p1" style = {this.state.lightOn3}>Honda</p><div className = 'selected' style={this.state.jetskiStyle3}></div></div>
-                                    }
-                                    </div>
+                                        <div className = "jetskiWrap">
+                                            {!this.state.notAvailable1 && <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}>
+                                                                            <p className = "p1" style = {this.state.lightOn1}>Bombardier</p>
+                                                                            <div className = 'selected' style={this.state.jetskiStyle1}></div>
+                                                                        </div>
+                                            } 
+                                            {!this.state.notAvailable2 && <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}>
+                                                                            <p className = "p1" style = {this.state.lightOn2}>Kawasaki</p>
+                                                                            <div className = 'selected' style={this.state.jetskiStyle2}></div>
+                                                                        </div>
+                                            }  
+                                            {!this.state.notAvailable3 && <div className = "jetski3" onClick = {() => this.saveJetski('Honda')}>
+                                                                            <p className = "p1" style = {this.state.lightOn3}>Honda</p>
+                                                                            <div className = 'selected' style={this.state.jetskiStyle3}></div>
+                                                                        </div>
+                                            }
+                                        </div>
                                     }
                                     </div>
                                     <button className = "buttonS2">Submit</button>
@@ -329,9 +326,7 @@ class Home extends Component {
                                     <button className = "buttonS" onClick = {this.props.logout}>Log out </button>
                                     <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
                             </div>
-                            
                             :
-
                             <div className = "bookingContainer2">
                                 <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>
                                 <div className = "booking2">
@@ -341,9 +336,7 @@ class Home extends Component {
                             </div>
                         }
                     </div>
-                    
                     :
-                    
                     <Login/>
                 }
             </div>
