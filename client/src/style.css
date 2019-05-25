@@ -490,6 +490,9 @@ input{
     margin-top: 20px;
 }
 
+.bookingForm{
+    height:70.5vh;
+}
 .homeBooking{
     border: 2px solid rgb(255, 213, 173);;
     border-radius: 5px;
