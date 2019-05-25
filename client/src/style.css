@@ -523,8 +523,14 @@ input{
     overflow: scroll;
 }
 
+.about2{
+height:100vh;
+width:100vw;
+background-color: rgba(5, 32, 36, 0.424);
+}
+
 .aboutText{
-     color: #1c3a3a; 
+     color: #ffeac3d8; 
      font-family: verdana;
      margin-left: 700px;
      width: 700px;
