@@ -135,6 +135,10 @@ html, body {
     padding-top:15pt;
 }
 
+.bcw{
+    height:75vh;
+}
+
 .booking2{
     height: 80vh;
     padding:15px;
@@ -490,9 +494,7 @@ input{
     margin-top: 20px;
 }
 
-.bookingForm{
-    height:70.5vh;
-}
+
 .homeBooking{
     border: 2px solid rgb(255, 213, 173);;
     border-radius: 5px;
