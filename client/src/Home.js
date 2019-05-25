@@ -252,7 +252,7 @@ class Home extends Component {
                     <div>
                         {this.state.toggle ?
                             <div className='bookingContainer'>
-                                <div className = 'bcw'>
+                                
                                 <form className = 'bookingForm' onSubmit={this.handleSubmit}  >
                                     <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
                                     <p>Book your adventure:</p>
@@ -332,7 +332,7 @@ class Home extends Component {
                                     <button className = "buttonS" onClick = {this.props.logout}>Log out </button>
                                     <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
                             </div>
-                            </div>
+                            
                             :
                             <div className = "bookingContainer2">
                                 <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>

@@ -135,9 +135,6 @@ html, body {
     padding-top:15pt;
 }
 
-.bcw{
-    height:75vh;
-}
 
 .booking2{
     height: 80vh;
@@ -442,8 +439,8 @@ input{
     color: rgb(255, 161, 98);
     width: 34pt;
     height: 20pt;
-    margin-top: 30pt;
-    margin-left: 10px;
+    margin:auto;
+    margin-right:30vw;
     font-size: 8px;
     border-radius: 2px;
     border: 2px solid rgba(88, 0, 0, 0.801);
