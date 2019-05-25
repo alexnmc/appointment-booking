@@ -271,7 +271,6 @@ class Home extends Component {
                                         <option value = ''>Available times:</option>
                                         {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
                                     </select>
-                                    
                                     <input 
                                         type='text'
                                         name='name'
