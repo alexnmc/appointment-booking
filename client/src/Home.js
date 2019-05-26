@@ -12,7 +12,8 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state = {
-            
+            targetDate:'',
+            time2:'',
             loading:'off',
             date: '',
             time: '',      //we store all the data from the inputs here and after that we send it to the database
@@ -32,7 +33,6 @@ class Home extends Component {
             userID: this.props.user._id,
             username: this.props.user.username,
             toggle: true,
-            targetDate:'',
             booking2:[],
             times:[
                     "09:00 - 10:00", 
@@ -74,6 +74,8 @@ class Home extends Component {
             notAvailable1:false,
             notAvailable2:false,
             notAvailable3:false,
+            time2:'',
+            targetDate:''
         })
         :
         alert("Don't forget to choose a jet ski!")
@@ -105,8 +107,6 @@ class Home extends Component {
     }
     
     checkTime = (date) => {
-       
-        this.setState({targetDate: date})
         axios.get(`bookings/date/${date}`).then(res => {
             let arr2 = res.data
             let arr = this.check3(arr2)
@@ -118,9 +118,10 @@ class Home extends Component {
         })
     }
 
-    checkJetski = (time) => {
+    checkJetski = (time, date) => {
         this.setState({loading:"on"})
-        axios.get(`bookings/jet/1?date=${this.state.targetDate}&time=${time}`).then(res => {
+        axios.get(`bookings/jet/1?date=${date}&time=${time}`).then(res => {
+            console.log(res.data)
             let arr = res.data
             for(let i = 0; i < arr.length; i++){
                 if(arr[i].jetski === 'Kawasaki'){this.setState({notAvailable2: true})}
@@ -178,20 +179,26 @@ class Home extends Component {
                     "03:00 - 04:00",
                     "04:00 - 05:00"
                    ],
-            time:''
+            notAvailable1:false,
+            notAvailable2:false,
+            notAvailable3:false,
+            targetDate: e.target.value
         })
         this.setState({
             userID: this.props.user._id,
             username: this.props.user.username,
         })
         this.checkTime(e.target.value)
+        this.checkJetski(this.state.time2, e.target.value)
+        
     }
 
     handleChange3 = (e) => {
         e.preventDefault()
         const {name, value} = e.target
         this.setState({
-            [name]: value
+            [name]: value,
+            time2: e.target.value
         })
         this.setState({
             userID: this.props.user._id,
@@ -201,7 +208,7 @@ class Home extends Component {
             notAvailable3:false,
             
         })
-        this.checkJetski(e.target.value)
+        this.checkJetski(e.target.value, this.state.targetDate)
     }
     
     editToggler = () => {

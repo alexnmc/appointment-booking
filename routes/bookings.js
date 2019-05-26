@@ -51,7 +51,6 @@ bookingsRouter.get('/jet/1', (req, res, next) => {
             return next(err)
         }
         return res.status(200).send(data)
-        
     })
     
 })
