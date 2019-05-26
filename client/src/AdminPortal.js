@@ -1,7 +1,6 @@
 import React , {Component, Fragment} from 'react'
 import {withAdmin} from './Context/AdminProvider'
 import axios from 'axios'
-import data from './time.json'
 import moment from 'moment' // formats the date displayed..
 
 //this is the admins page, we can get here only with a token
@@ -11,7 +10,6 @@ class AdminPortal extends Component  {
     constructor(props){
         super(props)
         this.state = {
-            
             date: '',
             time: '',      //we store all the data from the edit inputs here 
             name: '',
@@ -55,10 +53,12 @@ class AdminPortal extends Component  {
                     name: name,
                     email: email,
                     phone: phone,
-                    jetski: jetski
+                    jetski: jetski,
+                    time2: time
                 }
             })
                 this.props.handleToggle(id)
+                
     }
     
     
@@ -210,8 +210,6 @@ class AdminPortal extends Component  {
         })
     }
 
-    
-
 render(){
        
     let arr = this.props.bookings
@@ -312,9 +310,9 @@ render(){
                     name='jetski'
                     value={this.state.jetski}
                     onChange={this.handleChange}>
-                    <option value = 'Kawasaki'>{this.state.notAvailable2 ? 'n/a' : 'Kawasaki'}</option>    
-                    <option value = 'Bombardier'>{this.state.notAvailable1 ? 'n/a' : 'Bombardier'}</option>
-                    <option value = 'Honda'>{this.state.notAvailable3 ? 'n/a' : 'Honda'}</option>
+                   {this.state.notAvailable2 === false && <option value = 'Kawasaki'> Kawasaki</option>}    
+                   {this.state.notAvailable1 === false && <option value = 'Bombardier'> Bombardier</option>}
+                   {this.state.notAvailable1 === false && <option value = 'Honda'> Honda</option>}
                 </select>
                 <button className = "editButton">Save</button>
                  </form>
