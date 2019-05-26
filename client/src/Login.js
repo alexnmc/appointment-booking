@@ -1,5 +1,5 @@
 import React from 'react'
-import {withUser} from './UserProvider'
+import {withUser} from './Context/UserProvider'
 
 
 

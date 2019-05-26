@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import axios from 'axios'
-import {withAdmin} from './AdminProvider'
+import {withAdmin} from './Context/AdminProvider'
 import moment from 'moment'
 import Login from './Login'
-import {withUser} from './UserProvider'
+import {withUser} from './Context/UserProvider'
+import{withJetSki} from './Context/JetSkiProvider'
 import Loading from './Loading'
 
 
@@ -12,232 +12,27 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state = {
-            targetDate:'',
-            time2:'',
-            loading:'off',
-            date: '',
-            time: '',      //we store all the data from the inputs here and after that we send it to the database
-            name: '',
-            email: '',
-            phone: '',
-            jetski:'',
-            jetskiStyle1: {opacity: 0},
-            jetskiStyle2: {opacity: 0},
-            jetskiStyle3: {opacity: 0},
-            lightOn1: {color: ''},
-            lightOn2: {color: ''},
-            lightOn3: {color: ''},
-            notAvailable1:false,
-            notAvailable2:false,
-            notAvailable3:false,
-            userID: this.props.user._id,
-            username: this.props.user.username,
             toggle: true,
-            booking2:[],
-            times:[
-                    "09:00 - 10:00", 
-                    "10:00 - 11:00",
-                    "11:00 - 12:00", 
-                    "12:00 - 01:00",
-                    "01:00 - 02:00",
-                    "02:00 - 03:00",
-                    "03:00 - 04:00",
-                    "04:00 - 05:00"
-                  ]
-        }
-    }
-
-    handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
-        e.preventDefault()
-        
-        const {date, time, name, email, phone, jetski, userID, username} = this.state
-        axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
             
-                alert(res.data +' Date: '+ date +'  from '+ time)
-        })
-        
-         this.state.jetski.length ?
-         this.setState({
-            date: '',
-            time: '',               // reseting all the inputs to be empty after submit
-            name: '',   
-            email: '',
-            phone: '',
-            jetski: '',
-            userID:'',
-            jetskiStyle1: {opacity: 0},
-            jetskiStyle2: {opacity: 0},
-            jetskiStyle3: {opacity: 0},
-            lightOn1: {color: ''},
-            lightOn2: {color: ''},
-            lightOn3: {color: ''},
-            notAvailable1:false,
-            notAvailable2:false,
-            notAvailable3:false,
-            time2:'',
-            targetDate:''
-        })
-        :
-        alert("Don't forget to choose a jet ski!")
-    }
-
-    check3 = (arr)=>{    //checks if the time requested was in the database 3 times
-        let arr2 = []
-        let arr3 = []
-        let arr4 = []
-        for(let i = 0; i < arr.length; i++){
-         if(!arr2.includes(arr[i].time)){
-            arr2.push(arr[i].time)
-            arr3.push([])
-         }
         }
-        for(let j = 0; j < arr2.length; j++){
-            for(let x = 0; x < arr.length; x++){
-                if(arr2[j] === arr[x].time){
-                    arr3[j].push(arr2[j])
-                }
-            }
-        }
-        for(let i = 0; i<arr3.length; i++){
-            if(arr3[i].length >= 3){
-            arr4.push(arr3[i][0])
-            }
-        }
-        return arr4
-    }
-    
-    checkTime = (date) => {
-        axios.get(`bookings/date/${date}`).then(res => {
-            let arr2 = res.data
-            let arr = this.check3(arr2)
-            for(let i = 0; i < arr.length; i++){
-                this.setState({
-                   times: arr.length === 8 ? ["no available time"] : this.state.times.filter(item => arr[i] !== item),
-                })
-            }
-        })
     }
 
-    checkJetski = (time, date) => {
-        this.setState({loading:"on"})
-        axios.get(`bookings/jet/1?date=${date}&time=${time}`).then(res => {
-            console.log(res.data)
-            let arr = res.data
-            for(let i = 0; i < arr.length; i++){
-                if(arr[i].jetski === 'Kawasaki'){this.setState({notAvailable2: true})}
-                if(arr[i].jetski === 'Bombardier'){this.setState({notAvailable1: true})}
-                if(arr[i].jetski === 'Honda'){this.setState({notAvailable3: true})}
-            }
-            this.setState({
-                loading: "off"
-            })
-        })
-    }
-
-    changeBackground = (jet) => {
-            jet === 'Bombardier' ? 
-            this.setState({jetskiStyle1:{opacity:1},lightOn1: {color: 'rgb(243, 204, 168)'}, jetskiStyle2:{opacity:0}, lightOn2: {color: ''}, jetskiStyle3:{opacity:0}, lightOn3: {color: ''} })
-          :
-            jet === 'Kawasaki' ? 
-            this.setState({jetskiStyle1:{opacity:0},lightOn1: {color: ''}, jetskiStyle2:{opacity:1},  lightOn2: {color: 'rgb(243, 204, 168)'}, jetskiStyle3:{opacity:0},lightOn3: {color: ''}})
-            :
-            jet === 'Honda' && this.setState({jetskiStyle1:{opacity:0},lightOn1: {color: ''}, jetskiStyle2:{opacity:0},  lightOn2: {color: ''}, jetskiStyle3:{opacity:1},lightOn3: {color: 'rgb(243, 204, 168)'}})
-    }
-    
-    saveJetski = (jet) => {
-        this.setState({
-            jetski: jet,
-           
-        })
-        this.changeBackground(jet)
-    }
-
-    handleChange = (e) => {
-        e.preventDefault()
-        const {name, value} = e.target
-        this.setState({
-            [name]: value
-        })
-        this.setState({
-            userID: this.props.user._id,
-            username: this.props.user.username,
-        })
-    }
-
-    handleChange2 = (e) => {
-        e.preventDefault()
-        const {name, value} = e.target
-        this.setState({
-            [name]: value,
-            times:[
-                    "09:00 - 10:00", 
-                    "10:00 - 11:00",
-                    "11:00 - 12:00", 
-                    "12:00 - 01:00",
-                    "01:00 - 02:00",
-                    "02:00 - 03:00",
-                    "03:00 - 04:00",
-                    "04:00 - 05:00"
-                   ],
-            notAvailable1:false,
-            notAvailable2:false,
-            notAvailable3:false,
-            targetDate: e.target.value
-        })
-        this.setState({
-            userID: this.props.user._id,
-            username: this.props.user.username,
-        })
-        this.checkTime(e.target.value)
-        this.checkJetski(this.state.time2, e.target.value)
-        
-    }
-
-    handleChange3 = (e) => {
-        e.preventDefault()
-        const {name, value} = e.target
-        this.setState({
-            [name]: value,
-            time2: e.target.value
-        })
-        this.setState({
-            userID: this.props.user._id,
-            username: this.props.user.username,
-            notAvailable1:false,
-            notAvailable2:false,
-            notAvailable3:false,
-            
-        })
-        this.checkJetski(e.target.value, this.state.targetDate)
-    }
-    
+   
     editToggler = () => {
         this.setState(prevState => {
             return {
                 toggle: !prevState.toggle  
             }
         })
-        this.showBooking(this.props.user._id)
+        this.props.showBooking(this.props.user._id)
     }
 
-    showBooking = (id) => {
-        axios.get(`/bookings/${id}`).then(res => { 
-            this.setState({
-                booking2: res.data
-            })
-        })
-    }
     
-    handleErase = () => {
-        this.props.handleDelete2(this.props.user._id)
-        this.props.logout()
-        this.props.handleDelete3(this.props.user._id)  
-    }
-
+    
     
     render(){
 
-        let array = this.state.booking2
+        let array = this.props.booking2
             array.sort(function (a, b){
                 return new Date(a.date) - new Date(b.date) 
             })  
@@ -259,74 +54,73 @@ class Home extends Component {
                     <div>
                         {this.state.toggle ?
                             <div className='bookingContainer'>
-                                
-                                <form className = 'bookingForm' onSubmit={this.handleSubmit}  >
+                                <form className = 'bookingForm' onSubmit={this.props.handleSubmit}  >
                                     <p>{`Hello ${this.props.user.username.toUpperCase()} !`}</p>
                                     <p>Book your adventure:</p>
                                     <input className = "date"
                                         type='date' 
                                         name='date'
-                                        value={this.state.date} 
-                                        onChange={this.handleChange2}
+                                        value={this.props.date} 
+                                        onChange={this.props.handleChange2}
                                         required
                                     />
                                     <select 
                                         required 
                                         aria-required="true" 
                                         name='time'
-                                        value={this.state.time}
-                                        onChange={this.handleChange3}>
+                                        value={this.props.time}
+                                        onChange={this.props.handleChange3}>
                                         <option value = ''>Available times:</option>
-                                        {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                                        {this.props.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
                                     </select>
                                     <input 
                                         type='text'
                                         name='name'
                                         placeholder='Name of Renter'
-                                        value={this.state.name}
-                                        onChange={this.handleChange}
+                                        value={this.props.name}
+                                        onChange={this.props.handleChange}
                                         required
                                     />
                                     <input 
                                         type='email'
                                         name='email'
                                         placeholder='Your Email Address'
-                                        value={this.state.email}
-                                        onChange={this.handleChange}
+                                        value={this.props.email}
+                                        onChange={this.props.handleChange}
                                         required
                                     />
                                     <input 
                                         type='number'
                                         name='phone'
                                         placeholder='Phone Number'
-                                        value={this.state.phone}
-                                        onChange={this.handleChange}
+                                        value={this.props.phone}
+                                        onChange={this.props.handleChange}
                                         required
                                     />
                                     <p className = "chooseJet"> Choose your jet ski:</p>
                                     <div className = "jetskiWrap">
-                                    {this.state.loading === 'on' ?
+                                    {this.props.loading === 'on' ?
                                         <Loading/>
                                         :
                                         <div className = "jetskiWrap">
-                                            {!this.state.notAvailable1 && <div className = 'jetskiWrap2'>
-                                                                            <div className = "jetski1" onClick = {() => this.saveJetski('Bombardier')}>
-                                                                                <p className = "p1" style = {this.state.lightOn1}>Bombardier</p>
-                                                                                <div className = 'selected' style={this.state.jetskiStyle1}></div>
+                                            {!this.props.notAvailable1 && <div className = 'jetskiWrap2'>
+                                                                            <div className = "jetski1" onClick = {() => this.props.saveJetski('Bombardier')}>
+                                                                                <p className = "p1" style = {this.props.lightOn1}>Bombardier</p>
+                                                                                <div className = 'selected' style={this.props.jetskiStyle1}></div>
                                                                             </div>
                                                                           </div>
                                             } 
-                                            {!this.state.notAvailable2 && <div className = 'jetskiWrap2'>
-                                                                                <div className = "jetski2" onClick = {() => this.saveJetski('Kawasaki')}>
-                                                                                    <p className = "p1" style = {this.state.lightOn2}>Kawasaki</p>
-                                                                                    <div className = 'selected' style={this.state.jetskiStyle2}></div>
+                                            {!this.props.notAvailable2 && <div className = 'jetskiWrap2'>
+                                                                                <div className = "jetski2" onClick = {() => this.props.saveJetski('Kawasaki')}>
+                                                                                    <p className = "p1" style = {this.props.lightOn2}>Kawasaki</p>
+                                                                                    <div className = 'selected' style={this.props.jetskiStyle2}></div>
                                                                                 </div>
                                                                           </div>
                                             }  
-                                            {!this.state.notAvailable3 && <div className = 'jetskiWrap2'>
-                                                                            <div className = "jetski3" onClick = {() => this.saveJetski('Honda')}>
-                                                                                <p className = "p1" style = {this.state.lightOn3}>Honda</p>
-                                                                                <div className = 'selected' style={this.state.jetskiStyle3}></div>
+                                            {!this.props.notAvailable3 && <div className = 'jetskiWrap2'>
+                                                                            <div className = "jetski3" onClick = {() => this.props.saveJetski('Honda')}>
+                                                                                <p className = "p1" style = {this.props.lightOn3}>Honda</p>
+                                                                                <div className = 'selected' style={this.props.jetskiStyle3}></div>
                                                                             </div>
                                                                           </div>
                                             }
@@ -337,14 +131,14 @@ class Home extends Component {
                                 </form>
                                     <button className = "buttonS" onClick = {this.editToggler}>Bookings</button>
                                     <button className = "buttonS" onClick = {this.props.logout}>Log out </button>
-                                    <button className = "deleteButton2" onClick = {this.handleErase}>Delete Account</button>
+                                    <button className = "deleteButton2" onClick = {this.props.handleErase}>Delete Account</button>
                             </div>
                             
                             :
                             <div className = "bookingContainer2">
                                 <p className = "p3">{`Bookings for ${this.props.user.username.toUpperCase()}:`}</p>
                                 <div className = "booking2">
-                                    {this.state.booking2.length === 0 ? <p>no bookings</p>: mapBooking2}
+                                    {this.props.booking2.length === 0 ? <p>no bookings</p>: mapBooking2}
                                 </div>
                                 <button className = "button4" onClick = {this.editToggler}>Return</button>
                             </div>
@@ -360,4 +154,4 @@ class Home extends Component {
 }
 
 
-export default withAdmin(withUser(Home))
+export default withUser(withJetSki(withAdmin(Home)))

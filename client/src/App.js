@@ -6,7 +6,7 @@ import About from  './About'
 import Contact from './Contact'
 import Admin from './Admin'
 import AdminPortal from './AdminPortal'
-import {withAdmin} from './AdminProvider'
+import {withAdmin} from './Context/AdminProvider'
 import ProtectedRoutes from './ProtectedRoutes'
 
 

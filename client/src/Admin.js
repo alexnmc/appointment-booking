@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { withAdmin } from './AdminProvider'
+import { withAdmin } from './Context/AdminProvider'
 
 
 
