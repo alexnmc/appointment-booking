@@ -141,7 +141,6 @@ class Home extends Component {
                                 </div>
                                 <button className = "button4" onClick = {this.editToggler}>Return</button>
                             </div>
-                            
                         }
                     </div>
                     :

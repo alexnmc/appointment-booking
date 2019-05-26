@@ -58,7 +58,7 @@ html, body {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color:  rgba(5, 32, 36, 0.424);
+    background-color:  rgba(5, 26, 29, 0.301);
 }
 
 .logIn{
@@ -209,7 +209,7 @@ p{
 
 h4{
     text-align: center;
-    color:rgba(255, 213, 174, 0.904);
+    color:rgba(255, 219, 184, 0.993);
     font-family: "helvetica";
     margin-top:20px;
     margin-bottom: 12pt;
@@ -225,7 +225,7 @@ to {opacity: 1}
 
 h2{
     text-align: center;
-    color:  rgba(255, 115, 0, 0.986);
+    color:  rgba(255, 112, 17, 0.959);
     border-radius:15px;
     font-family: "helvetica";
     margin-bottom: 4vh;
