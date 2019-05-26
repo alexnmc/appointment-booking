@@ -310,6 +310,7 @@ render(){
                     name='jetski'
                     value={this.state.jetski}
                     onChange={this.handleChange}>
+                    <option value = ''>Switch to:</option>
                    {this.state.notAvailable2 === false && <option value = 'Kawasaki'> Kawasaki</option>}    
                    {this.state.notAvailable1 === false && <option value = 'Bombardier'> Bombardier</option>}
                    {this.state.notAvailable1 === false && <option value = 'Honda'> Honda</option>}
