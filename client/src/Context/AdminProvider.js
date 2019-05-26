@@ -32,7 +32,7 @@ class AdminProvider extends Component {
         })
     }
    
-    logout = () => {
+    logout2 = () => {
         this.setState({
             user:'',   // we logout by removing the token from state and local storage
             token: ''
@@ -69,7 +69,7 @@ class AdminProvider extends Component {
         })
     }
     
-    signup = userInfo => {
+    signup2 = userInfo => {
         axios.post('/auth/signup', userInfo).then(res => {
             const { token, admin } = res.data
             localStorage.setItem("user", JSON.stringify(admin))    //stores the token and the user  in local storage in case of page refresh...
@@ -80,7 +80,7 @@ class AdminProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
 
-    login = userInfo => {
+    login2 = userInfo => {
         axios.post('/auth/login', userInfo).then(res => {
             const { token, admin } = res.data          // when the token and user comes back from the database we store it in local storage
             localStorage.setItem("user", JSON.stringify(admin))
@@ -96,9 +96,9 @@ class AdminProvider extends Component {
             <AdminContext.Provider
                 value={{
                     ...this.state,
-                    signup: this.signup,    // sending all this with context
-                    login: this.login,
-                    logout: this.logout,
+                    signup2: this.signup2,    // sending all this with context
+                    login2: this.login2,
+                    logout2: this.logout2,
                     showBookings: this.showBookings,
                     handleDelete: this.handleDelete,
                     handleDelete3: this.handleDelete3,

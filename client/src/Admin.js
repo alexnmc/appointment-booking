@@ -33,7 +33,7 @@ class Admin extends Component {
             username: this.state.username,
             password: this.state.password
         }
-        this.props.login(newAdmin) // we are receiving this function from the context and we call it here 
+        this.props.login2(newAdmin) // we are receiving this function from the context and we call it here 
         this.setState({
             username: '',
             password: ''
@@ -45,7 +45,7 @@ class Admin extends Component {
             username: this.state.username,
             password: this.state.password
         }
-        this.props.signup(newAdmin)
+        this.props.signup2(newAdmin)
         this.setState({
             username: '',
             password: '',

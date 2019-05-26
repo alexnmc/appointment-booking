@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {withAdmin} from './Context/AdminProvider'
 import moment from 'moment'
 import Login from './Login'
 import {withUser} from './Context/UserProvider'
@@ -154,4 +153,4 @@ class Home extends Component {
 }
 
 
-export default withUser(withJetSki(withAdmin(Home)))
+export default withUser(withJetSki(Home))
