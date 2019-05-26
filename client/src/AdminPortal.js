@@ -1,5 +1,6 @@
 import React , {Component, Fragment} from 'react'
 import {withAdmin} from './Context/AdminProvider'
+import axios from 'axios'
 import data from './time.json'
 import moment from 'moment' // formats the date displayed..
 
@@ -19,6 +20,21 @@ class AdminPortal extends Component  {
             jetski:'',
             toggle: true,
             currentId: '', // the id of the booking we want to edit...
+            notAvailable1:false,
+            notAvailable2:false,
+            notAvailable3:false,
+            times:[
+                "09:00 - 10:00", 
+                "10:00 - 11:00",
+                "11:00 - 12:00", 
+                "12:00 - 01:00",
+                "01:00 - 02:00",
+                "02:00 - 03:00",
+                "03:00 - 04:00",
+                "04:00 - 05:00"
+               ],
+               time2:'',
+               targetDate:''
             
         }
     }
@@ -46,14 +62,114 @@ class AdminPortal extends Component  {
     }
     
     
+    check3 = (arr)=>{    //checks if the time requested was in the database 3 times
+        let arr2 = []
+        let arr3 = []
+        let arr4 = []
+        for(let i = 0; i < arr.length; i++){
+         if(!arr2.includes(arr[i].time)){
+            arr2.push(arr[i].time)
+            arr3.push([])
+         }
+        }
+        for(let j = 0; j < arr2.length; j++){
+            for(let x = 0; x < arr.length; x++){
+                if(arr2[j] === arr[x].time){
+                    arr3[j].push(arr2[j])
+                }
+            }
+        }
+        for(let i = 0; i<arr3.length; i++){
+            if(arr3[i].length >= 3){
+            arr4.push(arr3[i][0])
+            }
+        }
+        return arr4
+    }
+    
+    
+    
+    checkTime = (date) => {
+        axios.get(`bookings/date/${date}`).then(res => {
+            let arr2 = res.data
+            let arr = this.check3(arr2)
+            for(let i = 0; i < arr.length; i++){
+                this.setState({
+                   times: arr.length === 8 ? ["no available time"] : this.state.times.filter(item => arr[i] !== item),
+                })
+            }
+        })
+    }
+
+    
+    checkJetski = (time, date) => {
+        this.setState({loading:"on"})
+        axios.get(`bookings/jet/1?date=${date}&time=${time}`).then(res => {
+            console.log('admin', res.data)
+            let arr = res.data
+            for(let i = 0; i < arr.length; i++){
+                if(arr[i].jetski === 'Kawasaki'){this.setState({notAvailable2: true})}
+                if(arr[i].jetski === 'Bombardier'){this.setState({notAvailable1: true})}
+                if(arr[i].jetski === 'Honda'){this.setState({notAvailable3: true})}
+            }
+            this.setState({
+                loading: "off"
+            })
+        })
+    }
+
+    
     handleChange = e => {
         const { name, value } = e.target
         this.setState({
             [name]: value,
         })
     }
+
+    handleChange2 = (e) => {
+        e.preventDefault()
+        const {name, value} = e.target
+        this.setState({
+            [name]: value,
+            times:[
+                    "09:00 - 10:00", 
+                    "10:00 - 11:00",
+                    "11:00 - 12:00", 
+                    "12:00 - 01:00",
+                    "01:00 - 02:00",
+                    "02:00 - 03:00",
+                    "03:00 - 04:00",
+                    "04:00 - 05:00"
+                   ],
+            notAvailable1:false,
+            notAvailable2:false,
+            notAvailable3:false,
+            targetDate: e.target.value
+        })
+       
+        this.checkTime(e.target.value)
+        this.checkJetski(this.state.time2, e.target.value)
+        
+    }
+
     
-    
+    handleChange3 = (e) => {
+        e.preventDefault()
+        const {name, value} = e.target
+        this.setState({
+            [name]: value,
+            time2: e.target.value
+        })
+        this.setState({
+            notAvailable1:false,
+            notAvailable2:false,
+            notAvailable3:false,
+            
+        })
+        this.checkJetski(e.target.value, this.state.targetDate)
+    }
+   
+
     handleSubmit = (e, id) => {  // on submit we are sending a new booking object to the database
          e.preventDefault()
     
@@ -85,6 +201,13 @@ class AdminPortal extends Component  {
             delete updates.jetski
         }
         this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
+        this.setState({
+            notAvailable1:false,
+            notAvailable2:false,
+            notAvailable3:false,
+            time2:'',
+            targetDate:''
+        })
     }
 
     
@@ -157,15 +280,15 @@ render(){
                      type='date' 
                      name='date'
                      value={this.state.date} 
-                     onChange={this.handleChange}
+                     onChange={this.handleChange2}
                 />
                 <select 
                      className = "edit"
                      name='time'
                      value={this.state.time}
-                     onChange={this.handleChange}>
+                     onChange={this.handleChange3}>
                      <option value = ''>Choose a Time</option>
-                     {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                     {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
                 </select>
                 <input 
                      className = "edit"
@@ -189,9 +312,9 @@ render(){
                     name='jetski'
                     value={this.state.jetski}
                     onChange={this.handleChange}>
-                    <option value = 'Kawasaki'>Kawasaki</option>    
-                    <option value = 'Bombardier'>Bombardier</option>
-                    <option value = 'Honda'>Honda</option>
+                    <option value = 'Kawasaki'>{this.state.notAvailable2 ? 'n/a' : 'Kawasaki'}</option>    
+                    <option value = 'Bombardier'>{this.state.notAvailable1 ? 'n/a' : 'Bombardier'}</option>
+                    <option value = 'Honda'>{this.state.notAvailable3 ? 'n/a' : 'Honda'}</option>
                 </select>
                 <button className = "editButton">Save</button>
                  </form>
