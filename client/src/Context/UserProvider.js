@@ -20,6 +20,14 @@ class UserProvider extends Component {
         }
     }
 
+    
+    resetToggle = () => {
+        this.setState({
+            toggle: true
+        })
+    }
+    
+    
     editToggler2 = () => {
         this.setState(prevState => {
             return {
@@ -129,7 +137,8 @@ class UserProvider extends Component {
                    handleSignup: this.handleSignup,
                    handleChange:this.handleChange,
                    handleDelete2: this.handleDelete2,
-                   logout: this.logout
+                   logout: this.logout,
+                   resetToggle: this.resetToggle
 
                 }}>
                 {this.props.children}

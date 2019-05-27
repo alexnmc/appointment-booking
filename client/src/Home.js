@@ -17,6 +17,10 @@ class Home extends Component {
     }
 
    
+    componentDidMount(){
+        this.props.resetToggle()// reset from signup to login
+    }
+    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -26,8 +30,6 @@ class Home extends Component {
         this.props.showBooking(this.props.user._id)
     }
 
-    
-    
     
     render(){
 
