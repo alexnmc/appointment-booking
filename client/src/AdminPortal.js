@@ -151,7 +151,6 @@ class AdminPortal extends Component  {
        
         this.checkTime(e.target.value)
         this.checkJetski(this.state.time2, e.target.value)
-        
     }
 
     

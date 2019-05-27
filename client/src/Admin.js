@@ -64,7 +64,6 @@ class Admin extends Component {
                     alert("wrong code")
         :
         alert('passwords does not match')
-        this.editToggler()
     }
 
     handleChange = (e) => {

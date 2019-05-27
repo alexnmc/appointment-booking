@@ -90,8 +90,6 @@ class UserProvider extends Component {
                 password: '',
                 password2:''
             })
-
-        this.editToggler2()
     }
 
     handleChange = (e) => {
