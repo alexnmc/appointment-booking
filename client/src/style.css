@@ -180,8 +180,8 @@ html, body {
 }
 
 .editButton{
-    width: 60px;
-    height: 28px;
+    width: 50px;
+    height: 27px;
     border-radius: 4px;
     border:2px solid rgb(30, 80, 35);
     background-color: rgb(57, 116, 88);
