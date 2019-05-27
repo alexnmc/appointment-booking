@@ -182,7 +182,7 @@ class AdminPortal extends Component  {
         }
        
         if(!updates.date.length) { // if state did not get any data from the inputs than we delete all those from our update object so we dont loose the saved booking details
-            delete updates.date   // we dont want to send any empty items to the database because the booking object  will get updated with the new empty values
+            delete updates.date   // we dont want to send any empty items to the database because the booking object will get updated with the new empty values
         }
         if(!updates.time.length) {
             delete updates.time
@@ -312,7 +312,7 @@ render(){
                     <option value = ''>Switch to:</option>
                    {this.state.notAvailable2 === false && <option value = 'Kawasaki'> Kawasaki</option>}    
                    {this.state.notAvailable1 === false && <option value = 'Bombardier'> Bombardier</option>}
-                   {this.state.notAvailable1 === false && <option value = 'Honda'> Honda</option>}
+                   {this.state.notAvailable3 === false && <option value = 'Honda'> Honda</option>}
                 </select>
                 <button className = "editButton" onClick = {this.handleSubmit}>Save</button>
                 <button className = "editButton" onClick = {this.editToggle}>Exit</button>

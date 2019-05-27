@@ -94,6 +94,14 @@ bookingsRouter.delete('/delete/:userID', (req, res, next) => {
 
 bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
             
+    Booking.findOne({id: req.params.userID, time:req.body.time, date:req.body.date, jetski: req.body.jetski}, (err, booking) => {
+        if (err) {
+            res.status(500)
+            return next(err)
+        } if(booking){ 
+            return res.status(200).send("JetSki Not Available")
+        } else {   
+    
         Booking.findOneAndUpdate(
                 {_id: req.params.id},
                 req.body,                           // update existing booking with this object this is the 2nd argument of the axios.put
@@ -105,9 +113,12 @@ bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the 
                     }
                     return res.status(201).send(updatedBooking)
                 }
-            )
+        )
+        }   
     }
-)
+
+
+)})
  
 
 

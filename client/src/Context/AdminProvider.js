@@ -23,10 +23,11 @@ class AdminProvider extends Component {
     
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
+            response.data === 'JetSki Not Available' && alert(response.data)
             const updatedBooking = response.data
             this.setState(prevState => {
                 return {
-                    bookings: prevState.bookings.map(item => item._id === id ? updatedBooking : item )
+                    bookings: response.data === 'JetSki Not Available' ? prevState.bookings : prevState.bookings.map(item => item._id === id ? updatedBooking : item )
                 }
             })
         })
@@ -43,7 +44,6 @@ class AdminProvider extends Component {
 
     showBookings = () => {
         axios.get('/bookings').then(res => {  // get request to the database to display all the bookings on the AdminPortal page
-            console.log(res.data)
             this.setState({
                 bookings: res.data 
             })
