@@ -58,7 +58,6 @@ class AdminPortal extends Component  {
                 }
             })
                 this.props.handleToggle(id)
-                
     }
     
     
@@ -264,7 +263,7 @@ render(){
 
                 :
                 
-                <form onSubmit={this.handleSubmit}  className = 'bookingForm2'>
+                <form  className = 'bookingForm2'>
                 <input 
                      className = "edit"
                      type='text'
@@ -315,7 +314,8 @@ render(){
                    {this.state.notAvailable1 === false && <option value = 'Bombardier'> Bombardier</option>}
                    {this.state.notAvailable1 === false && <option value = 'Honda'> Honda</option>}
                 </select>
-                <button className = "editButton">Save</button>
+                <button className = "editButton" onClick = {this.handleSubmit}>Save</button>
+                <button className = "editButton" onClick = {this.editToggle}>Exit</button>
                  </form>
             }
             </div>
