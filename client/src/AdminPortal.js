@@ -54,10 +54,13 @@ class AdminPortal extends Component  {
                     email: email,
                     phone: phone,
                     jetski: jetski,
-                    time2: time
+                    time2: time,
+                    targetDate:date
                 }
             })
                 this.props.handleToggle(id)
+                this.checkJetski(time, date)
+                this.checkTime(date)
     }
     
     
