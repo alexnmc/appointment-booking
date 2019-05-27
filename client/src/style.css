@@ -58,7 +58,7 @@ html, body {
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color:  rgba(7, 33, 37, 0.39);
+    background-color:  rgba(7, 33, 37, 0.418);
 }
 
 .logIn{
@@ -98,11 +98,7 @@ html, body {
 
 .signUpAdmin{
     display: block;
-    height: 230pt;
-    width: 205pt;
-    border: 3px solid  rgba(0, 23, 32, 0.425);
-    border-radius: 7px;
-    background-color: rgba(5, 32, 36, 0.767);
+   
 }
 
 .logInA{
@@ -399,7 +395,6 @@ input{
     align-items: center;
     justify-content: center;
     margin:auto;
-    margin-bottom: 0px;
     margin-top: 14pt;
     height: 25pt;
     width: 94pt;
@@ -464,6 +459,15 @@ input{
         align-items: flex-start;
         justify-content: center;
 }
+
+.adminContainer{
+    height:250pt;
+    width: 210pt;
+    border: 3px solid  rgba(0, 23, 32, 0.425);
+    border-radius: 7px;
+    background-color: rgba(5, 32, 36, 0.767);
+}
+
 
 .bookingList {
     border: 2px solid rgba(1, 31, 32, 0.822);
@@ -563,11 +567,13 @@ input{
 
 .buttonS{
     margin-top:10pt;
+    margin-bottom: 0px;
     border: 0px;
 }
 .buttonS2{
     margin-top:15pt;
     border: 0px;
+    margin-bottom: 0px;
 }
 
 @media only screen and (max-width: 724px) {
@@ -666,9 +672,7 @@ input{
         font-size: 15px;
     }
     
-    .adminContainer{
-        height:100%;
-    }
+    
     
     .deleteButton{
         width: 57px;

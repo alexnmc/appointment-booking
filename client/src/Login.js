@@ -72,8 +72,9 @@ const Login = (props) => {
                             value = {props.password2}
                             onChange = {props.handleChange}
                         />
-                        <button>Sign up</button>
+                        <button className = 'loginButton'>Sign up</button>
                     </form>
+                        <button className = 'signupButton' onClick = {props.editToggler2}>Login</button>
                 </div>
             </div>
         }

@@ -151,6 +151,7 @@ class Admin extends Component {
                             />
                             <button className = 'loginButton'>Sign up</button>
                         </form>
+                            <button className = 'signupButton2' onClick={this.editToggler}>Log in</button>
                     </div>
                 }
                 </div>
