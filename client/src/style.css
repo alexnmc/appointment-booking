@@ -83,6 +83,13 @@ html, body {
    font-size:12pt;
 }
 
+.signupButton2{
+    margin-top:5pt;
+    width:90pt;
+    height:24pt;
+    font-size:12pt;
+ }
+
 .loginButton{
    width:90pt;
    height:24pt;
