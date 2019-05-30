@@ -59,7 +59,7 @@ class AdminProvider extends Component {
         })
     }
     
-    handleDelete3 = (userID) => {
+    handleDelete3 = (userID) => { // deletes the bookings on delete account
         axios.delete(`bookings/delete/${userID}`).then(res => {
             this.setState(prevState => {
                 return {

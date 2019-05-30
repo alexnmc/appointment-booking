@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {withUser} from './UserProvider'
+import {withAdmin} from './AdminProvider'
 
 const JetSkiContext = React.createContext()
 
@@ -257,7 +258,7 @@ class JetSkiProvider extends Component {
     }
 }
 
-export default withUser(JetSkiProvider)
+export default withUser(withAdmin(JetSkiProvider))
 
 
 export const withJetSki = C => props => (
