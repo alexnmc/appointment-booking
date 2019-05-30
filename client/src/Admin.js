@@ -22,7 +22,8 @@ class Admin extends Component {
             return {
                 toggle: !prevState.toggle, //toggle from login to signin
                 username: '',
-                password: ''
+                password: '',
+                password2: ''
             }
         })
     }
@@ -49,6 +50,7 @@ class Admin extends Component {
         this.setState({
             username: '',
             password: '',
+            password2:''
         })
     }
     
