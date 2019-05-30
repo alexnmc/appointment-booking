@@ -36,6 +36,7 @@ class UserProvider extends Component {
         })
     }
 
+    
     signup = userInfo => {
         this.state.password === this.state.password2 ?
         axios.post('/user/signup', userInfo).then(res => {
@@ -49,6 +50,7 @@ class UserProvider extends Component {
         alert('passwords does not match')
     }
 
+    
     login = userInfo => {
         axios.post('/user/login', userInfo).then(res => {
             const { token, user } = res.data // when the token and user comes back from the database we store it in local storage
@@ -57,7 +59,6 @@ class UserProvider extends Component {
             this.setState({ user: user, token })
         })
         .catch(err => alert(err.response.data.errMsg))
-        
     }
    
     handleLogin = (e) => {   // login method, we send the username and password entered in the input fields to the database 
@@ -66,13 +67,10 @@ class UserProvider extends Component {
             username: this.state.username,
             password: this.state.password
         }
-
         this.login(newUser) // calling the login function
-
         this.setState({
             username: '',
             password: '',
-            password2: ''
         })
         
     }
@@ -83,7 +81,6 @@ class UserProvider extends Component {
                 username: this.state.username,
                 password: this.state.password
             }
-
             this.signup(newUser)
             this.setState({
                 username: '',
@@ -125,6 +122,7 @@ class UserProvider extends Component {
                    username:this.state.username,
                    password: this.state.password,
                    adminPassword: this.state.adminPassword,
+                   password2: this.state.paswword2,
                    user: this.state.user,
                    token: this.state.token,
                    toggle: this.state.toggle,

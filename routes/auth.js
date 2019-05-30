@@ -87,7 +87,7 @@ authRouter.get('/', (req, res) => {    // get all for testing with postman
 
 authRouter.delete('/', (req, res, next) => {
     
-     Admin.remove((err, data) => {      // for testing, deletes everything on the /auth endpoint!
+     Admin.remove((err, data) => {  // for testing, deletes everything on the /auth endpoint!
         if (err) {
             res.status(500)
             return next(err)
