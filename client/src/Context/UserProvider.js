@@ -31,7 +31,10 @@ class UserProvider extends Component {
     editToggler2 = () => {
         this.setState(prevState => {
             return {
-                toggle: !prevState.toggle  //toggle from login to signin
+                toggle: !prevState.toggle,  //toggle from login to signin
+                username: '',
+                password: '',
+                password2:''
             }
         })
     }
@@ -75,6 +78,7 @@ class UserProvider extends Component {
         
     }
 
+    
     handleSignup = (e) => {
         e.preventDefault()
             const newUser = {
@@ -82,11 +86,7 @@ class UserProvider extends Component {
                 password: this.state.password
             }
             this.signup(newUser)
-            this.setState({
-                username: '',
-                password: '',
-                password2:''
-            })
+            
     }
 
     handleChange = (e) => {
@@ -106,7 +106,11 @@ class UserProvider extends Component {
     logout = () => {
         this.setState({
             user:'',   // we logout by removing the token from state and local storage
-            token: ''
+            token: '',
+            toggle:true,
+            password:'',
+            password2:'',
+            username:''
         })
         localStorage.removeItem("user")
         localStorage.removeItem("token")
@@ -122,7 +126,7 @@ class UserProvider extends Component {
                    username:this.state.username,
                    password: this.state.password,
                    adminPassword: this.state.adminPassword,
-                   password2: this.state.paswword2,
+                   password2: this.state.password2,
                    user: this.state.user,
                    token: this.state.token,
                    toggle: this.state.toggle,
