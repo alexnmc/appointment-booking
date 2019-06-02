@@ -83,21 +83,19 @@ class JetSkiProvider extends Component {
         let arr3 = []
         let arr4 = []
         for(let i = 0; i < arr.length; i++){
-         if(!arr2.includes(arr[i].time)){
-            arr2.push(arr[i].time)
-            arr3.push([])
-         }
+           if(!arr2.includes(arr[i].time)){
+                arr2.push(arr[i].time)
+                arr3.push([])
         }
         for(let j = 0; j < arr2.length; j++){
-            for(let x = 0; x < arr.length; x++){
-                if(arr2[j] === arr[x].time){
-                    arr3[j].push(arr2[j])
-                }
+            if(arr2[j] === arr[i].time){
+                arr3[j].push(arr2[j])
+            }
             }
         }
         for(let i = 0; i<arr3.length; i++){
-            if(arr3[i].length >= 3){
-            arr4.push(arr3[i][0])
+                if(arr3[i].length >= 3){
+                arr4.push(arr3[i][0])
             }
         }
         return arr4
@@ -132,7 +130,6 @@ class JetSkiProvider extends Component {
         })
     }
 
-    
     changeBackground = (jet) => {
             jet === 'Bombardier' ? 
             this.setState({jetskiStyle1:{opacity:1},lightOn1: {color: 'rgb(243, 204, 168)'}, jetskiStyle2:{opacity:0}, lightOn2: {color: ''}, jetskiStyle3:{opacity:0}, lightOn3: {color: ''} })
