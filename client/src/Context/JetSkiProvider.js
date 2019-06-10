@@ -28,8 +28,8 @@ class JetSkiProvider extends Component {
             notAvailable1:false,
             notAvailable2:false,
             notAvailable3:false,
-            userID: this.props.user._id,
-            username: this.props.user.username,
+            userID: JSON.parse(localStorage.getItem("user"))._id,
+            username: JSON.parse(localStorage.getItem("user")).username,
             booking2:[],
             times:[
                     "09:00 - 10:00", 
@@ -46,7 +46,8 @@ class JetSkiProvider extends Component {
 
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        console.log(this.props.user)
+
+        
         const {date, time, name, email, phone, jetski, userID, username} = this.state
         console.log({date, time, name, email, phone, jetski, userID, username})
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
@@ -73,7 +74,9 @@ class JetSkiProvider extends Component {
             notAvailable2:false,
             notAvailable3:false,
             time2:'',
-            targetDate:''
+            targetDate:'',
+            userID: JSON.parse(localStorage.getItem("user"))._id,
+            username: JSON.parse(localStorage.getItem("user")).username,
         })
         :
         alert("Don't forget to choose a jet ski!")
@@ -150,15 +153,15 @@ class JetSkiProvider extends Component {
     }
 
     handleChange = (e) => {
+        console.log(this.state.userID)
         e.preventDefault()
         const {name, value} = e.target
         this.setState({
-            [name]: value
+            [name]: value,
+            userID: JSON.parse(localStorage.getItem("user"))._id,
+            username: JSON.parse(localStorage.getItem("user")).username,
         })
-        this.setState({
-            userID: this.props.user._id,
-            username: this.props.user.username,
-        })
+       
     }
 
     handleChange2 = (e) => {
@@ -181,10 +184,7 @@ class JetSkiProvider extends Component {
             notAvailable3:false,
             targetDate: e.target.value
         })
-        this.setState({
-            userID: this.props.user._id,
-            username: this.props.user.username,
-        })
+        
         this.checkTime(e.target.value)
         this.checkJetski(this.state.time2, e.target.value)
         
@@ -198,12 +198,9 @@ class JetSkiProvider extends Component {
             time2: e.target.value
         })
         this.setState({
-            userID: this.props.user._id,
-            username: this.props.user.username,
             notAvailable1:false,
             notAvailable2:false,
             notAvailable3:false,
-            
         })
         this.checkJetski(e.target.value, this.state.targetDate)
     }
@@ -214,7 +211,7 @@ class JetSkiProvider extends Component {
                 toggle: !prevState.toggle  
             }
         })
-        this.showBooking(this.props.user._id)
+        this.showBooking(this.state.userID)
     }
 
     showBooking = (id) => {
@@ -228,7 +225,7 @@ class JetSkiProvider extends Component {
     handleErase = () => {
         this.props.handleDelete2()
         this.props.logout()
-        this.props.handleDelete3(this.props.user._id)  
+        this.props.handleDelete3(this.state.userID)  
     }
 
     
