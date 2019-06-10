@@ -46,7 +46,7 @@ class JetSkiProvider extends Component {
 
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        this.setState({userID : this.props.user._id})
+        console.log(this.props.user)
         const {date, time, name, email, phone, jetski, userID, username} = this.state
         console.log({date, time, name, email, phone, jetski, userID, username})
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
