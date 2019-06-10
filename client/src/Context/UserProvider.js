@@ -74,8 +74,9 @@ class UserProvider extends Component {
         this.setState({
             username: '',
             password: '',
+            user:'',
+            token:''
         })
-        
     }
 
     
@@ -86,9 +87,15 @@ class UserProvider extends Component {
                 password: this.state.password
             }
             this.signup(newUser)
-            
+            this.setState({
+                username: '',
+                password: '',
+                user:'',
+                token:''
+            })
     }
 
+    
     handleChange = (e) => {
         e.preventDefault()
         const { name, value } = e.target
@@ -97,8 +104,8 @@ class UserProvider extends Component {
         })
     }
 
-    handleDelete2 = (id) => {
-        axios.delete(`/user/${id}`).then(res => {
+    handleDelete2 = () => {
+        axios.delete(`/user/${this.state.user._id}`).then(res => {
             alert(res.data)
         })
     }

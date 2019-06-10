@@ -86,7 +86,6 @@ authRouter.get('/', (req, res) => {    // get all for testing with postman
 
 
 
-
 authRouter.delete('/', (req, res, next) => {
     
     User.remove((err, data) => {      // for testing, deletes everything on the /auth endpoint!
@@ -100,7 +99,7 @@ authRouter.delete('/', (req, res, next) => {
 
 
 
-authRouter.delete('/:id', (req, res, next) => {     //delete one by ID for admin use only
+authRouter.delete('/:id', (req, res, next) => {    
      
     User.findOneAndDelete({_id: req.params.id} , (err, data) => {
        if (err) {

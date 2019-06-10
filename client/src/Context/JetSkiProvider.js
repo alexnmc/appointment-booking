@@ -46,8 +46,9 @@ class JetSkiProvider extends Component {
 
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-        
+        this.setState({userID : this.props.user._id})
         const {date, time, name, email, phone, jetski, userID, username} = this.state
+        console.log({date, time, name, email, phone, jetski, userID, username})
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
             
                 alert(res.data +' Date: '+ date +'  from '+ time)
@@ -225,7 +226,7 @@ class JetSkiProvider extends Component {
     }
     
     handleErase = () => {
-        this.props.handleDelete2(this.props.user._id)
+        this.props.handleDelete2()
         this.props.logout()
         this.props.handleDelete3(this.props.user._id)  
     }
