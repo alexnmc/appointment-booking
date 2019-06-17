@@ -4,8 +4,8 @@
 }
 
 html, body {
-    overflow: scroll;
-    margin: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar {
