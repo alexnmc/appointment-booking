@@ -209,6 +209,7 @@ p{
     font-size: 19px;
     font-weight: 900;
     text-align: center;
+    margin-top:10pt;
 }
 
 h4{
@@ -361,8 +362,8 @@ input{
 .jetski3:hover,
 .jetski2:hover,
 .jetski1:hover{
-    height:102pt;
-    width:132pt;
+    height:96pt;
+    width:126pt;
  }
 
 .selected{
@@ -375,8 +376,8 @@ input{
 }
 
 .selected:hover{
-    height: 102pt;
-    width: 132pt;
+    height: 96pt;
+    width: 126pt;
  }
 
  .p1{
