@@ -28,8 +28,8 @@ class JetSkiProvider extends Component {
             notAvailable1:false,
             notAvailable2:false,
             notAvailable3:false,
-            userID: JSON.parse(localStorage.getItem("user"))._id,
-            username: JSON.parse(localStorage.getItem("user")).username,
+            userID: JSON.parse(localStorage.getItem("user")) && JSON.parse(localStorage.getItem("user"))._id ,
+            username: JSON.parse(localStorage.getItem("user")) && JSON.parse(localStorage.getItem("user")).username,
             booking2:[],
             times:[
                     "09:00 - 10:00", 

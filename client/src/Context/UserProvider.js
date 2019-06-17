@@ -78,7 +78,6 @@ class UserProvider extends Component {
             password: '',
             
         })
-        
     }
 
     
