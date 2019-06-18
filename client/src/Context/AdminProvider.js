@@ -9,8 +9,8 @@ class AdminProvider extends Component {
     constructor(){
         super()
         this.state = {
-            user: JSON.parse(localStorage.getItem("user")) || {},
-            token: localStorage.getItem("token") || "",
+            admin: JSON.parse(localStorage.getItem("admin")) || {},
+            token2: localStorage.getItem("token2") || "",
             bookings:[],
             toggle: true,
 
@@ -35,11 +35,11 @@ class AdminProvider extends Component {
    
     logout2 = () => {
         this.setState({
-            user:'',   // we logout by removing the token from state and local storage
-            token: ''
+            admin:'',   // we logout by removing the token from state and local storage
+            token2: ''
         })
-        localStorage.removeItem("user")
-        localStorage.removeItem("token")
+        localStorage.removeItem("admin")
+        localStorage.removeItem("token2")
     }
 
     showBookings = () => {
@@ -72,9 +72,10 @@ class AdminProvider extends Component {
     signup2 = userInfo => {
         axios.post('/auth/signup', userInfo).then(res => {
             const { token, admin } = res.data
-            localStorage.setItem("user", JSON.stringify(admin))    //stores the token and the user  in local storage in case of page refresh...
-            localStorage.setItem("token", token)
-            this.setState({ user: admin, token })
+            localStorage.setItem("admin", JSON.stringify(admin))    //stores the token and the user  in local storage in case of page refresh...
+            localStorage.setItem("token2", token)
+            this.setState({ admin: admin, token })
+            window.location.reload()
             
         })
         .catch(err => alert(err.response.data.errMsg))
@@ -83,9 +84,10 @@ class AdminProvider extends Component {
     login2 = userInfo => {
         axios.post('/auth/login', userInfo).then(res => {
             const { token, admin } = res.data          // when the token and user comes back from the database we store it in local storage
-            localStorage.setItem("user", JSON.stringify(admin))
-            localStorage.setItem("token", token)
-            this.setState({ user: admin, token })
+            localStorage.setItem("admin", JSON.stringify(admin))
+            localStorage.setItem("token2", token)
+            this.setState({ admin: admin, token })
+           
         })
         .catch(err => alert(err.response.data.errMsg))
     }

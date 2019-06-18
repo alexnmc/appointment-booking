@@ -14,18 +14,20 @@ import ProtectedRoutes from './ProtectedRoutes'
 class App extends Component {
     render(){
         return (
+           
+            
     //if there is a token in the local storage(or state) the  Admin component redirects to the AdminPortal component autoomatically
             <div>
-                <Navbar token = {this.props.token} />
+                <Navbar token = {localStorage.getItem("token2")} />
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/about" component={About}/>
                     <Route path="/contact" component={Contact}/>
-                    <Route exact path="/admin" render = {props => this.props.token ? <Redirect to="/adminportal"/> : <Admin {...props}/>}/>
+                    <Route exact path="/admin" render = {props => localStorage.getItem("token2") ? <Redirect to="/adminportal"/> : <Admin {...props}/>}/>
                     <ProtectedRoutes
                         redirectTo="/admin"
                         component={AdminPortal}  // prevents users access to the adminportal by typing in the url in the browser
-                        token={this.props.token}
+                        token={localStorage.getItem("token2") }
                         path="/adminportal"
                     />
                 
