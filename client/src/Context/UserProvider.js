@@ -11,7 +11,7 @@ class UserProvider extends Component {
         this.state = {
             username: '',
             password: '',
-            paswword2: '',
+            password2: '',
             toggle: true,
             adminPassword: '',
             user: JSON.parse(localStorage.getItem("user")) || {},
@@ -91,7 +91,7 @@ class UserProvider extends Component {
             this.setState({
                 username: '',
                 password: '',
-                
+                password2:''
             })
     }
 

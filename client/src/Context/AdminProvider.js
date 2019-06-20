@@ -87,7 +87,6 @@ class AdminProvider extends Component {
             localStorage.setItem("admin", JSON.stringify(admin))
             localStorage.setItem("token2", token)
             this.setState({ admin: admin, token })
-           
         })
         .catch(err => alert(err.response.data.errMsg))
     }
