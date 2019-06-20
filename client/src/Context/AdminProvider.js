@@ -13,6 +13,11 @@ class AdminProvider extends Component {
             token2: localStorage.getItem("token2") || "",
             bookings:[],
             toggle: true,
+            username: '',
+            password: '',
+            password2: '',
+            toggle2: true,
+            adminCode: ''
 
         }
     }
@@ -20,6 +25,7 @@ class AdminProvider extends Component {
     handleToggle = (id) => {
         this.state.bookings.map(item => item._id === id ? item.toggle = false : item.toggle = true)  
     }
+    
     
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
@@ -91,20 +97,89 @@ class AdminProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
 
+    editToggler = () => {
+        this.setState(prevState => {
+            return {
+                toggle2: !prevState.toggle2, //toggle from login to signin
+                username: '',
+                password: '',
+                password2: '',
+                adminCode: ''
+            }
+        })
+    }
+
+    handleLogin2 = (e) => {   // login method, we send the username and password entered in the input fields to the database 
+        e.preventDefault()
+        const newAdmin = {
+            username: this.state.username,
+            password: this.state.password
+        }
+        this.login2(newAdmin) // we are receiving this function from the context and we call it here 
+        this.setState({
+            username: '',
+            password: ''
+        })
+    }
+
+    adminSignup = () => {
+        const newAdmin = {
+            username: this.state.username,
+            password: this.state.password
+        }
+        this.signup2(newAdmin)
+        this.setState({
+            username: '',
+            password: '',
+            password2:'',
+            adminCode:''
+        })
+    }
+    
+    handleSignup2 = (e) => {
+        e.preventDefault()
+        this.state.password === this.state.password2 ?    
+            this.state.adminCode === process.env.REACT_APP_CODE ?
+                this.adminSignup()
+                :
+                this.state.adminPassword === "" ? 
+                    alert("please enter secret code: vschool")
+                    :
+                    alert("wrong code")
+        :
+        alert('passwords does not match')
+    }
+
+    
+    handleChange2 = (e) => {
+        e.preventDefault()
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        })
+    }
+
+
+
     
     render() {
         return (
             <AdminContext.Provider
                 value={{
                     ...this.state,
-                    signup2: this.signup2,    // sending all this with context
-                    login2: this.login2,
+                    handleToggle: this.handleToggle,
+                    handleEdit:this.handleEdit,
                     logout2: this.logout2,
                     showBookings: this.showBookings,
                     handleDelete: this.handleDelete,
                     handleDelete3: this.handleDelete3,
-                    handleEdit: this.handleEdit,
-                    handleToggle: this.handleToggle,
+                    signup2: this.signup2,
+                    login2: this.login2,
+                    editToggler: this.editToggler,
+                    handleLogin2: this.handleLogin2,
+                    adminSignup: this.adminSignup,
+                    handleSignup2: this.handleSignup2,
+                    handleChange2: this.handleChange2
                 }}>
                 {this.props.children}
             </AdminContext.Provider>
