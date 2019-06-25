@@ -59,7 +59,6 @@ class JetSkiProvider extends Component {
             email: '',
             phone: '',
             jetski: '',
-            userID:'',
             jetskiStyle1: {opacity: 0},
             jetskiStyle2: {opacity: 0},
             jetskiStyle3: {opacity: 0},

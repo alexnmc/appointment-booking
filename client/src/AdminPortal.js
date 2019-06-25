@@ -262,58 +262,60 @@ render(){
                 :
                 
                 <form  className = 'bookingForm2'>
-                <p className='p20'><span>User:</span>{item.username}</p>
-                <input 
-                     className = "edit"
-                     type='text'
-                     name='name'
-                     placeholder='Name'
-                     value={this.state.name}
-                     onChange={this.handleChange}
-                />
-                <input 
-                     className = "edit"
-                     type='date' 
-                     name='date'
-                     value={this.state.date} 
-                     onChange={this.handleChange2}
-                />
-                <select 
-                     className = "edit"
-                     name='time'
-                     value={this.state.time}
-                     onChange={this.handleChange3}>
-                     <option value = ''>Choose a Time</option>
-                     {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
-                </select>
-                <input 
-                     className = "edit"
-                     type='email'
-                     name='email'
-                     placeholder='Email'
-                     value={this.state.email}
-                     onChange={this.handleChange}
-                />
-                <input 
-                     className = "edit"
-                     type='number'
-                     name='phone'
-                     placeholder='Phone'
-                     value={this.state.phone}
-                     onChange={this.handleChange}
-                 />
-               
-                <select 
-                    className = 'edit'
-                    name='jetski'
-                    value={this.state.jetski}
-                    onChange={this.handleChange}>
-                    <option value = ''>Switch to:</option>
-                   {this.state.notAvailable2 === false && <option value = 'Kawasaki'> Kawasaki</option>}    
-                   {this.state.notAvailable1 === false && <option value = 'Bombardier'> Bombardier</option>}
-                   {this.state.notAvailable3 === false && <option value = 'Honda'> Honda</option>}
-                </select>
-                <button className = "editButton" onClick = {this.handleSubmit}>Save</button>
+                    <p className='p20'><span>User:</span>{item.username}</p>
+                    <div className = 'editDiv'>
+                        <input 
+                            className = "edit"
+                            type='text'
+                            name='name'
+                            placeholder='Name'
+                            value={this.state.name}
+                            onChange={this.handleChange}
+                        />
+                        <input 
+                            className = "edit"
+                            type='date' 
+                            name='date'
+                            value={this.state.date} 
+                            onChange={this.handleChange2}
+                        />
+                        <select 
+                            className = "edit"
+                            name='time'
+                            value={this.state.time}
+                            onChange={this.handleChange3}>
+                            <option value = ''>Choose a Time</option>
+                            {this.state.times.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                        </select>
+                        <input 
+                            className = "edit"
+                            type='email'
+                            name='email'
+                            placeholder='Email'
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                        />
+                        <input 
+                            className = "edit"
+                            type='number'
+                            name='phone'
+                            placeholder='Phone'
+                            value={this.state.phone}
+                            onChange={this.handleChange}
+                        />
+                    
+                        <select 
+                            className = 'edit'
+                            name='jetski'
+                            value={this.state.jetski}
+                            onChange={this.handleChange}>
+                            <option value = ''>Switch to:</option>
+                        {this.state.notAvailable2 === false && <option value = 'Kawasaki'> Kawasaki</option>}    
+                        {this.state.notAvailable1 === false && <option value = 'Bombardier'> Bombardier</option>}
+                        {this.state.notAvailable3 === false && <option value = 'Honda'> Honda</option>}
+                        </select>
+                    </div>
+                    <button className = "editButton" onClick = {this.handleSubmit}>Save</button>
                 <button className = "editButton" onClick = {this.editToggle}>Exit</button>
                  </form>
             }

@@ -175,7 +175,7 @@ html, body {
     font-size:17px;
     font-weight: 100;
     color: white;
-    margin: 7pt;
+    margin:3pt;
     width:80pt;
     display:flex;
 }
@@ -189,7 +189,13 @@ html, body {
     margin: 7pt;
     width: 130pt;
     display:flex;
+    overflow: scroll;
 }
+
+.p22::-webkit-scrollbar { 
+    display: none; 
+}
+
 
 
 span{
@@ -213,12 +219,12 @@ span{
     display:inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 12.5pt;
+    margin: 7pt;
     height: 29px;
-    width: 115pt;
+    width: 125pt;
     border: 1px solid rgb(18, 56, 9);
     border-radius: 3px;
-    background-color: rgb(255, 214, 177);
+    background-color: rgb(255, 255, 255);
     color: black;
     padding-left: 5px;
 }
@@ -530,6 +536,15 @@ input{
 .bookingList2{
     width: 100%;
     height: auto;
+}
+
+.editDiv{
+    width:76vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25pt
+  
 }
 
 .bookingForm2{
