@@ -247,14 +247,13 @@ render(){
                 {item.toggle ?
                 <div className = "bookingList" > 
                     <div className = "booking">
-                    { ` User: ${item.username},
-                        Name: ${item.name.toUpperCase()} ,
-                        Date: ${moment(item.date).format("MMM Do YY ")} ,
-                        Time: ${item.time} ,
-                        Email: ${item.email} ,
-                        Phone: ${item.phone} ,
-                        Jetski: ${item.jetski}
-                    `}
+                       <p className='p20'><span>User:</span>{item.username}</p>
+                       <p className='p21'><span>Name:</span>{item.name.toUpperCase()}</p>
+                       <p className='p21'>Date:{moment(item.date).format("MMM Do YY ")}</p>
+                       <p className='p21'>Time:{item.time}</p>
+                       <p className='p22'><span>Email:</span>{item.email}</p> 
+                       <p className='p22'><span>Phone:</span>{item.phone}</p>
+                       <p className='p21'>Jetski: {item.jetski}</p>
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' onClick={() => this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email, item.jetski)}>Edit</button>
@@ -263,6 +262,7 @@ render(){
                 :
                 
                 <form  className = 'bookingForm2'>
+                <p className='p20'><span>User:</span>{item.username}</p>
                 <input 
                      className = "edit"
                      type='text'

@@ -46,13 +46,9 @@ class JetSkiProvider extends Component {
 
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
-
-        
         const {date, time, name, email, phone, jetski, userID, username} = this.state
-        console.log({date, time, name, email, phone, jetski, userID, username})
         axios.post(`/bookings/${this.state.date}`, {date, time, name, email, phone, jetski, userID, username}).then(res => {
-            
-                alert(res.data +' Date: '+ date +'  from '+ time)
+            alert(res.data +' Date: '+ date +'  from '+ time)
         })
         
          this.state.jetski.length ?
@@ -105,6 +101,7 @@ class JetSkiProvider extends Component {
         return arr4
     }
     
+    
     checkTime = (date) => {
         axios.get(`bookings/date/${date}`).then(res => {
             let arr2 = res.data
@@ -121,7 +118,6 @@ class JetSkiProvider extends Component {
     checkJetski = (time, date) => {
         this.setState({loading:"on"})
         axios.get(`bookings/jet/1?date=${date}&time=${time}`).then(res => {
-            console.log(res.data)
             let arr = res.data
             for(let i = 0; i < arr.length; i++){
                 if(arr[i].jetski === 'Kawasaki'){this.setState({notAvailable2: true})}
@@ -134,6 +130,7 @@ class JetSkiProvider extends Component {
         })
     }
 
+    
     changeBackground = (jet) => {
             jet === 'Bombardier' ? 
             this.setState({jetskiStyle1:{opacity:1},lightOn1: {color: 'rgb(243, 204, 168)'}, jetskiStyle2:{opacity:0}, lightOn2: {color: ''}, jetskiStyle3:{opacity:0}, lightOn3: {color: ''} })
@@ -144,6 +141,7 @@ class JetSkiProvider extends Component {
             jet === 'Honda' && this.setState({jetskiStyle1:{opacity:0},lightOn1: {color: ''}, jetskiStyle2:{opacity:0},  lightOn2: {color: ''}, jetskiStyle3:{opacity:1},lightOn3: {color: 'rgb(243, 204, 168)'}})
     }
     
+    
     saveJetski = (jet) => {
         this.setState({
             jetski: jet,
@@ -152,8 +150,8 @@ class JetSkiProvider extends Component {
         this.changeBackground(jet)
     }
 
+    
     handleChange = (e) => {
-        console.log(this.state.userID)
         e.preventDefault()
         const {name, value} = e.target
         this.setState({
@@ -161,9 +159,9 @@ class JetSkiProvider extends Component {
             userID: JSON.parse(localStorage.getItem("user"))._id,
             username: JSON.parse(localStorage.getItem("user")).username,
         })
-       
     }
 
+    
     handleChange2 = (e) => {
         e.preventDefault()
         const {name, value} = e.target
@@ -187,9 +185,9 @@ class JetSkiProvider extends Component {
         
         this.checkTime(e.target.value)
         this.checkJetski(this.state.time2, e.target.value)
-        
     }
 
+   
     handleChange3 = (e) => {
         e.preventDefault()
         const {name, value} = e.target
@@ -205,6 +203,7 @@ class JetSkiProvider extends Component {
         this.checkJetski(e.target.value, this.state.targetDate)
     }
     
+    
     editToggler = () => {
         this.setState(prevState => {
             return {
@@ -214,6 +213,7 @@ class JetSkiProvider extends Component {
         this.showBooking(this.state.userID)
     }
 
+    
     showBooking = (id) => {
         axios.get(`/bookings/${id}`).then(res => { 
             this.setState({
@@ -221,6 +221,7 @@ class JetSkiProvider extends Component {
             })
         })
     }
+    
     
     handleErase = () => {
         this.props.handleDelete2()
