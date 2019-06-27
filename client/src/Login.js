@@ -74,7 +74,7 @@ const Login = (props) => {
                         />
                         <button className = 'loginButton'>Sign up</button>
                     </form>
-                        <button className = 'signupButton' onClick = {props.editToggler2}>Login</button>
+                        <button className = 'signupButton' onClick = {props.editToggler2}>Return</button>
                 </div>
             </div>
         }

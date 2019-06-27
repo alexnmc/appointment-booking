@@ -81,7 +81,7 @@ const Admin = props=>  {
                             />
                             <button className = 'loginButton'>Sign up</button>
                         </form>
-                            <button className = 'signupButton2' onClick={props.editToggler}>Log in</button>
+                            <button className = 'signupButton2' onClick={props.editToggler}>Return</button>
                     </div>
                 }
                 </div>
