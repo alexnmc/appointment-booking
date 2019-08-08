@@ -142,7 +142,7 @@ class AdminProvider extends Component {
             this.state.adminCode === process.env.REACT_APP_CODE ?
                 this.adminSignup()
                 :
-                this.state.adminPassword === "" ? 
+                this.state.adminCode === "" ? 
                     alert("please enter secret code: vschool")
                     :
                     alert("wrong code")

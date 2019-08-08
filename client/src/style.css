@@ -10,7 +10,7 @@ html, body {
 
 .navbar {
     width: 100vw;
-    height: 37pt;
+    height: 45pt;
     background-color:#fcfcfc; 
     display:flex;
     align-items: center;
@@ -78,21 +78,21 @@ html, body {
 
 .signupButton{
    margin-top:3pt;
-   width:90pt;
-   height:24pt;
+   width:100pt;
+   height:26pt;
    font-size:12pt;
 }
 
 .signupButton2{
     margin-top:5pt;
-    width:90pt;
-    height:24pt;
+    width:100pt;
+    height:26pt;
     font-size:12pt;
  }
 
 .loginButton{
-   width:90pt;
-   height:24pt;
+   width:100pt;
+   height:26pt;
    font-size:12pt;
 }
 
@@ -331,7 +331,7 @@ input{
 
 .login1{
     width: 132pt;
-    height: 23.5pt;
+    height: 26pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
     background-color:  rgb(255, 235, 209);
     color:black;
@@ -509,7 +509,7 @@ input{
 }
 
 .adminContainer{
-    height:250pt;
+    height:260pt;
     width: 210pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
@@ -560,9 +560,8 @@ input{
     margin-top: 17px;
 }
 
-
 .homeBooking{
-    border: 2px solid rgb(255, 213, 173);;
+    border: 2px solid rgb(255, 213, 173);
     border-radius: 5px;
     margin: 15px;
     padding: 10px;
