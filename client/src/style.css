@@ -77,36 +77,35 @@ html, body {
 }
 
 .signupButton{
-   margin-top:3pt;
-   width:100pt;
-   height:26pt;
+   margin-top:5pt;
+   width:150pt;
+   height:30pt;
    font-size:12pt;
 }
 
 .signupButton2{
-    margin-top:5pt;
-    width:100pt;
-    height:26pt;
+    margin-top:10pt;
+    width:150pt;
+    height:30pt;
     font-size:12pt;
  }
 
 .loginButton{
-   width:100pt;
-   height:26pt;
+   width:150pt;
+   height:30pt;
    font-size:12pt;
 }
 
 .signUpAdmin{
     display: block;
-   
 }
 
 .logInA{
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
-    height:200pt;
-    width:200pt;
+    height: 250pt;
+    width:300pt;
 }
 
 .bookingContainer2{
@@ -330,8 +329,8 @@ input{
 }
 
 .login1{
-    width: 132pt;
-    height: 26pt;
+    width: 150pt;
+    height: 30pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
     background-color:  rgb(255, 235, 209);
     color:black;
@@ -444,8 +443,8 @@ input{
     justify-content: center;
     margin:auto;
     margin-top: 14pt;
-    height: 25pt;
-    width: 94pt;
+    height: 29pt;
+    width: 150pt;
     border: 2px solid  rgba(255, 105, 18, 0.822);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
@@ -509,8 +508,8 @@ input{
 }
 
 .adminContainer{
-    height:260pt;
-    width: 210pt;
+    height:300pt;
+    width: 300pt;
     border: 3px solid  rgba(0, 23, 32, 0.425);
     border-radius: 7px;
     background-color: rgba(5, 32, 36, 0.767);
