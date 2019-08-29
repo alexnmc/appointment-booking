@@ -445,7 +445,6 @@ input{
     margin-top: 14pt;
     height: 29pt;
     width: 150pt;
-    border: 2px solid  rgba(255, 105, 18, 0.822);
     background-color:rgba(0, 27, 29, 0.972);
     border-radius: 3px;
     font-size: 17px;
@@ -725,8 +724,6 @@ input{
     .bookingList{
         font-size: 15px;
     }
-    
-    
     
     .deleteButton{
         width: 57px;
