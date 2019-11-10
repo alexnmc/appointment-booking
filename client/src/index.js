@@ -8,8 +8,6 @@ import JetSkiProvider from './Context/JetSkiProvider'
 import './style.css'
 
 
-
-
 ReactDOM.render(
     <BrowserRouter>
         <UserProvider> 

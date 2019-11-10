@@ -41,7 +41,7 @@ const Admin = props=>  {
                     :     
 
                     <div className = "adminContainer">
-                        <form onSubmit={props.handleSignup} className='signUpAdmin'>
+                        <form onSubmit={props.handleSignup2} className='signUpAdmin'>
                         <h4>Sign Up:</h4>
                        
                             <input

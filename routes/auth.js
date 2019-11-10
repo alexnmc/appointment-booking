@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 //post a new user to user collection (signing up)
 authRouter.post("/signup", (req, res, next) => {
-    
+    console.log("hello world")
     Admin.findOne({username: req.body.username}, (err, existingAdmin) => {
         
         if (err) {
