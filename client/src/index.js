@@ -12,12 +12,12 @@ import './style.css'
 
 ReactDOM.render(
     <BrowserRouter>
-    <UserProvider> 
-    <AdminProvider>
-    <JetSkiProvider>     
-        <App/>
-    </JetSkiProvider>
-    </AdminProvider>
-    </UserProvider>
+        <UserProvider> 
+            <AdminProvider>
+                <JetSkiProvider>     
+                    <App/>
+                </JetSkiProvider>
+            </AdminProvider>
+        </UserProvider>
     </BrowserRouter>, 
 document.getElementById('root'))

@@ -14,8 +14,6 @@ import ProtectedRoutes from './ProtectedRoutes'
 class App extends Component {
     render(){
         return (
-           
-            
     //if there is a token in the local storage(or state) the  Admin component redirects to the AdminPortal component autoomatically
             <div>
                 <Navbar token = {localStorage.getItem("token2")} />
@@ -30,7 +28,6 @@ class App extends Component {
                         token={localStorage.getItem("token2") }
                         path="/adminportal"
                     />
-                
                 </Switch>
             </div>
         )

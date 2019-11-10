@@ -435,8 +435,7 @@ input{
     pointer-events: none;
  }
 
-
- .button,
+.button,
  button{
     display: flex;
     align-items: center;
