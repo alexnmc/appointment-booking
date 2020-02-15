@@ -133,7 +133,7 @@ class JetSkiProvider extends Component {
     changeBackground = (jet) => {
             jet === 'Bombardier' ? 
             this.setState({jetskiStyle1:{opacity:1},lightOn1: {color: 'rgb(243, 204, 168)'}, jetskiStyle2:{opacity:0}, lightOn2: {color: ''}, jetskiStyle3:{opacity:0}, lightOn3: {color: ''} })
-          :
+            :
             jet === 'Kawasaki' ? 
             this.setState({jetskiStyle1:{opacity:0},lightOn1: {color: ''}, jetskiStyle2:{opacity:1},  lightOn2: {color: 'rgb(243, 204, 168)'}, jetskiStyle3:{opacity:0},lightOn3: {color: ''}})
             :
@@ -144,7 +144,6 @@ class JetSkiProvider extends Component {
     saveJetski = (jet) => {
         this.setState({
             jetski: jet,
-           
         })
         this.changeBackground(jet)
     }

@@ -584,11 +584,11 @@ input{
 
 .adminPortal2{
     background-color: #142b2bf1;
-    height: 100vh;
+    width: 100vw;
+    height: 100vh
 }
 
 .adminPortal3{
-    height: 90vh;
     padding: 20px;
     overflow: scroll;
 }

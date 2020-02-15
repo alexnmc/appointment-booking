@@ -18,7 +18,7 @@ bookingsRouter.get('/', (req, res) => {    // get all for testing with postman
 
 
 bookingsRouter.get('/:id', (req, res, next) => {    
-    console.log(req.params.id)
+   
     Booking.find({userID: req.params.id}, (err, data) => {
         if(err) {
             res.status(500)
@@ -120,7 +120,6 @@ bookingsRouter.put('/:id',  (req, res, next) => {   // express router reads the 
 
 )})
  
-
 
 /*/ checks if the booking is in the database and if the time and date requested is availabale 
 bookingsRouter.post('/:date', (req, res, next) => {

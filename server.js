@@ -17,13 +17,9 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 
-
-
 app.use('/bookings', require('./routes/bookings'))
 app.use("/auth", require("./routes/auth"))
 app.use("/user", require("./routes/user"))
-
-
 
 
 
@@ -36,7 +32,6 @@ mongoose.set('useCreateIndex', true); // stops the error message...
 
 app.use((err, req, res, next) => {
     if (err.name === "UnauthorizedError") {
-        
         res.status(err.status); //secret error 
     }
     return res.send({errMsg: err.message})

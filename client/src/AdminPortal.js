@@ -104,7 +104,6 @@ class AdminPortal extends Component  {
     checkJetski = (time, date) => {
         this.setState({loading:"on"})
         axios.get(`bookings/jet/1?date=${date}&time=${time}`).then(res => {
-            console.log('admin', res.data)
             let arr = res.data
             for(let i = 0; i < arr.length; i++){
                 if(arr[i].jetski === 'Kawasaki'){this.setState({notAvailable2: true})}
@@ -210,7 +209,7 @@ class AdminPortal extends Component  {
 
 render(){
        
-    let arr = this.props.bookings
+    let arr = [...this.props.bookings]
     
         arr.sort(function (a, b) {
             return new Date(a.date) - new Date(b.date)

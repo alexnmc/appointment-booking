@@ -23,7 +23,9 @@ class AdminProvider extends Component {
     }
 
     handleToggle = (id) => {
-        this.state.bookings.map(item => item._id === id ? item.toggle = false : item.toggle = true)  
+        let arr = [...this.state.bookings]
+        arr.map(item => item._id === id ? item.toggle = false : item.toggle = true)  
+        this.setState({bookings: arr})
     }
     
     
@@ -83,8 +85,7 @@ class AdminProvider extends Component {
             this.setState({ admin: admin, token })
             window.location.reload()
             
-        })
-        .catch(err => alert(err.response.data.errMsg))
+        }).catch(err => alert(err.response.data.errMsg))
     }
 
     login2 = userInfo => {
@@ -93,8 +94,7 @@ class AdminProvider extends Component {
             localStorage.setItem("admin", JSON.stringify(admin))
             localStorage.setItem("token2", token)
             this.setState({ admin: admin, token })
-        })
-        .catch(err => alert(err.response.data.errMsg))
+        }).catch(err => alert(err.response.data.errMsg))
     }
 
     editToggler = () => {
@@ -158,8 +158,6 @@ class AdminProvider extends Component {
             [name]: value
         })
     }
-
-
 
     
     render() {
