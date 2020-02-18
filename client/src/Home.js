@@ -79,6 +79,7 @@ class Home extends Component {
                                         name='name'
                                         placeholder='Name of Renter'
                                         value={this.props.name}
+                                        maxLength = '10'
                                         onChange={this.props.handleChange}
                                         required
                                     />

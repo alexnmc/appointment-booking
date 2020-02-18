@@ -239,7 +239,7 @@ render(){
             return 0;
         })
 
-        let mapIt = arr.map(item => {
+        let mapIt = () => arr.map(item => {
                 
             return(
                 <div key = {item._id} >
@@ -252,7 +252,7 @@ render(){
                        <p className='p21'>Time:{item.time}</p>
                        <p className='p22'><span>Email:</span>{item.email}</p> 
                        <p className='p22'><span>Phone:</span>{item.phone}</p>
-                       <p className='p21'>Jetski: {item.jetski}</p>
+                       <p className='p21'>Jetski:{item.jetski}</p>
                     </div>
                     <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' onClick={() => this.editToggle(item._id, item.name, item.date, item.time, item.phone, item.email, item.jetski)}>Edit</button>
@@ -326,11 +326,9 @@ render(){
     return (
             <Fragment >
                 <div className = "adminPortal2"  >
-                    <div className ="adminPortal3">
                     <h1 className= 'h1'>{this.props.bookings.length === 1 ? '1 booking' : this.props.bookings.length + ' bookings'}</h1>
                     <button className = 'adminButton' onClick = {this.props.logout2}>Log out </button>
-                        {mapIt}
-                    </div>
+                        {mapIt()}
                 </div>
             </Fragment>
         )
